@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:07:15.441Z",
+  "exportedAt": "2026-05-07T22:23:09.336Z",
   "data": {
     "mt_products": [
       {
@@ -72,7 +72,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
@@ -254,7 +254,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
@@ -306,7 +306,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 1,
+        "views": 2,
         "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
@@ -344,7 +344,7 @@
       {
         "id": "9bacb046-83e5-401e-9c02-d2d2970fd582",
         "name": "Bombillo Recargable",
-        "price": 3000,
+        "price": 2400,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -439,8 +439,8 @@
       "logoEmoji": "🛒",
       "logoImage": "blob:https://edrian48228-crack.github.io/b442d557-8a9a-40d2-a365-99aa9b840926",
       "imgFolder": "",
-      "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
-      "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
+      "ownStoreUrl": "https://edrian48228-crack.github.io/rep/app",
+      "affiliateUrl": "https://edrian48228-crack.github.io/rep/app",
       "orderMessage": "",
       "contactBgImage": "",
       "additionalContacts": [],
