@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:10:58.916Z",
+  "exportedAt": "2026-05-07T20:11:47.583Z",
   "data": {
     "mt_products": [
       {
@@ -187,7 +187,7 @@
       },
       {
         "id": "18c3a79f-ed0f-4e18-a4d6-c8acdbd90e54",
-        "name": "producto 5",
+        "name": "pulidora",
         "price": 0.99,
         "currency": "CUP",
         "category": "Electrónica",
