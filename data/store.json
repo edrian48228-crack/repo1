@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:01:54.490Z",
+  "exportedAt": "2026-05-07T22:02:44.073Z",
   "data": {
     "mt_products": [
       {
@@ -239,7 +239,7 @@
       },
       {
         "id": "1dd4d4c1-7b24-4c54-97a6-7d41eb779c4a",
-        "name": "adaptador microsd",
+        "name": "Adaptador Microsd",
         "price": 500,
         "currency": "CUP",
         "category": "Electrónica",
@@ -265,7 +265,7 @@
       },
       {
         "id": "3e29ab58-5f06-4e34-ba80-8d3aba672009",
-        "name": "memory card",
+        "name": "Memory Card",
         "price": 2000,
         "currency": "CUP",
         "category": "Electrónica",
@@ -291,7 +291,7 @@
       },
       {
         "id": "3f35a150-bd80-4858-ae9c-9fbd97241cd6",
-        "name": "taladro",
+        "name": "Taladro",
         "price": 24000,
         "currency": "CUP",
         "category": "Electrónica",
@@ -317,7 +317,7 @@
       },
       {
         "id": "ebd59cf5-c9d0-40da-be9a-bb9606f91fc7",
-        "name": "conector",
+        "name": "Conector",
         "price": 350,
         "currency": "CUP",
         "category": "Electrónica",
@@ -343,7 +343,7 @@
       },
       {
         "id": "9bacb046-83e5-401e-9c02-d2d2970fd582",
-        "name": "Bombillo recargable",
+        "name": "Bombillo Recargable",
         "price": 3000,
         "currency": "CUP",
         "category": "Electrónica",
