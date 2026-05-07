@@ -1,2 +1,2 @@
-# repo1
-Ventas de visuterias
+# repotienda
+Venta de productos
