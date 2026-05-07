@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:26:38.589Z",
+  "exportedAt": "2026-05-07T22:28:52.504Z",
   "data": {
     "mt_products": [
       {
@@ -110,7 +110,7 @@
       {
         "id": "65d83ced-556c-478b-9f22-20e5b6ef160d",
         "name": "Caja Descodificadora",
-        "price": 1500,
+        "price": 14999.98,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
