@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:12:44.274Z",
+  "exportedAt": "2026-05-07T20:15:38.553Z",
   "data": {
     "mt_products": [
       {
@@ -314,6 +314,32 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3f35a150-0-1778184761121-y1yyweq0.gif"
         ]
+      },
+      {
+        "id": "ebd59cf5-c9d0-40da-be9a-bb9606f91fc7",
+        "name": "conector",
+        "price": 350,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebd59cf5-0-1778184935480-u9vhw5bc.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:15:32.949Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebd59cf5-0-1778184935480-u9vhw5bc.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -399,6 +425,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "6702b432-f90c-4867-af65-2b1f7122fd6c",
+        "type": "low_stock",
+        "message": "\"conector\" tiene stock bajo (1)",
+        "productId": "ebd59cf5-c9d0-40da-be9a-bb9606f91fc7",
+        "date": "2026-05-07T20:15:32.960Z",
+        "read": false
+      },
       {
         "id": "b381d266-26ab-4da2-90e2-813678bbfff2",
         "type": "low_stock",
