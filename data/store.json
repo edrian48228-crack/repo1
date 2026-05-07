@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T19:59:24.108Z",
+  "exportedAt": "2026-05-07T20:01:05.516Z",
   "data": {
     "mt_products": [
       {
@@ -30,32 +30,6 @@
         ]
       },
       {
-        "id": "cb7beb00-6537-4c5b-9173-ff1106f7fd7f",
-        "name": "pulidora",
-        "price": 2400,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 0,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cb7beb00-0-1778183871261-d6kkoxf5.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T19:57:48.545Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cb7beb00-0-1778183871261-d6kkoxf5.webp"
-        ]
-      },
-      {
         "id": "877b4979-33a6-4ec2-833c-cfc39b5d2287",
         "name": "producto 2",
         "price": 7000,
@@ -66,7 +40,7 @@
         "minStock": 5,
         "description": "",
         "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183898048-vcpprnop.gif"
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183990182-tfq3uta9.gif"
         ],
         "originalPrice": 0,
         "bulkDiscount": 0,
@@ -78,7 +52,7 @@
         "lastSaleDate": null,
         "createdAt": "2026-05-07T19:58:15.536Z",
         "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183898048-vcpprnop.gif"
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183990182-tfq3uta9.gif"
         ]
       },
       {
@@ -105,6 +79,32 @@
         "createdAt": "2026-05-07T19:59:18.688Z",
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-7b1f9c06-0-1778183961343-it0otf49.webp"
+        ]
+      },
+      {
+        "id": "2236ce96-caf5-43c7-af1a-e969c20abb87",
+        "name": "producto 3",
+        "price": 750,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 0,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2236ce96-0-1778184061885-cqtn9jmc.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:00:58.415Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2236ce96-0-1778184061885-cqtn9jmc.webp"
         ]
       }
     ],
@@ -191,6 +191,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "b8fbf8f4-9248-4faa-a3dc-f0ca79fa540f",
+        "type": "low_stock",
+        "message": "\"producto 3\" tiene stock bajo (0)",
+        "productId": "2236ce96-caf5-43c7-af1a-e969c20abb87",
+        "date": "2026-05-07T20:00:58.437Z",
+        "read": false
+      },
       {
         "id": "98436916-157f-49fd-a0c1-5e936a936b5c",
         "type": "low_stock",
