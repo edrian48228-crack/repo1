@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:25:46.888Z",
+  "exportedAt": "2026-05-07T22:26:38.589Z",
   "data": {
     "mt_products": [
       {
@@ -162,7 +162,7 @@
       {
         "id": "fd5406ac-7d59-4763-8617-39accf7875a8",
         "name": "Toma Corriente",
-        "price": 500,
+        "price": 550,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
