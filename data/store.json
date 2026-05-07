@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:24:49.722Z",
+  "exportedAt": "2026-05-07T22:25:46.888Z",
   "data": {
     "mt_products": [
       {
@@ -188,7 +188,7 @@
       {
         "id": "18c3a79f-ed0f-4e18-a4d6-c8acdbd90e54",
         "name": "Pulidora",
-        "price": 0.99,
+        "price": 2400,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -214,7 +214,7 @@
       {
         "id": "36c10d4f-d606-413e-8fc1-a736679b133d",
         "name": "Taladro",
-        "price": 24000,
+        "price": 3000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
