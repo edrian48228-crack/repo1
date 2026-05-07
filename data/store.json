@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:15:38.553Z",
+  "exportedAt": "2026-05-07T20:18:22.999Z",
   "data": {
     "mt_products": [
       {
@@ -296,7 +296,7 @@
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 0,
+        "stock": 1,
         "minStock": 5,
         "description": "",
         "images": [
@@ -306,7 +306,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
@@ -339,6 +339,32 @@
         "createdAt": "2026-05-07T20:15:32.949Z",
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebd59cf5-0-1778184935480-u9vhw5bc.gif"
+        ]
+      },
+      {
+        "id": "9bacb046-83e5-401e-9c02-d2d2970fd582",
+        "name": "Bombillo recargable",
+        "price": 3000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9bacb046-0-1778184956934-2fvy1nfd.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:15:54.411Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9bacb046-0-1778184956934-2fvy1nfd.gif"
         ]
       }
     ],
@@ -425,6 +451,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "ebf1fb53-53bc-42df-91b3-1ed8c076ed06",
+        "type": "low_stock",
+        "message": "\"Bombillo recargable\" tiene stock bajo (0)",
+        "productId": "9bacb046-83e5-401e-9c02-d2d2970fd582",
+        "date": "2026-05-07T20:15:54.429Z",
+        "read": false
+      },
       {
         "id": "6702b432-f90c-4867-af65-2b1f7122fd6c",
         "type": "low_stock",
