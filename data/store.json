@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:01:05.516Z",
+  "exportedAt": "2026-05-07T20:04:17.919Z",
   "data": {
     "mt_products": [
       {
         "id": "3805a13f-12d0-43c0-97c9-67eb434c2b7e",
         "name": "producto 1",
-        "price": 3000,
+        "price": 2000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 0,
+        "stock": 1,
         "minStock": 5,
         "description": "",
         "images": [
@@ -36,7 +36,7 @@
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 0,
+        "stock": 1,
         "minStock": 5,
         "description": "",
         "images": [
@@ -62,7 +62,7 @@
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 0,
+        "stock": 1,
         "minStock": 5,
         "description": "",
         "images": [
@@ -105,6 +105,32 @@
         "createdAt": "2026-05-07T20:00:58.415Z",
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2236ce96-0-1778184061885-cqtn9jmc.webp"
+        ]
+      },
+      {
+        "id": "65d83ced-556c-478b-9f22-20e5b6ef160d",
+        "name": "producto",
+        "price": 1,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 0,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-65d83ced-0-1778184254280-n50zmhgc.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:04:11.752Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-65d83ced-0-1778184254280-n50zmhgc.gif"
         ]
       }
     ],
@@ -191,6 +217,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "eb78ae8c-7ce8-42f9-aa82-18bf77b1abc9",
+        "type": "low_stock",
+        "message": "\"producto\" tiene stock bajo (0)",
+        "productId": "65d83ced-556c-478b-9f22-20e5b6ef160d",
+        "date": "2026-05-07T20:04:11.767Z",
+        "read": false
+      },
       {
         "id": "b8fbf8f4-9248-4faa-a3dc-f0ca79fa540f",
         "type": "low_stock",
