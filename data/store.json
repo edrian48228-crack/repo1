@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T21:49:23.354Z",
+  "exportedAt": "2026-05-07T21:54:57.865Z",
   "data": {
     "mt_products": [
       {
         "id": "3805a13f-12d0-43c0-97c9-67eb434c2b7e",
-        "name": "producto 1",
+        "name": "Cinta Metrica",
         "price": 2000,
         "currency": "CUP",
         "category": "Electrónica",
@@ -31,7 +31,7 @@
       },
       {
         "id": "877b4979-33a6-4ec2-833c-cfc39b5d2287",
-        "name": "producto 2",
+        "name": "Linterna Solar",
         "price": 7000,
         "currency": "CUP",
         "category": "Electrónica",
@@ -83,7 +83,7 @@
       },
       {
         "id": "2236ce96-caf5-43c7-af1a-e969c20abb87",
-        "name": "producto 3",
+        "name": "Silicona",
         "price": 750,
         "currency": "CUP",
         "category": "Electrónica",
@@ -110,7 +110,7 @@
       {
         "id": "65d83ced-556c-478b-9f22-20e5b6ef160d",
         "name": "caja descodificadora",
-        "price": 1,
+        "price": 1500,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -136,7 +136,7 @@
       {
         "id": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
         "name": "linterna de cabeza",
-        "price": 2,
+        "price": 3000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -161,8 +161,8 @@
       },
       {
         "id": "fd5406ac-7d59-4763-8617-39accf7875a8",
-        "name": "producto 5",
-        "price": 1,
+        "name": "toma corriente",
+        "price": 500,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -735,7 +735,7 @@
       {
         "date": "2026-05-07",
         "hour": 23,
-        "count": 4
+        "count": 5
       }
     ],
     "mt_projects": []
