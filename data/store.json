@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T21:15:53.259Z",
+  "exportedAt": "2026-05-07T21:18:13.882Z",
   "data": {
     "mt_products": [
       {
@@ -135,7 +135,7 @@
       },
       {
         "id": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
-        "name": "producto 4",
+        "name": "linterna de cabeza",
         "price": 2,
         "currency": "CUP",
         "category": "Electrónica",
@@ -731,6 +731,11 @@
         "date": "2026-05-07",
         "hour": 21,
         "count": 2
+      },
+      {
+        "date": "2026-05-07",
+        "hour": 23,
+        "count": 1
       }
     ],
     "mt_projects": []
