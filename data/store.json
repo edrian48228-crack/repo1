@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:18:22.999Z",
+  "exportedAt": "2026-05-07T21:14:56.674Z",
   "data": {
     "mt_products": [
       {
@@ -239,7 +239,7 @@
       },
       {
         "id": "1dd4d4c1-7b24-4c54-97a6-7d41eb779c4a",
-        "name": "memorias",
+        "name": "adaptador microsd",
         "price": 500,
         "currency": "CUP",
         "category": "Electrónica",
