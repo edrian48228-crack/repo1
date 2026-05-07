@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:06:22.132Z",
+  "exportedAt": "2026-05-07T20:09:23.760Z",
   "data": {
     "mt_products": [
       {
@@ -210,6 +210,32 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-18c3a79f-0-1778184312540-qgth71a5.gif"
         ]
+      },
+      {
+        "id": "36c10d4f-d606-413e-8fc1-a736679b133d",
+        "name": "taladro",
+        "price": 24000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-36c10d4f-0-1778184560696-kthkz1gc.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:09:18.165Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-36c10d4f-0-1778184560696-kthkz1gc.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -295,6 +321,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "aaf462c8-6e37-4526-bb46-0c798ec6f7fc",
+        "type": "low_stock",
+        "message": "\"taladro\" tiene stock bajo (1)",
+        "productId": "36c10d4f-d606-413e-8fc1-a736679b133d",
+        "date": "2026-05-07T20:09:18.172Z",
+        "read": false
+      },
       {
         "id": "dc076d92-f9ad-4443-87ca-4023df04ae6d",
         "type": "low_stock",
