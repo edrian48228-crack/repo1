@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T19:58:20.771Z",
+  "exportedAt": "2026-05-07T19:59:24.108Z",
   "data": {
     "mt_products": [
       {
@@ -79,6 +79,32 @@
         "createdAt": "2026-05-07T19:58:15.536Z",
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183898048-vcpprnop.gif"
+        ]
+      },
+      {
+        "id": "7b1f9c06-5031-48cf-8f74-4c5fa55365df",
+        "name": "Cinta metrica",
+        "price": 1000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 0,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-7b1f9c06-0-1778183961343-it0otf49.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T19:59:18.688Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-7b1f9c06-0-1778183961343-it0otf49.webp"
         ]
       }
     ],
@@ -165,6 +191,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "98436916-157f-49fd-a0c1-5e936a936b5c",
+        "type": "low_stock",
+        "message": "\"Cinta metrica\" tiene stock bajo (0)",
+        "productId": "7b1f9c06-5031-48cf-8f74-4c5fa55365df",
+        "date": "2026-05-07T19:59:18.697Z",
+        "read": false
+      },
       {
         "id": "f005d0d4-9242-4d26-867c-108a7476bacc",
         "type": "low_stock",
