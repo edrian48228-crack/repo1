@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T21:54:57.865Z",
+  "exportedAt": "2026-05-07T21:56:12.279Z",
   "data": {
     "mt_products": [
       {
@@ -109,7 +109,7 @@
       },
       {
         "id": "65d83ced-556c-478b-9f22-20e5b6ef160d",
-        "name": "caja descodificadora",
+        "name": "Caja Descodificadora",
         "price": 1500,
         "currency": "CUP",
         "category": "Electrónica",
@@ -135,7 +135,7 @@
       },
       {
         "id": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
-        "name": "linterna de cabeza",
+        "name": "Linterna de Cabeza",
         "price": 3000,
         "currency": "CUP",
         "category": "Electrónica",
@@ -161,7 +161,7 @@
       },
       {
         "id": "fd5406ac-7d59-4763-8617-39accf7875a8",
-        "name": "toma corriente",
+        "name": "Toma Corriente",
         "price": 500,
         "currency": "CUP",
         "category": "Electrónica",
