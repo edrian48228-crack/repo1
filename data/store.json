@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:06:03.112Z",
+  "exportedAt": "2026-05-07T22:07:15.441Z",
   "data": {
     "mt_products": [
       {
@@ -21,7 +21,7 @@
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
-        "cartAdds": 0,
+        "cartAdds": 1,
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-07T19:57:24.018Z",
@@ -203,7 +203,7 @@
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
-        "cartAdds": 0,
+        "cartAdds": 1,
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-07T20:05:10.019Z",
@@ -333,7 +333,7 @@
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
-        "cartAdds": 0,
+        "cartAdds": 1,
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-07T20:15:32.949Z",
