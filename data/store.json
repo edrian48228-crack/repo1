@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:09:23.760Z",
+  "exportedAt": "2026-05-07T20:10:58.916Z",
   "data": {
     "mt_products": [
       {
@@ -236,6 +236,58 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-36c10d4f-0-1778184560696-kthkz1gc.gif"
         ]
+      },
+      {
+        "id": "1dd4d4c1-7b24-4c54-97a6-7d41eb779c4a",
+        "name": "memorias",
+        "price": 500,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-1dd4d4c1-0-1778184609582-4sncim4q.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:10:07.051Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-1dd4d4c1-0-1778184609582-4sncim4q.gif"
+        ]
+      },
+      {
+        "id": "3e29ab58-5f06-4e34-ba80-8d3aba672009",
+        "name": "memory card",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 2,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3e29ab58-0-1778184655248-57e3n9m3.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:10:51.939Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3e29ab58-0-1778184655248-57e3n9m3.webp"
+        ]
       }
     ],
     "mt_sales": [
@@ -321,6 +373,22 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "9508b3a4-df50-4b61-815d-c3c7d9d5a85e",
+        "type": "low_stock",
+        "message": "\"memory card\" tiene stock bajo (2)",
+        "productId": "3e29ab58-5f06-4e34-ba80-8d3aba672009",
+        "date": "2026-05-07T20:10:51.964Z",
+        "read": false
+      },
+      {
+        "id": "5dad3897-f6c9-48b0-b767-00c611e9a479",
+        "type": "low_stock",
+        "message": "\"memorias\" tiene stock bajo (1)",
+        "productId": "1dd4d4c1-7b24-4c54-97a6-7d41eb779c4a",
+        "date": "2026-05-07T20:10:07.069Z",
+        "read": false
+      },
       {
         "id": "aaf462c8-6e37-4526-bb46-0c798ec6f7fc",
         "type": "low_stock",
