@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:11:47.583Z",
+  "exportedAt": "2026-05-07T20:12:44.274Z",
   "data": {
     "mt_products": [
       {
@@ -114,7 +114,7 @@
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 0,
+        "stock": 1,
         "minStock": 5,
         "description": "",
         "images": [
@@ -192,7 +192,7 @@
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 0,
+        "stock": 1,
         "minStock": 5,
         "description": "",
         "images": [
@@ -288,6 +288,32 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3e29ab58-0-1778184655248-57e3n9m3.webp"
         ]
+      },
+      {
+        "id": "3f35a150-bd80-4858-ae9c-9fbd97241cd6",
+        "name": "taladro",
+        "price": 24000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 0,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3f35a150-0-1778184761121-y1yyweq0.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:12:38.592Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3f35a150-0-1778184761121-y1yyweq0.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -373,6 +399,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "b381d266-26ab-4da2-90e2-813678bbfff2",
+        "type": "low_stock",
+        "message": "\"taladro\" tiene stock bajo (0)",
+        "productId": "3f35a150-bd80-4858-ae9c-9fbd97241cd6",
+        "date": "2026-05-07T20:12:38.607Z",
+        "read": false
+      },
       {
         "id": "9508b3a4-df50-4b61-815d-c3c7d9d5a85e",
         "type": "low_stock",
