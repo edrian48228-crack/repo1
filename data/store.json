@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T21:14:56.674Z",
+  "exportedAt": "2026-05-07T21:15:53.259Z",
   "data": {
     "mt_products": [
       {
@@ -109,7 +109,7 @@
       },
       {
         "id": "65d83ced-556c-478b-9f22-20e5b6ef160d",
-        "name": "producto",
+        "name": "caja descodificadora",
         "price": 1,
         "currency": "CUP",
         "category": "Electrónica",
