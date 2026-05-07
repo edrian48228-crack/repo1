@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T22:29:35.606Z",
+  "exportedAt": "2026-05-07T22:31:14.803Z",
   "data": {
     "mt_products": [
       {
@@ -344,7 +344,7 @@
       {
         "id": "9bacb046-83e5-401e-9c02-d2d2970fd582",
         "name": "Bombillo Recargable",
-        "price": 2400,
+        "price": 3000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
