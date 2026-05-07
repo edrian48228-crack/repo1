@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T20:04:17.919Z",
+  "exportedAt": "2026-05-07T20:05:15.348Z",
   "data": {
     "mt_products": [
       {
@@ -132,6 +132,84 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-65d83ced-0-1778184254280-n50zmhgc.gif"
         ]
+      },
+      {
+        "id": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
+        "name": "producto 4",
+        "price": 2,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3eb509ec-0-1778184276999-ke7b5854.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:04:34.474Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3eb509ec-0-1778184276999-ke7b5854.gif"
+        ]
+      },
+      {
+        "id": "fd5406ac-7d59-4763-8617-39accf7875a8",
+        "name": "producto 5",
+        "price": 1,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-fd5406ac-0-1778184298131-j3s41vwm.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:04:55.619Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-fd5406ac-0-1778184298131-j3s41vwm.gif"
+        ]
+      },
+      {
+        "id": "18c3a79f-ed0f-4e18-a4d6-c8acdbd90e54",
+        "name": "producto 5",
+        "price": 0.99,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 0,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-18c3a79f-0-1778184312540-qgth71a5.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-07T20:05:10.019Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-18c3a79f-0-1778184312540-qgth71a5.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -217,6 +295,30 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "dc076d92-f9ad-4443-87ca-4023df04ae6d",
+        "type": "low_stock",
+        "message": "\"producto 5\" tiene stock bajo (0)",
+        "productId": "18c3a79f-ed0f-4e18-a4d6-c8acdbd90e54",
+        "date": "2026-05-07T20:05:10.029Z",
+        "read": false
+      },
+      {
+        "id": "b57790ed-6042-4eeb-8254-4a63c08a17db",
+        "type": "low_stock",
+        "message": "\"producto 5\" tiene stock bajo (1)",
+        "productId": "fd5406ac-7d59-4763-8617-39accf7875a8",
+        "date": "2026-05-07T20:04:55.628Z",
+        "read": false
+      },
+      {
+        "id": "4f4dfcf1-09d1-4445-8c00-ac85a27d0caf",
+        "type": "low_stock",
+        "message": "\"producto 4\" tiene stock bajo (1)",
+        "productId": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
+        "date": "2026-05-07T20:04:34.487Z",
+        "read": false
+      },
       {
         "id": "eb78ae8c-7ce8-42f9-aa82-18bf77b1abc9",
         "type": "low_stock",
