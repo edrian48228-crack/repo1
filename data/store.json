@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:26:02.817Z",
+  "exportedAt": "2026-05-08T10:30:00.442Z",
   "data": {
     "mt_products": [
       {
@@ -228,7 +228,7 @@
         "bulkDiscount": 10,
         "bulkQty": 3,
         "featured": "si",
-        "views": 0,
+        "views": 1,
         "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
@@ -253,7 +253,7 @@
         "originalPrice": 0,
         "bulkDiscount": 0,
         "bulkQty": 3,
-        "featured": "no",
+        "featured": "si",
         "views": 0,
         "cartAdds": 0,
         "sales": 0,
