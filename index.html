@@ -4435,10 +4435,27 @@ body{overflow:visible!important;overflow-x:clip!important;}
 
 /* 2) En móvil: ocultar SOLO los botones de promo cuando se hace scroll */
 @media(max-width:900px){
-  /* Reservamos el espacio del promoRow SIEMPRE para que el header no cambie
-     de tamaño al ocultar/mostrar (causa principal del "temblor" en Android). */
-  #promoRow{transition:opacity .25s ease,transform .25s ease;will-change:opacity,transform;overflow:hidden;backface-visibility:hidden;}
-  body.promo-hide #promoRow{opacity:0;transform:translateY(-12px);pointer-events:none;}
+  /* Colapsamos REALMENTE el espacio del promoRow al ocultarse para que el
+     menú suba y no quede hueco. Usamos rAF + histéresis en JS para evitar
+     temblores. Animamos max-height/margin/padding/opacidad de forma conjunta. */
+  #promoRow{
+    transition:max-height .28s ease, opacity .22s ease, transform .28s ease,
+               margin .28s ease, padding .28s ease;
+    will-change:max-height,opacity,transform,margin,padding;
+    overflow:hidden;backface-visibility:hidden;
+    max-height:240px;
+  }
+  body.promo-hide #promoRow{
+    max-height:0!important;
+    opacity:0!important;
+    margin-top:0!important;
+    margin-bottom:0!important;
+    padding-top:0!important;
+    padding-bottom:0!important;
+    transform:translateY(-6px);
+    pointer-events:none;
+    border:0!important;
+  }
   /* Aislar reflujos del header del resto de la página */
   #mainHeader{contain:layout paint;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);}
 }
@@ -4471,9 +4488,11 @@ body{overflow:visible!important;overflow-x:clip!important;}
   // Ocultar SOLO los botones promo en móvil al hacer scroll.
   // Anti-temblor: rAF throttling, sin idleTimer que re-muestre en medio del
   // scroll, y sin colapsar la altura del header (eso lo hace el CSS).
-  var THRESHOLD = 120;
-  var DELTA     = 6;
+  var THRESHOLD = 80;
+  var HIDE_DELTA = 8;
+  var SHOW_DELTA = 24; // histéresis: subir más para volver a mostrar -> evita parpadeos
   var lastY = window.scrollY || 0;
+  var accDown = 0, accUp = 0;
   var ticking = false;
   var hidden = false;
   var isMobile = function(){ return window.matchMedia('(max-width:900px)').matches; };
@@ -4484,9 +4503,9 @@ body{overflow:visible!important;overflow-x:clip!important;}
     if(!isMobile()){ show(); return; }
     var y = window.scrollY || 0;
     var dy = y - lastY;
-    if(y <= THRESHOLD){ show(); }
-    else if(dy > DELTA){ hide(); }
-    else if(dy < -DELTA){ show(); }
+    if(y <= THRESHOLD){ show(); accDown=0; accUp=0; lastY=y; return; }
+    if(dy > 0){ accDown += dy; accUp = 0; if(accDown > HIDE_DELTA){ hide(); } }
+    else if(dy < 0){ accUp += -dy; accDown = 0; if(accUp > SHOW_DELTA){ show(); } }
     lastY = y;
   }
   function onScroll(){
