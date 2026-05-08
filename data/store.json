@@ -1,8 +1,61 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:00:20.390Z",
+  "exportedAt": "2026-05-08T10:01:29.494Z",
   "data": {
-    "mt_products": [],
+    "mt_products": [
+      {
+        "id": "6c99cb38-6fd8-41a4-bb3a-f99e07b0a23d",
+        "name": "Bombillo Recargable",
+        "price": 3000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-6c99cb38-0-1778234466464-x7yinnqy.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:01:03.951Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-6c99cb38-0-1778234466464-x7yinnqy.gif"
+        ]
+      },
+      {
+        "id": "ebfba31c-72b2-4842-91a5-c4522d34a39a",
+        "name": "Cajita Digital",
+        "price": 1500,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebfba31c-0-1778234485851-zl9o5pj4.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:01:23.325Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebfba31c-0-1778234485851-zl9o5pj4.gif"
+        ]
+      }
+    ],
     "mt_sales": [
       {
         "id": "782c3839-e5fa-42bd-a042-8a37147319c3",
@@ -86,6 +139,22 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "19cbc10e-5e7f-4bc7-9dea-6ff93afbd3c6",
+        "type": "low_stock",
+        "message": "\"Cajita Digital\" tiene stock bajo (1)",
+        "productId": "ebfba31c-72b2-4842-91a5-c4522d34a39a",
+        "date": "2026-05-08T10:01:23.335Z",
+        "read": false
+      },
+      {
+        "id": "640b78a5-f4de-4f59-8f4e-a9d27316deb7",
+        "type": "low_stock",
+        "message": "\"Bombillo Recargable\" tiene stock bajo (1)",
+        "productId": "6c99cb38-6fd8-41a4-bb3a-f99e07b0a23d",
+        "date": "2026-05-08T10:01:03.958Z",
+        "read": false
+      },
       {
         "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
