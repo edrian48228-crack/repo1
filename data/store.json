@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:15:10.114Z",
+  "exportedAt": "2026-05-08T10:16:42.096Z",
   "data": {
     "mt_products": [
       {
@@ -12,12 +12,12 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Este dispositivo se utiliza para alumbrar cuando no tengas corriente",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-6c99cb38-0-1778234466464-x7yinnqy.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 3500,
+        "bulkDiscount": 10,
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
@@ -110,7 +110,7 @@
       {
         "id": "2b8f5894-e72b-4ce5-874f-1fe4a7b57ce1",
         "name": "Conector Blanco y Rojo",
-        "price": 349.98,
+        "price": 350,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -136,7 +136,7 @@
       {
         "id": "0b2088d4-b375-4e42-a006-ca43a90792ad",
         "name": "Lampara de Cabeza",
-        "price": 2999.98,
+        "price": 3000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -162,7 +162,7 @@
       {
         "id": "670ca1f7-62ed-4933-b35b-20b666928080",
         "name": "Lampara Solar",
-        "price": 6999.97,
+        "price": 7000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
