@@ -1,7 +1,7 @@
 /* ============================================================
    MegaTienda Service Worker — Offline TOTAL + Auto-update (v17)
    ============================================================ */
-const VERSION = 'mt-v1.0.24-collapse';
+const VERSION = 'mt-v1.0.25-idleshow';
 const CACHE_STATIC  = 'mt-static-' + VERSION;
 const CACHE_RUNTIME = 'mt-runtime-' + VERSION;
 const CACHE_IMG     = 'mt-img-' + VERSION;

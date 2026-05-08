@@ -4485,28 +4485,41 @@ body{overflow:visible!important;overflow-x:clip!important;}
 
 <script id="patch-v24-script">
 (function(){
-  // Ocultar SOLO los botones promo en móvil al hacer scroll.
-  // Anti-temblor: rAF throttling, sin idleTimer que re-muestre en medio del
-  // scroll, y sin colapsar la altura del header (eso lo hace el CSS).
-  var THRESHOLD = 80;
-  var HIDE_DELTA = 8;
-  var SHOW_DELTA = 24; // histéresis: subir más para volver a mostrar -> evita parpadeos
+  // Botones promo móvil: se ocultan al desplazarse en CUALQUIER dirección
+  // y solo reaparecen cuando el usuario DEJA de desplazarse (idle) o vuelve
+  // al tope de la página. Anti-temblor con rAF throttling.
+  var THRESHOLD = 80;     // px desde el tope donde siempre se muestran
+  var MOVE_DELTA = 4;     // px mínimos de movimiento para considerarlo scroll
+  var IDLE_MS = 650;      // tiempo sin moverse para volver a mostrarlos
   var lastY = window.scrollY || 0;
-  var accDown = 0, accUp = 0;
   var ticking = false;
   var hidden = false;
+  var idleTimer = null;
   var isMobile = function(){ return window.matchMedia('(max-width:900px)').matches; };
   function hide(){ if(!hidden){ document.body.classList.add('promo-hide'); hidden = true; } }
   function show(){ if(hidden){ document.body.classList.remove('promo-hide'); hidden = false; } }
+  function scheduleShow(){
+    if(idleTimer) clearTimeout(idleTimer);
+    idleTimer = setTimeout(function(){
+      idleTimer = null;
+      show();
+    }, IDLE_MS);
+  }
   function update(){
     ticking = false;
-    if(!isMobile()){ show(); return; }
+    if(!isMobile()){ show(); if(idleTimer){clearTimeout(idleTimer);idleTimer=null;} return; }
     var y = window.scrollY || 0;
     var dy = y - lastY;
-    if(y <= THRESHOLD){ show(); accDown=0; accUp=0; lastY=y; return; }
-    if(dy > 0){ accDown += dy; accUp = 0; if(accDown > HIDE_DELTA){ hide(); } }
-    else if(dy < 0){ accUp += -dy; accDown = 0; if(accUp > SHOW_DELTA){ show(); } }
     lastY = y;
+    if(y <= THRESHOLD){
+      if(idleTimer){clearTimeout(idleTimer);idleTimer=null;}
+      show();
+      return;
+    }
+    if(Math.abs(dy) >= MOVE_DELTA){
+      hide();
+      scheduleShow(); // se mostrarán cuando deje de desplazarse
+    }
   }
   function onScroll(){
     if(ticking) return;
