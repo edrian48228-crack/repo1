@@ -4435,8 +4435,12 @@ body{overflow:visible!important;overflow-x:clip!important;}
 
 /* 2) En móvil: ocultar SOLO los botones de promo cuando se hace scroll */
 @media(max-width:900px){
-  #promoRow{transition:transform .3s ease,opacity .3s ease,max-height .3s ease;will-change:transform,opacity;overflow:hidden;}
-  body.promo-hide #promoRow{transform:translateY(-20px);opacity:0;max-height:0!important;margin:0!important;padding:0!important;pointer-events:none;}
+  /* Reservamos el espacio del promoRow SIEMPRE para que el header no cambie
+     de tamaño al ocultar/mostrar (causa principal del "temblor" en Android). */
+  #promoRow{transition:opacity .25s ease,transform .25s ease;will-change:opacity,transform;overflow:hidden;backface-visibility:hidden;}
+  body.promo-hide #promoRow{opacity:0;transform:translateY(-12px);pointer-events:none;}
+  /* Aislar reflujos del header del resto de la página */
+  #mainHeader{contain:layout paint;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);}
 }
 
 /* 3) Botón flotante "Instalar app": fondo naranja del sistema */
@@ -4464,31 +4468,34 @@ body{overflow:visible!important;overflow-x:clip!important;}
 
 <script id="patch-v24-script">
 (function(){
-  // Ocultar SOLO los botones promo en móvil al hacer scroll, mostrar al detenerse o subir
-  var THRESHOLD = 140;       // distancia mínima para empezar a ocultar
-  var IDLE_MS   = 600;       // si deja de hacer scroll, vuelven a aparecer
+  // Ocultar SOLO los botones promo en móvil al hacer scroll.
+  // Anti-temblor: rAF throttling, sin idleTimer que re-muestre en medio del
+  // scroll, y sin colapsar la altura del header (eso lo hace el CSS).
+  var THRESHOLD = 120;
+  var DELTA     = 6;
   var lastY = window.scrollY || 0;
-  var idleTimer = null;
+  var ticking = false;
+  var hidden = false;
   var isMobile = function(){ return window.matchMedia('(max-width:900px)').matches; };
-
-  function hide(){ document.body.classList.add('promo-hide'); }
-  function show(){ document.body.classList.remove('promo-hide'); }
-
-  function onScroll(){
+  function hide(){ if(!hidden){ document.body.classList.add('promo-hide'); hidden = true; } }
+  function show(){ if(hidden){ document.body.classList.remove('promo-hide'); hidden = false; } }
+  function update(){
+    ticking = false;
     if(!isMobile()){ show(); return; }
     var y = window.scrollY || 0;
     var dy = y - lastY;
-    if(y > THRESHOLD && dy > 4){
-      hide();
-    } else if(dy < -4 || y <= THRESHOLD){
-      show();
-    }
+    if(y <= THRESHOLD){ show(); }
+    else if(dy > DELTA){ hide(); }
+    else if(dy < -DELTA){ show(); }
     lastY = y;
-    if(idleTimer) clearTimeout(idleTimer);
-    idleTimer = setTimeout(show, IDLE_MS);
+  }
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
   }
   window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', function(){ if(!isMobile()) show(); });
+  window.addEventListener('resize', function(){ if(!isMobile()) show(); }, {passive:true});
 })();
 </script>
 </body>
