@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:20:56.335Z",
+  "exportedAt": "2026-05-08T10:23:36.346Z",
   "data": {
     "mt_products": [
       {
@@ -168,13 +168,13 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "este dispositivo le permite alumbrar lugares oscuros. Asi como carga con corriente electrica tambien lo hace con energia solar",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-670ca1f7-0-1778234623877-fs8dsk9z.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
+        "originalPrice": 7500,
+        "bulkDiscount": 8,
+        "bulkQty": 4,
         "featured": "no",
         "views": 0,
         "cartAdds": 0,
@@ -194,12 +194,12 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Dispositivo usado para ataris PS2",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-e5459a2b-0-1778234640605-f6uyptba.webp"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 2299.99,
+        "bulkDiscount": 7,
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
