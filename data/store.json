@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:09:50.058Z",
+  "exportedAt": "2026-05-08T10:15:10.114Z",
   "data": {
     "mt_products": [
       {
@@ -58,7 +58,7 @@
       {
         "id": "c63f5f38-f737-4877-865e-4660b35e3735",
         "name": "Cinta Metrica",
-        "price": 999.98,
+        "price": 1000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
@@ -399,6 +399,14 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "2c127b91-4ddf-4052-8076-d7a464f61b80",
+        "type": "low_stock",
+        "message": "\"Toma Corriente\" tiene stock bajo (1)",
+        "productId": "68757cd8-7c6a-4294-97cf-065d52f0df61",
+        "date": "2026-05-08T10:06:26.143Z",
+        "read": false
+      },
       {
         "id": "6f674cc4-bac6-4aa6-aee4-06334d50b183",
         "type": "low_stock",
