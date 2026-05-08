@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:18:52.889Z",
+  "exportedAt": "2026-05-08T10:19:52.577Z",
   "data": {
     "mt_products": [
       {
@@ -116,12 +116,12 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "este dispositivo se usa para conectar dispositivos de entradas y salidas",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2b8f5894-0-1778234587251-vbyeowx6.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 500,
+        "bulkDiscount": 16,
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
