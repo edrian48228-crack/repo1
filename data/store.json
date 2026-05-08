@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-07T23:10:09.361Z",
+  "exportedAt": "2026-05-08T00:26:07.104Z",
   "data": {
     "mt_products": [
       {
@@ -359,7 +359,7 @@
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
-        "cartAdds": 0,
+        "cartAdds": 1,
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-07T20:15:54.411Z",
@@ -745,6 +745,11 @@
       {
         "date": "2026-05-07",
         "hour": 1,
+        "count": 2
+      },
+      {
+        "date": "2026-05-08",
+        "hour": 2,
         "count": 2
       }
     ],
