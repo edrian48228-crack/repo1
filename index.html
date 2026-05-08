@@ -4413,5 +4413,78 @@ main,.container,.products-grid{max-width:100%;}
   }
 })();
 </script>
+
+<!-- =============================================================
+     PATCH v24 — Header siempre visible, ocultar promo en móvil al scrollear,
+     install naranja, botón llamar en misma línea
+     ============================================================= -->
+<style id="patch-v24-styles">
+/* 1) Header SIEMPRE visible (desktop + móvil), sin animaciones que lo escondan */
+#mainHeader{position:sticky!important;top:0!important;transform:none!important;opacity:1!important;visibility:visible!important;transition:none!important;}
+#mainHeader.hide-on-scroll,#mainHeader.scrolling-down,#mainHeader.hidden{transform:none!important;opacity:1!important;visibility:visible!important;}
+
+/* 2) En móvil: ocultar SOLO los botones de promo (Gana dinero / Quiero mi tienda)
+      cuando el usuario hace scroll hacia abajo. Resto del menú se mantiene. */
+@media(max-width:900px){
+  #promoRow{transition:transform .3s ease,opacity .3s ease;will-change:transform,opacity;}
+  body.promo-hide #promoRow{transform:translateY(-120%);opacity:0;pointer-events:none;}
+}
+
+/* 3) Botón flotante "Instalar app": fondo naranja al estilo del sistema */
+#pwaInstallBtn{
+  background:linear-gradient(135deg,var(--rojo),var(--naranja))!important;
+  border:1px solid var(--naranja)!important;
+  color:#fff!important;
+  box-shadow:0 8px 24px rgba(255,109,0,.45),0 0 0 1px rgba(255,255,255,.06) inset!important;
+  font-weight:800!important;
+}
+#pwaInstallBtn:hover{
+  background:linear-gradient(135deg,var(--naranja),var(--amarillo))!important;
+  color:#111!important;
+  box-shadow:0 10px 28px rgba(255,170,0,.55)!important;
+}
+
+/* 4) Detalle de producto: WhatsApp + Llamar + Carrito SIEMPRE en la misma línea */
+#productDetailModal .modal > div > div > div[style*="display:flex"][style*="gap:10px"]{
+  flex-wrap:nowrap!important;
+  align-items:stretch!important;
+}
+#productDetailModal .btn[onclick*="addToCart"]{flex:1 1 auto!important;min-width:0!important;}
+#productDetailModal .btn[href^="https://wa.me"],
+#productDetailModal .btn[href^="tel:"]{flex:0 0 48px!important;width:48px!important;height:42px!important;padding:0!important;}
+@media(max-width:480px){
+  #productDetailModal .btn[onclick*="addToCart"]{font-size:.8rem!important;padding:10px 12px!important;}
+}
+</style>
+
+<script id="patch-v24-script">
+(function(){
+  // Ocultar SOLO los botones promo en móvil al hacer scroll, mostrar al detenerse o subir
+  var THRESHOLD = 140;       // distancia mínima para empezar a ocultar
+  var IDLE_MS   = 600;       // si deja de hacer scroll, vuelven a aparecer
+  var lastY = window.scrollY || 0;
+  var idleTimer = null;
+  var isMobile = function(){ return window.matchMedia('(max-width:900px)').matches; };
+
+  function hide(){ document.body.classList.add('promo-hide'); }
+  function show(){ document.body.classList.remove('promo-hide'); }
+
+  function onScroll(){
+    if(!isMobile()){ show(); return; }
+    var y = window.scrollY || 0;
+    var dy = y - lastY;
+    if(y > THRESHOLD && dy > 4){
+      hide();
+    } else if(dy < -4 || y <= THRESHOLD){
+      show();
+    }
+    lastY = y;
+    if(idleTimer) clearTimeout(idleTimer);
+    idleTimer = setTimeout(show, IDLE_MS);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', function(){ if(!isMobile()) show(); });
+})();
+</script>
 </body>
 </html>
