@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:05:06.486Z",
+  "exportedAt": "2026-05-08T10:06:09.287Z",
   "data": {
     "mt_products": [
       {
@@ -262,6 +262,58 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9487811b-0-1778234704101-h2ag61ci.gif"
         ]
+      },
+      {
+        "id": "89b0d788-2cb2-4bbf-917c-361dac750f92",
+        "name": "Silicona",
+        "price": 749.99,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-89b0d788-0-1778234727627-h25szmlr.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:05:24.593Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-89b0d788-0-1778234727627-h25szmlr.webp"
+        ]
+      },
+      {
+        "id": "876fb702-f7bd-4105-82c6-0d9f3739cf3d",
+        "name": "Taladro",
+        "price": 24000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-876fb702-0-1778234766445-v25qgtc2.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:06:03.922Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-876fb702-0-1778234766445-v25qgtc2.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -347,6 +399,22 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "6f674cc4-bac6-4aa6-aee4-06334d50b183",
+        "type": "low_stock",
+        "message": "\"Taladro\" tiene stock bajo (1)",
+        "productId": "876fb702-f7bd-4105-82c6-0d9f3739cf3d",
+        "date": "2026-05-08T10:06:03.938Z",
+        "read": false
+      },
+      {
+        "id": "6a1ec4d2-ac4e-4efe-996d-338cb3706442",
+        "type": "low_stock",
+        "message": "\"Silicona\" tiene stock bajo (1)",
+        "productId": "89b0d788-2cb2-4bbf-917c-361dac750f92",
+        "date": "2026-05-08T10:05:24.612Z",
+        "read": false
+      },
       {
         "id": "6fddae71-a4e2-4534-b3a1-915c65c9c944",
         "type": "low_stock",
