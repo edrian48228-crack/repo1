@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:16:42.096Z",
+  "exportedAt": "2026-05-08T10:17:35.586Z",
   "data": {
     "mt_products": [
       {
@@ -38,14 +38,14 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Este dispositivo se utiliza para ver canales digitales, reproducir peliculas, videos musicales, grabar archivos de videos",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebfba31c-0-1778234485851-zl9o5pj4.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 18000,
+        "bulkDiscount": 10,
         "bulkQty": 3,
-        "featured": "no",
+        "featured": "si",
         "views": 0,
         "cartAdds": 0,
         "sales": 0,
