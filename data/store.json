@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:03:46.160Z",
+  "exportedAt": "2026-05-08T10:05:06.486Z",
   "data": {
     "mt_products": [
       {
@@ -184,6 +184,84 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-670ca1f7-0-1778234623877-fs8dsk9z.gif"
         ]
+      },
+      {
+        "id": "e5459a2b-64d9-40d7-9a01-f7edd484ab8f",
+        "name": "Memory Card",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-e5459a2b-0-1778234640605-f6uyptba.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:03:57.292Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-e5459a2b-0-1778234640605-f6uyptba.webp"
+        ]
+      },
+      {
+        "id": "4f0887cc-6893-4458-8f52-c23d2108f2f2",
+        "name": "Memoria MicroSD",
+        "price": 500,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4f0887cc-0-1778234672437-p83gtkws.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:04:29.915Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4f0887cc-0-1778234672437-p83gtkws.gif"
+        ]
+      },
+      {
+        "id": "9487811b-be78-407e-891e-31e207177bc3",
+        "name": "Pulidora",
+        "price": 24000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9487811b-0-1778234704101-h2ag61ci.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:05:01.578Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9487811b-0-1778234704101-h2ag61ci.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -269,6 +347,30 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "6fddae71-a4e2-4534-b3a1-915c65c9c944",
+        "type": "low_stock",
+        "message": "\"Pulidora\" tiene stock bajo (1)",
+        "productId": "9487811b-be78-407e-891e-31e207177bc3",
+        "date": "2026-05-08T10:05:01.592Z",
+        "read": false
+      },
+      {
+        "id": "4ae19c9e-45f0-4c55-b3ef-e19a27ce757b",
+        "type": "low_stock",
+        "message": "\"Memoria MicroSD\" tiene stock bajo (1)",
+        "productId": "4f0887cc-6893-4458-8f52-c23d2108f2f2",
+        "date": "2026-05-08T10:04:29.932Z",
+        "read": false
+      },
+      {
+        "id": "50d9de43-bc20-43d4-b7b4-382cd3d5db35",
+        "type": "low_stock",
+        "message": "\"Memory Card\" tiene stock bajo (1)",
+        "productId": "e5459a2b-64d9-40d7-9a01-f7edd484ab8f",
+        "date": "2026-05-08T10:03:57.314Z",
+        "read": false
+      },
       {
         "id": "1aa2b2e7-b677-442c-b013-3da883761834",
         "type": "low_stock",
