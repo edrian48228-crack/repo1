@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:19:52.577Z",
+  "exportedAt": "2026-05-08T10:20:56.335Z",
   "data": {
     "mt_products": [
       {
@@ -142,12 +142,12 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Este dispositivo se usa para alumbrar en lugares de poca luminosidad y permite mantener las mas manos desocupadas",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-0b2088d4-0-1778234606939-cxcy4gpx.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 3500,
+        "bulkDiscount": 10,
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
