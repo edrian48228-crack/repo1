@@ -4253,5 +4253,106 @@ body.admin-mode #promoRow{display:none!important;}
   });
 })();
 </script>
+
+<!-- =============================================================
+     PATCH v22 — Promo reaparecen tras logout, install/gana-dinero estilo admin,
+     iconos admin sin texto en android, botones producto compactos
+     ============================================================= -->
+<style id="patch-v22-styles">
+/* 1) Botón "Gana dinero conmigo": estilo idéntico al botón Admin (sin fondo, hover con fondo). Quitar VIP */
+#affiliateBtn.promo-btn{
+  background:transparent!important;
+  border:2px solid var(--naranja-brillante)!important;
+  color:var(--naranja-brillante)!important;
+  box-shadow:none!important;
+  text-shadow:0 0 8px rgba(255,145,0,.3);
+  font-weight:800;
+}
+#affiliateBtn.promo-btn:hover{
+  background:linear-gradient(135deg,var(--naranja),var(--amarillo))!important;
+  color:#111!important;
+  border-color:var(--amarillo)!important;
+  box-shadow:0 0 20px rgba(255,214,0,.4)!important;
+}
+#affiliateBtn.promo-btn::before{content:none!important;display:none!important;}
+
+/* 2) Botón flotante "Instalar app": mismo estilo que Admin, sin fondo, hover con fondo */
+#pwaInstallBtn{
+  background:transparent!important;
+  border:2px solid var(--naranja-brillante)!important;
+  color:var(--naranja-brillante)!important;
+  box-shadow:none!important;
+  font-weight:800!important;
+  transition:all .3s;
+}
+#pwaInstallBtn:hover{
+  background:linear-gradient(135deg,var(--naranja),var(--amarillo))!important;
+  color:#111!important;
+  border-color:var(--amarillo)!important;
+  box-shadow:0 0 20px rgba(255,214,0,.4)!important;
+}
+
+/* 3) En android: iconos del menú de administración SIN texto */
+@media(max-width:640px){
+  .admin-tabs button > span:not(.tab-count){display:none!important;}
+  .admin-tabs button{padding:9px 11px!important;gap:0!important;}
+  .admin-tabs button i{font-size:1rem!important;}
+  .admin-tabs .tab-count{
+    position:absolute!important;top:-4px!important;right:-4px!important;
+    margin:0!important;min-width:16px!important;height:16px!important;
+    font-size:.58rem!important;padding:0 4px!important;
+    box-shadow:0 0 0 2px var(--bg-secondary,#111);
+  }
+  .admin-tabs button{position:relative;}
+}
+
+/* 4) Botones whatsapp/llamar/carrito en detalle de producto: menos altos */
+#productDetailModal .btn[href^="https://wa.me"],
+#productDetailModal .btn[href^="tel:"]{
+  padding:10px 16px!important;
+  min-height:0!important;
+  align-items:center;
+}
+#productDetailModal .btn[onclick*="addToCart"]{
+  padding:12px 24px!important;
+}
+#productDetailModal .btn i{font-size:1rem!important;}
+</style>
+
+<script id="patch-v22-script">
+(function(){
+  /* === 1) Forzar reaparición de botones promo al cerrar admin (especialmente Android) === */
+  function forceShowPromo(){
+    if(typeof config==='undefined') return;
+    if(config.hideMonetizeButtons) return;
+    document.body.classList.remove('admin-mode');
+    const own=document.getElementById('ownStoreBtn');
+    const aff=document.getElementById('affiliateBtn');
+    if(own){ own.style.display='inline-flex'; own.style.cssText=own.style.cssText.replace(/display\s*:\s*none;?/i,'display:inline-flex;'); if(config.ownStoreUrl) own.href=config.ownStoreUrl; }
+    if(aff){ aff.style.display='inline-flex'; aff.style.cssText=aff.style.cssText.replace(/display\s*:\s*none;?/i,'display:inline-flex;'); if(config.affiliateUrl) aff.href=config.affiliateUrl; }
+    const row=document.getElementById('promoRow');
+    if(row) row.style.display='flex';
+  }
+  // Hook logoutAdmin
+  if(typeof window.logoutAdmin==='function'){
+    const _o=window.logoutAdmin;
+    window.logoutAdmin=function(){
+      const r=_o.apply(this,arguments);
+      setTimeout(forceShowPromo,80);
+      setTimeout(forceShowPromo,400);
+      return r;
+    };
+  }
+  // Hook showPage para detectar regreso a la tienda
+  if(typeof window.showPage==='function'){
+    const _sp=window.showPage;
+    window.showPage=function(id){
+      const r=_sp.apply(this,arguments);
+      if(id==='store') setTimeout(forceShowPromo,60);
+      return r;
+    };
+  }
+})();
+</script>
 </body>
 </html>
