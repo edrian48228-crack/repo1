@@ -1,370 +1,242 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T07:45:22.339Z",
+  "exportedAt": "2026-05-07T10:59:27.290Z",
   "data": {
     "mt_products": [
       {
-        "id": "3805a13f-12d0-43c0-97c9-67eb434c2b7e",
-        "name": "Cinta Metrica",
-        "price": 2000,
+        "id": "p1",
+        "name": "Smartphone Samsung A1+",
+        "price": 27000,
         "currency": "CUP",
         "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
+        "condition": "usado",
+        "stock": 2,
+        "minStock": 3,
+        "description": "Smartphone de última generación con cámara de 108MP y pantalla AMOLED. 6 con 128. Incluye una inteligencia artificial Offline. SOLO 7 MESES DE USO",
         "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3805a13f-0-1778183846532-84ms3n2k.gif"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
         ],
-        "originalPrice": 0,
+        "views": 245,
+        "cartAdds": 42,
+        "sales": 18,
+        "lastSaleDate": "2025-03-28",
+        "createdAt": "2025-01-15",
+        "originalPrice": 30000,
+        "bulkDiscount": 10,
+        "bulkQty": 3,
+        "featured": "si",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
+        ]
+      },
+      {
+        "id": "p2",
+        "name": "Puertos de Telefonos Moviles",
+        "price": 200,
+        "currency": "CUP",
+        "category": "Accesorios",
+        "condition": "nuevo",
+        "stock": 30,
+        "minStock": 5,
+        "description": "Puertos para telefonos moviles tipo b y tipo c",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p2-0-1777985688086-06g4c1st.webp"
+        ],
+        "views": 190,
+        "cartAdds": 35,
+        "sales": 22,
+        "lastSaleDate": "2025-03-30",
+        "createdAt": "2025-01-20",
+        "originalPrice": 220,
+        "bulkDiscount": 15,
+        "bulkQty": 2,
+        "featured": "no",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p2-0-1777985688086-06g4c1st.webp"
+        ]
+      },
+      {
+        "id": "p3",
+        "name": "Smartphone Huawei Nova 5T",
+        "price": 35000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "usado",
+        "stock": 2,
+        "minStock": 10,
+        "description": "Telefonos de uso en perfecto estado. Solo detallito el borde de carmara frontal que no afecta la foto.  Incluye una inteligencia artificial offline",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p3-0-1777985690442-0u1rji2c.webp"
+        ],
+        "views": 156,
+        "cartAdds": 29,
+        "sales": 35,
+        "lastSaleDate": "2025-03-29",
+        "createdAt": "2025-02-01",
+        "originalPrice": 40000,
+        "bulkDiscount": 20,
+        "bulkQty": 5,
+        "featured": "no",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p3-0-1777985690442-0u1rji2c.webp"
+        ]
+      },
+      {
+        "id": "p4",
+        "name": "Cargador de Motorina 72V/28A",
+        "price": 12,
+        "currency": "USD",
+        "category": "Dulces",
+        "condition": "nuevo",
+        "stock": 100,
+        "minStock": 15,
+        "description": "Caja de chocolates belgas artesanales - 12 unidades",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
+        ],
+        "views": 321,
+        "cartAdds": 59,
+        "sales": 45,
+        "lastSaleDate": "2025-03-30",
+        "createdAt": "2025-02-10",
+        "originalPrice": 18,
+        "bulkDiscount": 10,
+        "bulkQty": 3,
+        "featured": "si",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
+        ]
+      },
+      {
+        "id": "p5",
+        "name": "Smartphone Realme Note 50",
+        "price": 45000,
+        "currency": "USD",
+        "category": "Electrónica",
+        "condition": "usado",
+        "stock": 5,
+        "minStock": 2,
+        "description": "Tiene todos sus accesorios. 8 de RAM y 128 de almacenamiento. Trae una inteligencia Offline. SOLO 6 MESES DE USO",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p5-0-1777984594268-z3sh0j4s.webp"
+        ],
+        "views": 412,
+        "cartAdds": 16,
+        "sales": 3,
+        "lastSaleDate": "2025-03-25",
+        "createdAt": "2025-01-05",
+        "originalPrice": 50000,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "si",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p5-0-1777984594268-z3sh0j4s.webp"
+        ]
+      },
+      {
+        "id": "p7",
+        "name": "Puertos de telefonos celulares",
+        "price": 200,
+        "currency": "USD",
+        "category": "Electrónica",
+        "condition": "reparado",
+        "stock": 8,
+        "minStock": 3,
+        "description": "Puertos para telefonos celulares",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p7-0-1777985631440-lqytija6.webp"
+        ],
+        "views": 167,
+        "cartAdds": 20,
+        "sales": 10,
+        "lastSaleDate": "2025-03-27",
+        "createdAt": "2025-03-01",
+        "originalPrice": 220,
+        "bulkDiscount": 5,
+        "bulkQty": 2,
+        "featured": "no",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p7-0-1777985631440-lqytija6.webp"
+        ]
+      },
+      {
+        "id": "p8",
+        "name": "Smartphone Relme Note 50",
+        "price": 48000,
+        "currency": "CUP",
+        "category": "Accesorios",
+        "condition": "nuevo",
+        "stock": 20,
+        "minStock": 5,
+        "description": "Telefonos movil con inteligencia offline incluida. 8 con 256.",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-0-1777984598071-aiq9i8oi.webp",
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-1-1778094434984-5o0qodgc.webp"
+        ],
+        "views": 78,
+        "cartAdds": 9,
+        "sales": 5,
+        "lastSaleDate": "2025-03-20",
+        "createdAt": "2025-03-05",
+        "originalPrice": 55000,
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-0-1777984598071-aiq9i8oi.webp",
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-1-1778094434984-5o0qodgc.webp"
+        ]
+      },
+      {
+        "id": "cc1c2346-a6af-4ab8-91e1-3f1f5e18fcb1",
+        "name": "Pantallas para moviles",
+        "price": 10000,
+        "currency": "CUP",
+        "category": "Accesorios",
+        "condition": "nuevo",
+        "stock": 10,
+        "minStock": 5,
+        "description": "Pantallas para todo tipo de telefonos moviles",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-cc1c2346-0-1778094643937-fmvlj921.webp"
+        ],
+        "originalPrice": 12000,
+        "bulkDiscount": 10,
+        "bulkQty": 3,
+        "featured": "si",
         "views": 0,
-        "cartAdds": 1,
+        "cartAdds": 4,
         "sales": 0,
         "lastSaleDate": null,
-        "createdAt": "2026-05-07T19:57:24.018Z",
+        "createdAt": "2026-05-06T19:10:41.218Z",
         "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3805a13f-0-1778183846532-84ms3n2k.gif"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-cc1c2346-0-1778094643937-fmvlj921.webp"
         ]
       },
       {
-        "id": "877b4979-33a6-4ec2-833c-cfc39b5d2287",
-        "name": "Linterna Solar",
-        "price": 7000,
+        "id": "215b18d6-1501-4950-a935-ecfb465f0a67",
+        "name": "Placa de Samsung A32 5g",
+        "price": 7500,
         "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183990182-tfq3uta9.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T19:58:15.536Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-877b4979-0-1778183990182-tfq3uta9.gif"
-        ]
-      },
-      {
-        "id": "7b1f9c06-5031-48cf-8f74-4c5fa55365df",
-        "name": "Cinta metrica",
-        "price": 1000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-7b1f9c06-0-1778183961343-it0otf49.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 1,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T19:59:18.688Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-7b1f9c06-0-1778183961343-it0otf49.webp"
-        ]
-      },
-      {
-        "id": "2236ce96-caf5-43c7-af1a-e969c20abb87",
-        "name": "Silicona",
-        "price": 750,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2236ce96-0-1778184061885-cqtn9jmc.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:00:58.415Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2236ce96-0-1778184061885-cqtn9jmc.webp"
-        ]
-      },
-      {
-        "id": "65d83ced-556c-478b-9f22-20e5b6ef160d",
-        "name": "Caja Descodificadora",
-        "price": 15000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-65d83ced-0-1778184254280-n50zmhgc.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 1,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:04:11.752Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-65d83ced-0-1778184254280-n50zmhgc.gif"
-        ]
-      },
-      {
-        "id": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
-        "name": "Linterna de Cabeza",
-        "price": 3000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3eb509ec-0-1778184276999-ke7b5854.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:04:34.474Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3eb509ec-0-1778184276999-ke7b5854.gif"
-        ]
-      },
-      {
-        "id": "fd5406ac-7d59-4763-8617-39accf7875a8",
-        "name": "Toma Corriente",
-        "price": 550,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-fd5406ac-0-1778184298131-j3s41vwm.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:04:55.619Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-fd5406ac-0-1778184298131-j3s41vwm.gif"
-        ]
-      },
-      {
-        "id": "18c3a79f-ed0f-4e18-a4d6-c8acdbd90e54",
-        "name": "Pulidora",
-        "price": 2400,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-18c3a79f-0-1778184312540-qgth71a5.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 1,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:05:10.019Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-18c3a79f-0-1778184312540-qgth71a5.gif"
-        ]
-      },
-      {
-        "id": "36c10d4f-d606-413e-8fc1-a736679b133d",
-        "name": "Taladro",
-        "price": 3000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-36c10d4f-0-1778184560696-kthkz1gc.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:09:18.165Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-36c10d4f-0-1778184560696-kthkz1gc.gif"
-        ]
-      },
-      {
-        "id": "1dd4d4c1-7b24-4c54-97a6-7d41eb779c4a",
-        "name": "Adaptador Microsd",
-        "price": 500,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-1dd4d4c1-0-1778184609582-4sncim4q.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 1,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:10:07.051Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-1dd4d4c1-0-1778184609582-4sncim4q.gif"
-        ]
-      },
-      {
-        "id": "3e29ab58-5f06-4e34-ba80-8d3aba672009",
-        "name": "Memory Card",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
+        "category": "Accesorios",
         "condition": "nuevo",
         "stock": 2,
         "minStock": 5,
-        "description": "",
+        "description": "Placa para telefono samsung a32 5g",
         "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3e29ab58-0-1778184655248-57e3n9m3.webp"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-215b18d6-0-1778094736194-6l94ar2z.webp"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 8000,
+        "bulkDiscount": 15,
         "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 0,
+        "featured": "si",
+        "views": 1,
+        "cartAdds": 2,
         "sales": 0,
         "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:10:51.939Z",
+        "createdAt": "2026-05-06T19:12:13.504Z",
         "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3e29ab58-0-1778184655248-57e3n9m3.webp"
-        ]
-      },
-      {
-        "id": "3f35a150-bd80-4858-ae9c-9fbd97241cd6",
-        "name": "Taladro",
-        "price": 24000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3f35a150-0-1778184761121-y1yyweq0.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 2,
-        "cartAdds": 0,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:12:38.592Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-3f35a150-0-1778184761121-y1yyweq0.gif"
-        ]
-      },
-      {
-        "id": "ebd59cf5-c9d0-40da-be9a-bb9606f91fc7",
-        "name": "Conector",
-        "price": 350,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebd59cf5-0-1778184935480-u9vhw5bc.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 1,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:15:32.949Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebd59cf5-0-1778184935480-u9vhw5bc.gif"
-        ]
-      },
-      {
-        "id": "9bacb046-83e5-401e-9c02-d2d2970fd582",
-        "name": "Bombillo Recargable",
-        "price": 3000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9bacb046-0-1778184956934-2fvy1nfd.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "cartAdds": 1,
-        "sales": 0,
-        "lastSaleDate": null,
-        "createdAt": "2026-05-07T20:15:54.411Z",
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-9bacb046-0-1778184956934-2fvy1nfd.gif"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-215b18d6-0-1778094736194-6l94ar2z.webp"
         ]
       }
     ],
@@ -391,9 +263,9 @@
       }
     ],
     "mt_config": {
-      "storeName": "El Estantico",
-      "whatsapp": "+5358293406",
-      "facebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
+      "storeName": "MegaTienda Online",
+      "whatsapp": "+5354693549",
+      "facebook": "https://facebook.com/megatienda",
       "email": "tienda@ejemplo.com",
       "creatorName": "Edrian Cruz Down",
       "creatorWhatsapp": "+5354693449",
@@ -428,19 +300,19 @@
       "licenseKey": "MEGA-2025-TRIAL",
       "licenseExpiry": "2026-12-31",
       "licenseActive": true,
-      "clientChannel": "t.me/Argos780513",
+      "clientChannel": "",
       "clientWebsite": "",
       "clientApk": "",
       "clientFacebook": "",
-      "clientWhatsapp": "+5358293406",
+      "clientWhatsapp": "+5354693549",
       "avatarEmoji": "🛒",
-      "avatarImage": "blob:https://edrian48228-crack.github.io/c11aae2c-2d46-465b-bf8c-99e0a855bbc6",
+      "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "blob:https://edrian48228-crack.github.io/2a19f941-a1a9-4e14-882c-6f034c1dfe40",
+      "logoImage": "",
       "imgFolder": "",
-      "ownStoreUrl": "https://edrian48228-crack.github.io/rep/app",
-      "affiliateUrl": "https://edrian48228-crack.github.io/rep/app",
+      "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
+      "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
       "orderMessage": "",
       "contactBgImage": "",
       "additionalContacts": [],
@@ -451,126 +323,6 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
-      {
-        "id": "ebf1fb53-53bc-42df-91b3-1ed8c076ed06",
-        "type": "low_stock",
-        "message": "\"Bombillo recargable\" tiene stock bajo (0)",
-        "productId": "9bacb046-83e5-401e-9c02-d2d2970fd582",
-        "date": "2026-05-07T20:15:54.429Z",
-        "read": false
-      },
-      {
-        "id": "6702b432-f90c-4867-af65-2b1f7122fd6c",
-        "type": "low_stock",
-        "message": "\"conector\" tiene stock bajo (1)",
-        "productId": "ebd59cf5-c9d0-40da-be9a-bb9606f91fc7",
-        "date": "2026-05-07T20:15:32.960Z",
-        "read": false
-      },
-      {
-        "id": "b381d266-26ab-4da2-90e2-813678bbfff2",
-        "type": "low_stock",
-        "message": "\"taladro\" tiene stock bajo (0)",
-        "productId": "3f35a150-bd80-4858-ae9c-9fbd97241cd6",
-        "date": "2026-05-07T20:12:38.607Z",
-        "read": false
-      },
-      {
-        "id": "9508b3a4-df50-4b61-815d-c3c7d9d5a85e",
-        "type": "low_stock",
-        "message": "\"memory card\" tiene stock bajo (2)",
-        "productId": "3e29ab58-5f06-4e34-ba80-8d3aba672009",
-        "date": "2026-05-07T20:10:51.964Z",
-        "read": false
-      },
-      {
-        "id": "5dad3897-f6c9-48b0-b767-00c611e9a479",
-        "type": "low_stock",
-        "message": "\"memorias\" tiene stock bajo (1)",
-        "productId": "1dd4d4c1-7b24-4c54-97a6-7d41eb779c4a",
-        "date": "2026-05-07T20:10:07.069Z",
-        "read": false
-      },
-      {
-        "id": "aaf462c8-6e37-4526-bb46-0c798ec6f7fc",
-        "type": "low_stock",
-        "message": "\"taladro\" tiene stock bajo (1)",
-        "productId": "36c10d4f-d606-413e-8fc1-a736679b133d",
-        "date": "2026-05-07T20:09:18.172Z",
-        "read": false
-      },
-      {
-        "id": "dc076d92-f9ad-4443-87ca-4023df04ae6d",
-        "type": "low_stock",
-        "message": "\"producto 5\" tiene stock bajo (0)",
-        "productId": "18c3a79f-ed0f-4e18-a4d6-c8acdbd90e54",
-        "date": "2026-05-07T20:05:10.029Z",
-        "read": false
-      },
-      {
-        "id": "b57790ed-6042-4eeb-8254-4a63c08a17db",
-        "type": "low_stock",
-        "message": "\"producto 5\" tiene stock bajo (1)",
-        "productId": "fd5406ac-7d59-4763-8617-39accf7875a8",
-        "date": "2026-05-07T20:04:55.628Z",
-        "read": false
-      },
-      {
-        "id": "4f4dfcf1-09d1-4445-8c00-ac85a27d0caf",
-        "type": "low_stock",
-        "message": "\"producto 4\" tiene stock bajo (1)",
-        "productId": "3eb509ec-8dfd-408a-9513-ee181c8ee1fc",
-        "date": "2026-05-07T20:04:34.487Z",
-        "read": false
-      },
-      {
-        "id": "eb78ae8c-7ce8-42f9-aa82-18bf77b1abc9",
-        "type": "low_stock",
-        "message": "\"producto\" tiene stock bajo (0)",
-        "productId": "65d83ced-556c-478b-9f22-20e5b6ef160d",
-        "date": "2026-05-07T20:04:11.767Z",
-        "read": false
-      },
-      {
-        "id": "b8fbf8f4-9248-4faa-a3dc-f0ca79fa540f",
-        "type": "low_stock",
-        "message": "\"producto 3\" tiene stock bajo (0)",
-        "productId": "2236ce96-caf5-43c7-af1a-e969c20abb87",
-        "date": "2026-05-07T20:00:58.437Z",
-        "read": false
-      },
-      {
-        "id": "98436916-157f-49fd-a0c1-5e936a936b5c",
-        "type": "low_stock",
-        "message": "\"Cinta metrica\" tiene stock bajo (0)",
-        "productId": "7b1f9c06-5031-48cf-8f74-4c5fa55365df",
-        "date": "2026-05-07T19:59:18.697Z",
-        "read": false
-      },
-      {
-        "id": "f005d0d4-9242-4d26-867c-108a7476bacc",
-        "type": "low_stock",
-        "message": "\"producto 2\" tiene stock bajo (0)",
-        "productId": "877b4979-33a6-4ec2-833c-cfc39b5d2287",
-        "date": "2026-05-07T19:58:15.540Z",
-        "read": false
-      },
-      {
-        "id": "67783cef-633a-427b-8529-74bf8115dc02",
-        "type": "low_stock",
-        "message": "\"pulidora\" tiene stock bajo (0)",
-        "productId": "cb7beb00-6537-4c5b-9173-ff1106f7fd7f",
-        "date": "2026-05-07T19:57:48.549Z",
-        "read": false
-      },
-      {
-        "id": "fd625968-fe40-45f2-8455-3021cef9ac41",
-        "type": "low_stock",
-        "message": "\"producto 1\" tiene stock bajo (0)",
-        "productId": "3805a13f-12d0-43c0-97c9-67eb434c2b7e",
-        "date": "2026-05-07T19:57:24.024Z",
-        "read": false
-      },
       {
         "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
@@ -726,36 +478,6 @@
         "date": "2026-05-07",
         "hour": 12,
         "count": 1
-      },
-      {
-        "date": "2026-05-07",
-        "hour": 21,
-        "count": 2
-      },
-      {
-        "date": "2026-05-07",
-        "hour": 23,
-        "count": 5
-      },
-      {
-        "date": "2026-05-07",
-        "hour": 0,
-        "count": 5
-      },
-      {
-        "date": "2026-05-07",
-        "hour": 1,
-        "count": 2
-      },
-      {
-        "date": "2026-05-08",
-        "hour": 2,
-        "count": 2
-      },
-      {
-        "date": "2026-05-08",
-        "hour": 9,
-        "count": 7
       }
     ],
     "mt_projects": []
