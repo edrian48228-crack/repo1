@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:24:56.434Z",
+  "exportedAt": "2026-05-08T10:26:02.817Z",
   "data": {
     "mt_products": [
       {
@@ -272,12 +272,12 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Componente usado para sellado de diferentes componentes",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-89b0d788-0-1778234727627-h25szmlr.webp"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 1000,
+        "bulkDiscount": 11,
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
@@ -298,14 +298,14 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Dispositivo usado para barrenar objetos",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-876fb702-0-1778234766445-v25qgtc2.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 25000,
+        "bulkDiscount": 10,
         "bulkQty": 3,
-        "featured": "no",
+        "featured": "si",
         "views": 0,
         "cartAdds": 0,
         "sales": 0,
