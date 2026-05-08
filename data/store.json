@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:02:48.142Z",
+  "exportedAt": "2026-05-08T10:03:46.160Z",
   "data": {
     "mt_products": [
       {
@@ -106,6 +106,84 @@
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4b4f365a-0-1778234566119-1oi56du8.gif"
         ]
+      },
+      {
+        "id": "2b8f5894-e72b-4ce5-874f-1fe4a7b57ce1",
+        "name": "Conector Blanco y Rojo",
+        "price": 349.98,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2b8f5894-0-1778234587251-vbyeowx6.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:03:04.732Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-2b8f5894-0-1778234587251-vbyeowx6.gif"
+        ]
+      },
+      {
+        "id": "0b2088d4-b375-4e42-a006-ca43a90792ad",
+        "name": "Lampara de Cabeza",
+        "price": 2999.98,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-0b2088d4-0-1778234606939-cxcy4gpx.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:03:24.415Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-0b2088d4-0-1778234606939-cxcy4gpx.gif"
+        ]
+      },
+      {
+        "id": "670ca1f7-62ed-4933-b35b-20b666928080",
+        "name": "Lampara Solar",
+        "price": 6999.97,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-670ca1f7-0-1778234623877-fs8dsk9z.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:03:41.355Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-670ca1f7-0-1778234623877-fs8dsk9z.gif"
+        ]
       }
     ],
     "mt_sales": [
@@ -191,6 +269,30 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "1aa2b2e7-b677-442c-b013-3da883761834",
+        "type": "low_stock",
+        "message": "\"Lampara Solar\" tiene stock bajo (1)",
+        "productId": "670ca1f7-62ed-4933-b35b-20b666928080",
+        "date": "2026-05-08T10:03:41.369Z",
+        "read": false
+      },
+      {
+        "id": "a7b8fcb6-2862-4078-ab60-1ac8c738d826",
+        "type": "low_stock",
+        "message": "\"Lampara de Cabeza\" tiene stock bajo (1)",
+        "productId": "0b2088d4-b375-4e42-a006-ca43a90792ad",
+        "date": "2026-05-08T10:03:24.430Z",
+        "read": false
+      },
+      {
+        "id": "dd658403-b9c4-4b37-9b80-10ab9efff1e2",
+        "type": "low_stock",
+        "message": "\"Conector Blanco y Rojo\" tiene stock bajo (1)",
+        "productId": "2b8f5894-e72b-4ce5-874f-1fe4a7b57ce1",
+        "date": "2026-05-08T10:03:04.746Z",
+        "read": false
+      },
       {
         "id": "167eefd1-be30-4613-b473-6c9068616e27",
         "type": "low_stock",
