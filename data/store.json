@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:17:35.586Z",
+  "exportedAt": "2026-05-08T10:18:52.889Z",
   "data": {
     "mt_products": [
       {
@@ -64,13 +64,13 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Este dispositivo se usa para medir cualquier objeto, elemento o cosa",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-c63f5f38-0-1778234537359-zsb05sky.webp"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
+        "originalPrice": 1500,
+        "bulkDiscount": 15,
+        "bulkQty": 5,
         "featured": "no",
         "views": 0,
         "cartAdds": 0,
@@ -90,12 +90,12 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Este dispositivo se usa para medir cosas, elementos y objetos",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4b4f365a-0-1778234566119-1oi56du8.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 2500,
+        "bulkDiscount": 8,
         "bulkQty": 3,
         "featured": "no",
         "views": 0,
