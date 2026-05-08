@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:01:29.494Z",
+  "exportedAt": "2026-05-08T10:02:48.142Z",
   "data": {
     "mt_products": [
       {
@@ -53,6 +53,58 @@
         "createdAt": "2026-05-08T10:01:23.325Z",
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ebfba31c-0-1778234485851-zl9o5pj4.gif"
+        ]
+      },
+      {
+        "id": "c63f5f38-f737-4877-865e-4660b35e3735",
+        "name": "Cinta Metrica",
+        "price": 999.98,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-c63f5f38-0-1778234537359-zsb05sky.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:02:14.716Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-c63f5f38-0-1778234537359-zsb05sky.webp"
+        ]
+      },
+      {
+        "id": "4b4f365a-01b1-44e4-9158-245aa6a0e147",
+        "name": "Cinta Metrica",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4b4f365a-0-1778234566119-1oi56du8.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
+        "createdAt": "2026-05-08T10:02:43.604Z",
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4b4f365a-0-1778234566119-1oi56du8.gif"
         ]
       }
     ],
@@ -139,6 +191,22 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "167eefd1-be30-4613-b473-6c9068616e27",
+        "type": "low_stock",
+        "message": "\"Cinta Metrica\" tiene stock bajo (1)",
+        "productId": "4b4f365a-01b1-44e4-9158-245aa6a0e147",
+        "date": "2026-05-08T10:02:43.616Z",
+        "read": false
+      },
+      {
+        "id": "c1187186-0448-47a1-97d6-cfd6c34ea53c",
+        "type": "low_stock",
+        "message": "\"Cinta Metrica\" tiene stock bajo (1)",
+        "productId": "c63f5f38-f737-4877-865e-4660b35e3735",
+        "date": "2026-05-08T10:02:14.724Z",
+        "read": false
+      },
       {
         "id": "19cbc10e-5e7f-4bc7-9dea-6ff93afbd3c6",
         "type": "low_stock",
