@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:40:09.030Z",
+  "exportedAt": "2026-05-08T10:42:46.009Z",
   "data": {
     "mt_products": [
       {
@@ -266,7 +266,7 @@
       {
         "id": "89b0d788-2cb2-4bbf-917c-361dac750f92",
         "name": "Silicona",
-        "price": 749.99,
+        "price": 750,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
