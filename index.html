@@ -1695,10 +1695,10 @@ ${hasBulk?`<div style="background:rgba(0,230,118,.08);border:1px solid rgba(0,23
 <span><i class="fas fa-eye"></i> Vistas: <strong>${p.views}</strong></span>
 <span><i class="fas fa-bag-shopping"></i> Vendidos: <strong>${p.sales}</strong></span>
 </div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-<button class="btn btn-primary" onclick="addToCart('${p.id}');closeModal('productDetailModal');" ${p.stock<=0?'disabled':''} style="border-radius:50px;padding:16px 32px;font-size:1rem;flex:1;"><i class="fas fa-cart-shopping"></i> Añadir al carrito</button>
-<a href="https://wa.me/${(config.whatsapp||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hola, me interesa el producto: '+p.name+' ($'+p.price+' '+p.currency+')')}" target="_blank" class="btn btn-success" style="border-radius:50px;padding:16px 20px;font-size:1rem;" title="Escribir al admin por WhatsApp"><i class="fab fa-whatsapp" style="font-size:1.2rem;"></i></a>
-<a href="tel:${(config.whatsapp||'').replace(/[^0-9+]/g,'')}" class="btn btn-primary" style="border-radius:50px;padding:16px 20px;font-size:1rem;background:linear-gradient(135deg,#0288d1,#01579b);" title="Llamar al administrador"><i class="fas fa-phone" style="font-size:1.1rem;"></i></a>
+<div class="detail-actions-row" style="display:flex;gap:10px;flex-wrap:nowrap;align-items:stretch;">
+<button class="btn btn-primary" onclick="addToCart('${p.id}');closeModal('productDetailModal');" ${p.stock<=0?'disabled':''} style="border-radius:50px;padding:14px 18px;font-size:.95rem;flex:1 1 auto;min-width:0;"><i class="fas fa-cart-shopping"></i> <span class="da-label">Añadir al carrito</span></button>
+<a href="https://wa.me/${(config.whatsapp||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hola, me interesa el producto: '+p.name+' ($'+p.price+' '+p.currency+')')}" target="_blank" class="btn btn-success" style="border-radius:50px;padding:0;width:48px;height:48px;flex:0 0 48px;display:inline-flex;align-items:center;justify-content:center;" title="Escribir al admin por WhatsApp"><i class="fab fa-whatsapp" style="font-size:1.2rem;"></i></a>
+<a href="tel:${(config.whatsapp||'').replace(/[^0-9+]/g,'')}" class="btn btn-primary" style="border-radius:50px;padding:0;width:48px;height:48px;flex:0 0 48px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0288d1,#01579b);" title="Llamar al administrador"><i class="fas fa-phone" style="font-size:1.1rem;"></i></a>
 </div>
 </div>
 </div>`;
@@ -4419,18 +4419,27 @@ main,.container,.products-grid{max-width:100%;}
      install naranja, botón llamar en misma línea
      ============================================================= -->
 <style id="patch-v24-styles">
-/* 1) Header SIEMPRE visible (desktop + móvil), sin animaciones que lo escondan */
-#mainHeader{position:sticky!important;top:0!important;transform:none!important;opacity:1!important;visibility:visible!important;transition:none!important;}
+/* === FIX CRÍTICO: el patch v23 puso overflow-x:hidden en body y eso ROMPE
+   position:sticky del header. Cambiamos a overflow-x:clip que NO crea
+   contenedor de scroll y permite que el header siga pegado. === */
+html,body{overflow-x:clip!important;overflow-y:visible!important;}
+body{overflow:visible!important;overflow-x:clip!important;}
+
+/* 1) Header SIEMPRE visible (desktop + móvil) */
+#mainHeader{position:sticky!important;top:0!important;transform:none!important;opacity:1!important;visibility:visible!important;transition:none!important;z-index:1000!important;}
 #mainHeader.hide-on-scroll,#mainHeader.scrolling-down,#mainHeader.hidden{transform:none!important;opacity:1!important;visibility:visible!important;}
 
-/* 2) En móvil: ocultar SOLO los botones de promo (Gana dinero / Quiero mi tienda)
-      cuando el usuario hace scroll hacia abajo. Resto del menú se mantiene. */
+/* Menú de administración: también pegado arriba para que no desaparezca al scrollear */
+.admin-tabs{position:sticky!important;top:64px!important;z-index:50!important;background:rgba(5,5,8,.92)!important;backdrop-filter:blur(18px);padding:8px 0!important;margin:0 -4px 12px!important;}
+@media(max-width:640px){ .admin-tabs{top:56px!important;} }
+
+/* 2) En móvil: ocultar SOLO los botones de promo cuando se hace scroll */
 @media(max-width:900px){
-  #promoRow{transition:transform .3s ease,opacity .3s ease;will-change:transform,opacity;}
-  body.promo-hide #promoRow{transform:translateY(-120%);opacity:0;pointer-events:none;}
+  #promoRow{transition:transform .3s ease,opacity .3s ease,max-height .3s ease;will-change:transform,opacity;overflow:hidden;}
+  body.promo-hide #promoRow{transform:translateY(-20px);opacity:0;max-height:0!important;margin:0!important;padding:0!important;pointer-events:none;}
 }
 
-/* 3) Botón flotante "Instalar app": fondo naranja al estilo del sistema */
+/* 3) Botón flotante "Instalar app": fondo naranja del sistema */
 #pwaInstallBtn{
   background:linear-gradient(135deg,var(--rojo),var(--naranja))!important;
   border:1px solid var(--naranja)!important;
@@ -4444,16 +4453,12 @@ main,.container,.products-grid{max-width:100%;}
   box-shadow:0 10px 28px rgba(255,170,0,.55)!important;
 }
 
-/* 4) Detalle de producto: WhatsApp + Llamar + Carrito SIEMPRE en la misma línea */
-#productDetailModal .modal > div > div > div[style*="display:flex"][style*="gap:10px"]{
-  flex-wrap:nowrap!important;
-  align-items:stretch!important;
-}
-#productDetailModal .btn[onclick*="addToCart"]{flex:1 1 auto!important;min-width:0!important;}
-#productDetailModal .btn[href^="https://wa.me"],
-#productDetailModal .btn[href^="tel:"]{flex:0 0 48px!important;width:48px!important;height:42px!important;padding:0!important;}
-@media(max-width:480px){
-  #productDetailModal .btn[onclick*="addToCart"]{font-size:.8rem!important;padding:10px 12px!important;}
+/* 4) Detalle de producto: fila de acciones SIEMPRE en una sola línea */
+#productDetailModal .detail-actions-row{flex-wrap:nowrap!important;align-items:stretch!important;}
+#productDetailModal .detail-actions-row .btn{height:48px!important;min-height:0!important;line-height:1!important;}
+@media(max-width:420px){
+  #productDetailModal .detail-actions-row .btn[onclick*="addToCart"]{font-size:.78rem!important;padding:10px 10px!important;}
+  #productDetailModal .detail-actions-row .da-label{font-size:.8rem;}
 }
 </style>
 
