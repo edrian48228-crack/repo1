@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-08T10:23:36.346Z",
+  "exportedAt": "2026-05-08T10:24:56.434Z",
   "data": {
     "mt_products": [
       {
@@ -220,14 +220,14 @@
         "condition": "nuevo",
         "stock": 1,
         "minStock": 5,
-        "description": "",
+        "description": "Dispositivo usado para conectar microsd a computadores y telefonos celulares",
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-4f0887cc-0-1778234672437-p83gtkws.gif"
         ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
+        "originalPrice": 600,
+        "bulkDiscount": 10,
         "bulkQty": 3,
-        "featured": "no",
+        "featured": "si",
         "views": 0,
         "cartAdds": 0,
         "sales": 0,
