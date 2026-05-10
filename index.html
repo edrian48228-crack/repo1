@@ -833,7 +833,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <!-- CREATOR LOGIN -->
 <div id="page-creator-login" class="page" style="display:none;">
 <div class="container section" style="max-width:420px;margin:0 auto;padding-top:80px;padding-bottom:40px;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
-<div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,109,0,.04));border:1px solid rgba(255,109,0,.25);border-radius:22px;padding:40px;text-align:center;">
+<div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,109,0,.04));border:1px solid rgba(255,109,0,.25);border-radius:22px;padding:40px;text-align:center;width:100%;">
 <button class="modal-close" onclick="showPage('store')" style="position:absolute;top:14px;right:18px;font-size:1.2rem;background:var(--bg-secondary);color:var(--text-muted);font-weight:700;z-index:10;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid var(--glass-border);" aria-label="Cerrar"><i class="fas fa-times"></i></button>
 <div style="width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--naranja),var(--amarillo));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;"><i class="fas fa-crown" style="color:#111;"></i></div>
 <h2 style="font-family:'Orbitron',sans-serif;font-size:1.1rem;letter-spacing:1px;margin-bottom:8px;">ACCESO CREADOR</h2>
@@ -2083,10 +2083,30 @@ document.getElementById('cfgClientApk').value=config.clientApk||'';
 document.getElementById('cfgClientFacebook').value=config.clientFacebook||'';
 document.getElementById('cfgClientWhatsapp').value=config.clientWhatsapp||'';
 document.getElementById('cfgAvatarEmoji').value=config.avatarEmoji||'🛒';
-document.getElementById('cfgAvatarImage').value=config.avatarImage||'';
+// Para campos de imagen: si es base64 guardar en dataset y mostrar placeholder legible
+(function(){
+  const imgCfgFields=[
+    {id:'cfgAvatarImage',key:'avatarImage'},
+    {id:'cfgLogoImage',key:'logoImage'}
+  ];
+  imgCfgFields.forEach(({id,key})=>{
+    const el=document.getElementById(id); if(!el) return;
+    const val=config[key]||'';
+    el.style.color=''; el.style.fontStyle=''; el._useBase64=false; delete el.dataset.base64;
+    if(val.startsWith('data:')){
+      el.dataset.base64=val; el._useBase64=true;
+      const sizeKB=Math.round(val.length*0.75/1024);
+      const ext=(val.match(/^data:image\/([a-z0-9]+);/i)||[,'img'])[1];
+      el.value='[imagen.'+ext+' \u2022 ~'+sizeKB+'KB \u2014 se subir\xe1 al sincronizar con GitHub]';
+      el.style.color='var(--verde)'; el.style.fontStyle='italic';
+    } else {
+      el.value=val;
+    }
+  });
+})();
 document.getElementById('cfgAvatarMessages').value=config.avatarMessages||DEFAULT_CONFIG.avatarMessages;
 document.getElementById('cfgLogoEmoji').value=config.logoEmoji||'🛒';
-document.getElementById('cfgLogoImage').value=config.logoImage||'';
+// cfgLogoImage ya se maneja arriba en el bloque imgCfgFields
 document.getElementById('cfgImgFolder').value=config.imgFolder||'';
 // ownStoreUrl ahora en sesión Creador (se carga abajo)
 // Additional contacts
@@ -2102,10 +2122,33 @@ document.getElementById('cfgAdminPassCreator').value='';
 document.getElementById('cfgCreatorChannel').value=config.creatorChannel||'';
 document.getElementById('cfgCreatorCourse').value=config.creatorCourse||'';
 document.getElementById('cfgCreatorPhone').value=config.creatorPhone||'';
-document.getElementById('cfgCreatorPhoto').value=config.creatorPhoto||'';
+// Foto del creador: placeholder si es base64
+(function(){
+  const el=document.getElementById('cfgCreatorPhoto'); if(!el) return;
+  const val=config.creatorPhoto||'';
+  el.style.color=''; el.style.fontStyle=''; el._useBase64=false; delete el.dataset.base64;
+  if(val.startsWith('data:')){
+    el.dataset.base64=val; el._useBase64=true;
+    const sizeKB=Math.round(val.length*0.75/1024);
+    const ext=(val.match(/^data:image\/([a-z0-9]+);/i)||[,'img'])[1];
+    el.value='[foto.'+ext+' \u2022 ~'+sizeKB+'KB \u2014 se subir\xe1 al sincronizar]';
+    el.style.color='var(--verde)'; el.style.fontStyle='italic';
+  } else { el.value=val; }
+})();
 document.getElementById('cfgSecurityQuestion').value=config.securityQuestion||'';
 document.getElementById('cfgSecurityAnswer').value=config.securityAnswer||'';
-if(document.getElementById('cfgContactBgImage'))document.getElementById('cfgContactBgImage').value=config.contactBgImage||'';
+if(document.getElementById('cfgContactBgImage')){
+  const bgEl=document.getElementById('cfgContactBgImage');
+  const bgVal=config.contactBgImage||'';
+  bgEl.style.color=''; bgEl.style.fontStyle=''; bgEl._useBase64=false; delete bgEl.dataset.base64;
+  if(bgVal.startsWith('data:')){
+    bgEl.dataset.base64=bgVal; bgEl._useBase64=true;
+    const sizeKB=Math.round(bgVal.length*0.75/1024);
+    const ext=(bgVal.match(/^data:image\/([a-z0-9]+);/i)||[,'img'])[1];
+    bgEl.value='[fondo.'+ext+' \u2022 ~'+sizeKB+'KB \u2014 se subir\xe1 al sincronizar]';
+    bgEl.style.color='var(--verde)'; bgEl.style.fontStyle='italic';
+  } else { bgEl.value=bgVal; }
+}
 if(document.getElementById('cfgAffiliateUrl'))document.getElementById('cfgAffiliateUrl').value=config.affiliateUrl||'';
 if(document.getElementById('cfgOrderMessage'))document.getElementById('cfgOrderMessage').value=config.orderMessage||'';
 if(document.getElementById('cfgOwnStoreUrl'))document.getElementById('cfgOwnStoreUrl').value=config.ownStoreUrl||'';
@@ -2129,10 +2172,10 @@ config.clientApk=document.getElementById('cfgClientApk').value.trim();
 config.clientFacebook=document.getElementById('cfgClientFacebook').value.trim();
 config.clientWhatsapp=document.getElementById('cfgClientWhatsapp').value.trim();
 config.avatarEmoji=document.getElementById('cfgAvatarEmoji').value.trim()||'🛒';
-config.avatarImage=document.getElementById('cfgAvatarImage').value.trim();
+config.avatarImage=getConfigImageValue('cfgAvatarImage');
 config.avatarMessages=document.getElementById('cfgAvatarMessages').value.trim()||DEFAULT_CONFIG.avatarMessages;
 config.logoEmoji=document.getElementById('cfgLogoEmoji').value.trim()||'🛒';
-config.logoImage=document.getElementById('cfgLogoImage').value.trim();
+config.logoImage=getConfigImageValue('cfgLogoImage');
 config.imgFolder=document.getElementById('cfgImgFolder').value.trim();
 // ownStoreUrl ahora se guarda en saveCreatorConfig()
 // Parse additional contacts
@@ -2150,8 +2193,8 @@ config.creatorEmail=document.getElementById('cfgCreatorEmail').value.trim();
 config.creatorChannel=document.getElementById('cfgCreatorChannel').value.trim();
 config.creatorCourse=document.getElementById('cfgCreatorCourse').value.trim();
 config.creatorPhone=document.getElementById('cfgCreatorPhone').value.trim();
-config.creatorPhoto=document.getElementById('cfgCreatorPhoto').value.trim();
-config.contactBgImage=(document.getElementById('cfgContactBgImage')||{}).value||(config.contactBgImage||'');
+config.creatorPhoto=getConfigImageValue('cfgCreatorPhoto');
+config.contactBgImage=getConfigImageValue('cfgContactBgImage')||(config.contactBgImage||'');
 config.affiliateUrl=(document.getElementById('cfgAffiliateUrl')||{}).value||(config.affiliateUrl||'');
 config.ownStoreUrl=(document.getElementById('cfgOwnStoreUrl')||{}).value||(config.ownStoreUrl||'');
 config.orderMessage=(document.getElementById('cfgOrderMessage')||{}).value||(config.orderMessage||'');
@@ -2404,19 +2447,49 @@ document.querySelectorAll('.modal-overlay').forEach(overlay=>{overlay.addEventLi
 function triggerImageUpload(targetInputId){
 const input=document.createElement('input');
 input.type='file';input.accept='image/*';input.multiple=false;
-input.onchange=function(e){
-const file=e.target.files[0];if(!file)return;
-// Convert to base64 so the image is stored persistently and works on ALL devices
-const reader=new FileReader();
-reader.onload=function(ev){
-const base64=ev.target.result;
-const targetEl=document.getElementById(targetInputId);
-if(targetEl){targetEl.value=base64;}
-showToast('<i class="fas fa-check-circle"></i> Imagen cargada');
-};
-reader.readAsDataURL(file);
+input.onchange=async function(e){
+  const file=e.target.files[0]; if(!file) return;
+  const targetEl=document.getElementById(targetInputId); if(!targetEl) return;
+  showToast('<i class="fas fa-spinner fa-spin"></i> Procesando imagen\u2026');
+  try{
+    const raw=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file);});
+    let finalDataUrl=raw, ext='webp';
+    if(typeof ghToWebp==='function'){const conv=await ghToWebp(raw,1200,0.85);finalDataUrl=conv.dataUrl;ext=conv.ext;}
+    const creds=(typeof ghGetCreds==='function')?ghGetCreds():null;
+    const token=(typeof __ghTokenCache!=='undefined'&&__ghTokenCache)?__ghTokenCache:null;
+    if(creds&&creds.owner&&creds.repo&&token&&typeof ghUploadImage==='function'){
+      try{
+        showToast('<i class="fas fa-cloud-arrow-up fa-beat"></i> Subiendo a GitHub\u2026');
+        const prefix='cfg-'+targetInputId.replace(/[^a-z0-9]/gi,'-').toLowerCase();
+        const url=await ghUploadImage(finalDataUrl,prefix,token);
+        targetEl.value=url;
+        targetEl.style.color='';targetEl.style.fontStyle='';
+        delete targetEl.dataset.base64; targetEl._useBase64=false;
+        showToast('<i class="fas fa-check-circle"></i> Imagen subida \u2192 '+url.split('/').pop());
+        return;
+      }catch(ghErr){
+        if(typeof ghLog==='function')ghLog('No se pudo subir imagen directamente: '+ghErr.message,'warn');
+      }
+    }
+    targetEl.dataset.base64=finalDataUrl;
+    targetEl._useBase64=true;
+    const sizeKB=Math.round(finalDataUrl.length*0.75/1024);
+    targetEl.value='[imagen.'+ext+' \u2022 ~'+sizeKB+'KB \u2014 se subir\xe1 al sincronizar con GitHub]';
+    targetEl.style.color='var(--verde)';targetEl.style.fontStyle='italic';
+    showToast('<i class="fas fa-check-circle"></i> Imagen lista ('+ext.toUpperCase()+', ~'+sizeKB+'KB) \u2014 guardar\xe1 al sincronizar');
+  }catch(err){
+    showToast('<i class="fas fa-circle-exclamation"></i> Error al procesar imagen');
+    console.error('triggerImageUpload error:',err);
+  }
 };
 input.click();
+}
+function getConfigImageValue(inputId){
+  const el=document.getElementById(inputId); if(!el) return '';
+  if(el._useBase64&&el.dataset.base64) return el.dataset.base64;
+  const v=el.value.trim();
+  if(v.startsWith('[imagen.')&&el.dataset.base64) return el.dataset.base64;
+  return v;
 }
 
 /* Buffer global de imágenes por target — nunca vuelca base64 al textarea */
@@ -2997,7 +3070,7 @@ async function ghCollectAndUploadImages(token){
   }
   save('mt_products', products);
   // config: avatares y fondos
-  const imgFields = ['logoUrl','creatorPhoto','contactBgImage','siteIcon','heroImage'];
+  const imgFields = ['logoImage','avatarImage','logoUrl','creatorPhoto','contactBgImage','siteIcon','heroImage'];
   for(const f of imgFields){
     if(ghIsDataImage(config[f])){
       const oldUrl = config['__last_'+f]||null;
