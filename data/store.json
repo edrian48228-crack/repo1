@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-10T09:55:10.075Z",
+  "exportedAt": "2026-05-07T10:59:27.290Z",
   "data": {
     "mt_products": [
       {
@@ -14,7 +14,7 @@
         "minStock": 3,
         "description": "Smartphone de última generación con cámara de 108MP y pantalla AMOLED. 6 con 128. Incluye una inteligencia artificial Offline. SOLO 7 MESES DE USO",
         "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-p1-0-1778406843408-90x1un59.webp"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
         ],
         "views": 245,
         "cartAdds": 42,
@@ -26,7 +26,7 @@
         "bulkQty": 3,
         "featured": "si",
         "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-p1-0-1778406843408-90x1un59.webp"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
         ]
       },
       {
@@ -51,7 +51,9 @@
         "bulkDiscount": 15,
         "bulkQty": 2,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p2-0-1777985688086-06g4c1st.webp"
+        ]
       },
       {
         "id": "p3",
@@ -75,7 +77,9 @@
         "bulkDiscount": 20,
         "bulkQty": 5,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p3-0-1777985690442-0u1rji2c.webp"
+        ]
       },
       {
         "id": "p4",
@@ -88,7 +92,7 @@
         "minStock": 15,
         "description": "Caja de chocolates belgas artesanales - 12 unidades",
         "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-p4-0-1778406885341-g57dfise.webp"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
         ],
         "views": 321,
         "cartAdds": 59,
@@ -100,7 +104,7 @@
         "bulkQty": 3,
         "featured": "si",
         "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-p4-0-1778406885341-g57dfise.webp"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
         ]
       },
       {
@@ -125,7 +129,9 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "si",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p5-0-1777984594268-z3sh0j4s.webp"
+        ]
       },
       {
         "id": "p7",
@@ -149,7 +155,9 @@
         "bulkDiscount": 5,
         "bulkQty": 2,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p7-0-1777985631440-lqytija6.webp"
+        ]
       },
       {
         "id": "p8",
@@ -174,7 +182,10 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-0-1777984598071-aiq9i8oi.webp",
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-1-1778094434984-5o0qodgc.webp"
+        ]
       },
       {
         "id": "cc1c2346-a6af-4ab8-91e1-3f1f5e18fcb1",
@@ -198,7 +209,9 @@
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-06T19:10:41.218Z",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-cc1c2346-0-1778094643937-fmvlj921.webp"
+        ]
       },
       {
         "id": "215b18d6-1501-4950-a935-ecfb465f0a67",
@@ -222,7 +235,9 @@
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-06T19:12:13.504Z",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-215b18d6-0-1778094736194-6l94ar2z.webp"
+        ]
       }
     ],
     "mt_sales": [
@@ -291,10 +306,10 @@
       "clientFacebook": "",
       "clientWhatsapp": "+5354693549",
       "avatarEmoji": "🛒",
-      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/avatarImage-1778406618059-i97jl8y5.webp",
+      "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/logoImage-1778406612395-qczvqnwg.webp",
+      "logoImage": "",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -304,114 +319,112 @@
       "projects": [],
       "hideAvatar": false,
       "hideMonetizeButtons": false,
-      "securityDisabled": false,
-      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/logoImage-1778406612395-qczvqnwg.webp",
-      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/avatarImage-1778406618059-i97jl8y5.webp"
+      "securityDisabled": false
     },
     "mt_suppliers": null,
     "mt_notifications": [
       {
-        "id": "20d5bdd8-c105-4eef-be8f-77a180bfbbaa",
+        "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
         "message": "\"Placa de Samsung A32 5g\" tiene stock bajo (2)",
         "productId": "215b18d6-1501-4950-a935-ecfb465f0a67",
-        "date": "2026-05-10T09:54:00.716Z",
+        "date": "2026-05-06T19:12:13.520Z",
         "read": false
       },
       {
-        "id": "8a1978e0-f8f9-4fc9-af84-6b17d1f6c9b9",
-        "type": "low_stock",
-        "message": "\"Smartphone Huawei Nova 5T\" tiene stock bajo (2)",
-        "productId": "p3",
-        "date": "2026-05-10T09:54:00.716Z",
-        "read": false
-      },
-      {
-        "id": "2e644008-93ff-4d58-9737-aef448caf6db",
+        "id": "75da2fdd-3d80-40bd-9b3a-6b42da44f677",
         "type": "low_stock",
         "message": "\"Smartphone Samsung A1+\" tiene stock bajo (2)",
         "productId": "p1",
-        "date": "2026-05-10T09:54:00.716Z",
+        "date": "2026-05-06T18:49:53.044Z",
         "read": false
       },
       {
-        "id": "5d71c7f9-4828-4ffd-aa5d-7d046d75c0c5",
+        "id": "d5cb9276-c64c-462c-aa02-6a3d2c1ad687",
+        "type": "low_stock",
+        "message": "\"Smartphone Huawei Nova 5T\" tiene stock bajo (2)",
+        "productId": "p3",
+        "date": "2026-05-06T18:42:39.958Z",
+        "read": false
+      },
+      {
+        "id": "1c33b76c-1476-4423-a825-622a8db3d08e",
         "type": "best_seller",
         "message": "\"Chocolates Artesanales\" es el más vendido (45)",
         "productId": "p4",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "1108f2bd-c085-413b-bae8-7f73608cd4e1",
+        "id": "114306ba-c87a-4b8a-8b5e-45318dc13d29",
         "type": "slow_sale",
-        "message": "\"Mochila Táctica\" lleva 416 días sin venderse",
+        "message": "\"Mochila Táctica\" lleva 408 días sin venderse",
         "productId": "p8",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "73edb29d-48d2-4fe9-b6f9-c96eaf91a12f",
+        "id": "b8967299-3550-45ed-b390-02a4d006f048",
         "type": "slow_sale",
-        "message": "\"Smartwatch Fitness\" lleva 409 días sin venderse",
+        "message": "\"Smartwatch Fitness\" lleva 401 días sin venderse",
         "productId": "p7",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "1baed5d2-9e47-4640-9b88-5cf2c7abd1aa",
+        "id": "839b8a2f-32f0-4249-8423-3b9072171098",
         "type": "slow_sale",
-        "message": "\"Zapatillas Deportivas\" lleva 449 días sin venderse",
+        "message": "\"Zapatillas Deportivas\" lleva 441 días sin venderse",
         "productId": "p6",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "ac89215a-187d-47b0-8563-407076378202",
+        "id": "d9545b6f-3ba1-43fb-afe1-976d208d4a1c",
         "type": "low_stock",
         "message": "\"Zapatillas Deportivas\" tiene stock bajo (2)",
         "productId": "p6",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "38308d1b-f71c-4c61-9f23-c78f5695d68f",
+        "id": "52b8ffc0-b70b-4c1d-8222-a59389ca3cfb",
         "type": "slow_sale",
-        "message": "\"Laptop Gaming RTX\" lleva 411 días sin venderse",
+        "message": "\"Laptop Gaming RTX\" lleva 403 días sin venderse",
         "productId": "p5",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "99bcf25d-8b4b-4a89-872b-4e89738311f4",
+        "id": "722a7cb1-b6a2-4cfc-aea7-cfa498fac05c",
         "type": "slow_sale",
-        "message": "\"Chocolates Artesanales\" lleva 406 días sin venderse",
+        "message": "\"Chocolates Artesanales\" lleva 398 días sin venderse",
         "productId": "p4",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "2e120d2e-2586-4a80-a545-26a45b0e35ca",
+        "id": "c1085a65-9e53-43b6-a592-bf29ad0052fd",
         "type": "slow_sale",
-        "message": "\"Camiseta Premium\" lleva 407 días sin venderse",
+        "message": "\"Camiseta Premium\" lleva 399 días sin venderse",
         "productId": "p3",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "c97b42b0-e458-45aa-ba0f-70f7f9ad1ceb",
+        "id": "df9464f8-7927-4d1a-b670-9ed466adaf70",
         "type": "slow_sale",
-        "message": "\"Auriculares Inalámbricos\" lleva 406 días sin venderse",
+        "message": "\"Auriculares Inalámbricos\" lleva 398 días sin venderse",
         "productId": "p2",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       },
       {
-        "id": "d46a607c-7bc1-40b5-9c82-1af03dbbd0b7",
+        "id": "ce39f142-cb34-44df-8a08-83b1592a14b0",
         "type": "slow_sale",
-        "message": "\"Smartphone Ultra Pro\" lleva 408 días sin venderse",
+        "message": "\"Smartphone Ultra Pro\" lleva 400 días sin venderse",
         "productId": "p1",
-        "date": "2026-05-10T09:48:04.167Z",
+        "date": "2026-05-02T19:21:35.032Z",
         "read": false
       }
     ],
@@ -465,11 +478,6 @@
         "date": "2026-05-07",
         "hour": 12,
         "count": 1
-      },
-      {
-        "date": "2026-05-10",
-        "hour": 11,
-        "count": 2
       }
     ],
     "mt_projects": []

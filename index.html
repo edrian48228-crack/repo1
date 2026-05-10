@@ -812,7 +812,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <!-- ADMIN LOGIN -->
 <div id="page-admin-login" class="page" style="display:none;">
 <div class="container section" style="max-width:420px;margin:0 auto;padding-top:80px;padding-bottom:40px;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
-<div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,23,68,.04));border:1px solid rgba(255,23,68,.2);border-radius:22px;padding:40px;text-align:center;width:100%;">
+<div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,23,68,.04));border:1px solid rgba(255,23,68,.2);border-radius:22px;padding:40px;text-align:center;width:100%;min-height:420px;display:flex;flex-direction:column;justify-content:center;">
 <button class="modal-close" onclick="showPage('store')" style="position:absolute;top:14px;right:18px;font-size:1.2rem;background:var(--bg-secondary);color:var(--text-muted);font-weight:700;z-index:10;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid var(--glass-border);" aria-label="Cerrar"><i class="fas fa-times"></i></button><div style="width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--rojo),var(--naranja));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;box-shadow:var(--neon-rojo);"><i class="fas fa-shield-halved" style="color:#fff;"></i></div>
 <h2 style="font-family:'Orbitron',sans-serif;font-size:1.1rem;letter-spacing:1px;margin-bottom:8px;">PANEL ADMIN</h2>
 <p style="color:var(--text-muted);margin-bottom:20px;font-size:.82rem;">Ingresa tu contraseña de administrador</p>
@@ -833,7 +833,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <!-- CREATOR LOGIN -->
 <div id="page-creator-login" class="page" style="display:none;">
 <div class="container section" style="max-width:420px;margin:0 auto;padding-top:80px;padding-bottom:40px;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
-<div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,109,0,.04));border:1px solid rgba(255,109,0,.25);border-radius:22px;padding:40px;text-align:center;width:100%;">
+<div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,109,0,.04));border:1px solid rgba(255,109,0,.25);border-radius:22px;padding:40px;text-align:center;width:100%;min-height:420px;display:flex;flex-direction:column;justify-content:center;">
 <button class="modal-close" onclick="showPage('store')" style="position:absolute;top:14px;right:18px;font-size:1.2rem;background:var(--bg-secondary);color:var(--text-muted);font-weight:700;z-index:10;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid var(--glass-border);" aria-label="Cerrar"><i class="fas fa-times"></i></button>
 <div style="width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--naranja),var(--amarillo));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;"><i class="fas fa-crown" style="color:#111;"></i></div>
 <h2 style="font-family:'Orbitron',sans-serif;font-size:1.1rem;letter-spacing:1px;margin-bottom:8px;">ACCESO CREADOR</h2>
@@ -1695,9 +1695,10 @@ ${hasBulk?`<div style="background:rgba(0,230,118,.08);border:1px solid rgba(0,23
 <span><i class="fas fa-eye"></i> Vistas: <strong>${p.views}</strong></span>
 <span><i class="fas fa-bag-shopping"></i> Vendidos: <strong>${p.sales}</strong></span>
 </div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-<button class="btn btn-primary" onclick="addToCart('${p.id}');closeModal('productDetailModal');" ${p.stock<=0?'disabled':''} style="border-radius:50px;padding:16px 32px;font-size:1rem;flex:1;"><i class="fas fa-cart-shopping"></i> Añadir al carrito</button>
-<a href="https://wa.me/${(config.whatsapp||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hola, me interesa el producto: '+p.name+' ($'+p.price+' '+p.currency+')')}" target="_blank" class="btn btn-success" style="border-radius:50px;padding:16px 20px;font-size:1rem;" title="Escribir al admin por WhatsApp"><i class="fab fa-whatsapp" style="font-size:1.2rem;"></i></a>
+<div style="display:flex;gap:10px;flex-wrap:nowrap;align-items:center;">
+<button class="btn btn-primary" onclick="addToCart('${p.id}');closeModal('productDetailModal');" ${p.stock<=0?'disabled':''} style="border-radius:50px;padding:16px 20px;font-size:1rem;flex:1;min-width:0;"><i class="fas fa-cart-shopping"></i> <span style="white-space:nowrap;">Añadir al carrito</span></button>
+${(config.whatsapp||'').replace(/[^0-9]/g,'')?`<a href="https://wa.me/${(config.whatsapp||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hola, me interesa el producto: '+p.name+' ($'+p.price+' '+p.currency+')')}" target="_blank" class="btn btn-success" style="border-radius:50px;padding:16px 18px;font-size:1rem;flex-shrink:0;" title="WhatsApp"><i class="fab fa-whatsapp" style="font-size:1.2rem;"></i></a>`:''}
+${(config.whatsapp||'').replace(/[^0-9]/g,'')?`<a href="tel:+${(config.whatsapp||'').replace(/[^0-9]/g,'')}" class="btn" style="border-radius:50px;padding:16px 18px;font-size:1rem;flex-shrink:0;background:linear-gradient(135deg,#1565c0,#2979ff);color:#fff;border:none;" title="Llamar"><i class="fas fa-phone" style="font-size:1.1rem;"></i></a>`:''}
 </div>
 </div>
 </div>`;
