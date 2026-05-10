@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-10T09:47:37.167Z",
+  "exportedAt": "2026-05-10T09:50:23.469Z",
   "data": {
     "mt_products": [
       {
@@ -287,10 +287,10 @@
       "clientFacebook": "",
       "clientWhatsapp": "+5354693549",
       "avatarEmoji": "🛒",
-      "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
+      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/avatarImage-1778406618059-i97jl8y5.webp",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "",
+      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/logoImage-1778406612395-qczvqnwg.webp",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -300,7 +300,9 @@
       "projects": [],
       "hideAvatar": false,
       "hideMonetizeButtons": false,
-      "securityDisabled": false
+      "securityDisabled": false,
+      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/logoImage-1778406612395-qczvqnwg.webp",
+      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/avatarImage-1778406618059-i97jl8y5.webp"
     },
     "mt_suppliers": null,
     "mt_notifications": [
