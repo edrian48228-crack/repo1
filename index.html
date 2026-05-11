@@ -204,17 +204,21 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
   #contactModal .modal{max-width:94vw!important;}
   #contactModal .contact-card{gap:8px!important;}
   #contactCreatorPhoto{width:60px!important;height:60px!important;font-size:1.4rem!important;margin-bottom:10px!important;}
-  /* Modal producto sin scroll en Android */
-  #productDetailModal .modal{padding:14px!important;max-height:92dvh!important;overflow-y:auto!important;}
-  #productDetailModal .detail-layout{gap:12px!important;}
+  /* Modal producto sin scroll horizontal en Android */
+  #productDetailModal .modal{padding:14px!important;max-height:92dvh!important;overflow-y:auto!important;overflow-x:hidden!important;width:100%!important;box-sizing:border-box!important;}
+  #productDetailModal .detail-layout{gap:12px!important;width:100%!important;box-sizing:border-box!important;}
   #productDetailModal .main-image-wrap{aspect-ratio:4/3!important;max-height:38vw!important;}
-  #productDetailModal .detail-info{gap:8px!important;}
+  #productDetailModal .detail-info{gap:8px!important;width:100%!important;box-sizing:border-box!important;min-width:0!important;}
   #productDetailModal .detail-info h2{font-size:.95rem!important;}
   #productDetailModal .detail-info div[style*="2.4rem"]{font-size:1.5rem!important;}
   #productDetailModal .detail-info p{font-size:.8rem!important;line-height:1.5!important;display:-webkit-box!important;-webkit-line-clamp:3!important;-webkit-box-orient:vertical!important;overflow:hidden!important;}
   #productDetailModal .gallery img{width:48px!important;height:48px!important;}
-  #productDetailModal .detail-info>div[style*="display:flex"][style*="gap:18px"]{font-size:.75rem!important;}
-  #productDetailModal .btn{padding:12px 14px!important;font-size:.85rem!important;}
+  #productDetailModal .detail-info>div[style*="display:flex"][style*="gap:18px"]{font-size:.75rem!important;flex-wrap:wrap!important;}
+  /* Fila de 3 botones: caben en una línea sin scroll */
+  #productDetailModal div[style*="flex-wrap:nowrap"]{width:100%!important;box-sizing:border-box!important;gap:6px!important;}
+  #productDetailModal div[style*="flex-wrap:nowrap"] .btn{padding:11px 10px!important;font-size:.8rem!important;min-width:0!important;}
+  #productDetailModal div[style*="flex-wrap:nowrap"] .btn span{font-size:.78rem!important;}
+  #productDetailModal div[style*="flex-wrap:nowrap"] a.btn{padding:11px 14px!important;flex-shrink:0!important;}
 }
 
 
@@ -1729,10 +1733,10 @@ ${hasBulk?`<div style="background:rgba(0,230,118,.08);border:1px solid rgba(0,23
 <span><i class="fas fa-eye"></i> Vistas: <strong>${p.views}</strong></span>
 <span><i class="fas fa-bag-shopping"></i> Vendidos: <strong>${p.sales}</strong></span>
 </div>
-<div style="display:flex;gap:10px;flex-wrap:nowrap;align-items:center;">
-<button class="btn btn-primary" onclick="addToCart('${p.id}');closeModal('productDetailModal');" ${p.stock<=0?'disabled':''} style="border-radius:50px;padding:16px 20px;font-size:1rem;flex:1;min-width:0;"><i class="fas fa-cart-shopping"></i> <span style="white-space:nowrap;">Añadir al carrito</span></button>
-${(config.whatsapp||'').replace(/[^0-9]/g,'')?`<a href="https://wa.me/${(config.whatsapp||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hola, me interesa el producto: '+p.name+' ($'+p.price+' '+p.currency+')')}" target="_blank" class="btn btn-success" style="border-radius:50px;padding:16px 18px;font-size:1rem;flex-shrink:0;" title="WhatsApp"><i class="fab fa-whatsapp" style="font-size:1.2rem;"></i></a>`:''}
-${(config.whatsapp||'').replace(/[^0-9]/g,'')?`<a href="tel:+${(config.whatsapp||'').replace(/[^0-9]/g,'')}" class="btn" style="border-radius:50px;padding:16px 18px;font-size:1rem;flex-shrink:0;background:linear-gradient(135deg,#1565c0,#2979ff);color:#fff;border:none;" title="Llamar"><i class="fas fa-phone" style="font-size:1.1rem;"></i></a>`:''}
+<div style="display:flex;gap:10px;flex-wrap:nowrap;align-items:center;width:100%;box-sizing:border-box;">
+<button class="btn btn-primary" onclick="addToCart('${p.id}');closeModal('productDetailModal');" ${p.stock<=0?'disabled':''} style="border-radius:50px;padding:16px 20px;font-size:1rem;flex:1;min-width:0;overflow:hidden;"><i class="fas fa-cart-shopping"></i> <span>Añadir al carrito</span></button>
+${(config.whatsapp||'').replace(/[^0-9]/g,'')?`<a href="https://wa.me/${(config.whatsapp||'').replace(/[^0-9]/g,'')}?text=${encodeURIComponent('Hola, me interesa el producto: '+p.name+' ($'+p.price+' '+p.currency+')')}" target="_blank" class="btn btn-success" style="border-radius:50px;padding:16px 18px;font-size:1rem;flex-shrink:0;white-space:nowrap;" title="WhatsApp"><i class="fab fa-whatsapp" style="font-size:1.2rem;"></i></a>`:''}
+${(config.whatsapp||'').replace(/[^0-9]/g,'')?`<a href="tel:+${(config.whatsapp||'').replace(/[^0-9]/g,'')}" class="btn" style="border-radius:50px;padding:16px 18px;font-size:1rem;flex-shrink:0;background:linear-gradient(135deg,#1565c0,#2979ff);color:#fff;border:none;white-space:nowrap;" title="Llamar"><i class="fas fa-phone" style="font-size:1.1rem;"></i></a>`:''}
 </div>
 </div>
 </div>`;
