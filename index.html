@@ -275,6 +275,13 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 
 /* ===== ADMIN ===== */
 .admin-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:24px;background:var(--bg-secondary);padding:8px;border-radius:16px;border:1px solid var(--glass-border);}
+/* Admin tabs sticky en desktop */
+@media(min-width:641px){
+  #page-admin .admin-tabs{position:sticky;top:0;z-index:100;border-radius:0 0 16px 16px;margin-left:-20px;margin-right:-20px;padding:10px 20px;}
+  /* Ocultar header de portada cuando se está en admin */
+  body.admin-mode .header{display:none!important;}
+  body.admin-mode #page-admin{padding-top:0!important;}
+}
 .admin-tabs button{padding:10px 18px;border-radius:12px;color:var(--text-secondary);background:transparent;font-weight:700;transition:all .3s;font-size:.84rem;border:none;display:inline-flex;align-items:center;gap:6px;}
 .admin-tabs button i{font-size:.9rem;}
 .admin-tabs button:hover,.admin-tabs button.active{background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;box-shadow:var(--neon-naranja);}
@@ -1400,10 +1407,21 @@ const SAMPLE_PRODUCTS=[
 function save(k,v){localStorage.setItem(k,JSON.stringify(v));}
 function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d;}catch{return d;}}
 
+// Restaurar imágenes offline si config las perdió (ej: pull de GitHub sin imágenes)
+function restoreOfflineImages(cfg){
+  try{
+    const saved=JSON.parse(localStorage.getItem('mt_offline_imgs')||'{}');
+    ['logoImage','avatarImage','contactBgImage','creatorPhoto'].forEach(k=>{
+      if(!cfg[k]&&saved[k]) cfg[k]=saved[k];
+    });
+  }catch(e){}
+  return cfg;
+}
+
 let products=load('mt_products',SAMPLE_PRODUCTS);
 let cart=[];
 let sales=load('mt_sales',[]);
-let config=load('mt_config',DEFAULT_CONFIG);
+let config=restoreOfflineImages(load('mt_config',DEFAULT_CONFIG));
 Object.keys(DEFAULT_CONFIG).forEach(k=>{if(config[k]===undefined)config[k]=DEFAULT_CONFIG[k];});
 let suppliers=load('mt_suppliers',[]);
 let notifications=load('mt_notifications',[]);
@@ -1540,6 +1558,8 @@ const el=document.getElementById('page-'+page);if(el)el.style.display='block';
 document.querySelectorAll('#mainNav .nav-btn').forEach(b=>b.classList.remove('active'));
 if(page==='store')document.getElementById('navStore').classList.add('active');
 if(page.includes('admin')||page.includes('creator'))document.getElementById('navAdmin').classList.add('active');
+// Ocultar header de portada en desktop cuando se está en panel admin
+if(page==='admin'){document.body.classList.add('admin-mode');}else{document.body.classList.remove('admin-mode');}
 if(page==='store'){renderProducts();renderRecommended();document.getElementById('heroVisitCount').textContent=getVisitsToday();}
 // Limpia campos sensibles al entrar a páginas de login (autocompletado del navegador)
 if(page==='admin-login'){const ap=document.getElementById('adminPassword');if(ap){ap.value='';setTimeout(()=>ap.value='',50);}}
@@ -1981,7 +2001,7 @@ pfCategory.innerHTML=config.categories.map(c=>`<option value="${c}">${c}</option
 if(id){
 const p=products.find(x=>x.id===id);
 if(p){document.getElementById('pfName').value=p.name;document.getElementById('pfPrice').value=p.price;pfCurrency.value=p.currency;pfCategory.value=p.category;document.getElementById('pfCondition').value=p.condition;document.getElementById('pfStock').value=p.stock;document.getElementById('pfMinStock').value=p.minStock;document.getElementById('pfDescription').value=p.description;if(window.setImagesBuffer)window.setImagesBuffer('pfImages',p.images||[]);else document.getElementById('pfImages').value=(p.images||[]).join('\n');document.getElementById('pfOriginalPrice').value=p.originalPrice||0;document.getElementById('pfBulkDiscount').value=p.bulkDiscount||0;document.getElementById('pfBulkQty').value=p.bulkQty||3;document.getElementById('pfFeatured').value=p.featured||'no';}
-}else{['pfName','pfPrice','pfStock','pfDescription'].forEach(id=>document.getElementById(id).value='');if(window.clearImagesBuffer)window.clearImagesBuffer('pfImages');else document.getElementById('pfImages').value='';document.getElementById('pfMinStock').value='5';document.getElementById('pfCondition').value='nuevo';document.getElementById('pfOriginalPrice').value='0';document.getElementById('pfBulkDiscount').value='0';document.getElementById('pfBulkQty').value='3';document.getElementById('pfFeatured').value='no';}
+}else{['pfName','pfPrice','pfDescription'].forEach(id=>document.getElementById(id).value='');document.getElementById('pfStock').value='1';if(window.clearImagesBuffer)window.clearImagesBuffer('pfImages');else document.getElementById('pfImages').value='';document.getElementById('pfMinStock').value='5';document.getElementById('pfCondition').value='nuevo';document.getElementById('pfOriginalPrice').value='0';document.getElementById('pfBulkDiscount').value='0';document.getElementById('pfBulkQty').value='3';document.getElementById('pfFeatured').value='no';}
 openModal('productFormModal');
 }
 function editProduct(id){openProductForm(id);}
@@ -2196,7 +2216,16 @@ config.imgFolder=document.getElementById('cfgImgFolder').value.trim();
 // Parse additional contacts
 const acRaw=document.getElementById('cfgAdditionalContacts').value.trim();
 config.additionalContacts=acRaw?acRaw.split('\n').map(line=>{const [type,label,value]=line.split('|').map(s=>s.trim());return type&&label&&value?{id:crypto.randomUUID(),type,label,value}:null;}).filter(Boolean):[];
-save('mt_config',config);applyConfig();if(typeof window.__injectDynamicManifest==='function')window.__injectDynamicManifest();showToast('<i class="fas fa-check-circle"></i> Configuración guardada');
+save('mt_config',config);
+// Persistencia offline: guardar imágenes clave separadas para que sobrevivan sin conexión
+(function(){
+  const offlineImgs={};
+  ['logoImage','avatarImage','contactBgImage','creatorPhoto'].forEach(k=>{
+    if(config[k]) offlineImgs[k]=config[k];
+  });
+  if(Object.keys(offlineImgs).length) localStorage.setItem('mt_offline_imgs', JSON.stringify(offlineImgs));
+})();
+applyConfig();if(typeof window.__injectDynamicManifest==='function')window.__injectDynamicManifest();showToast('<i class="fas fa-check-circle"></i> Configuración guardada');
 }
 
 function saveCreatorConfig(){
@@ -3444,7 +3473,7 @@ async function ghPublicPull(c){
         if(typeof products!=='undefined' && payload.data.mt_products) products = JSON.parse(JSON.stringify(payload.data.mt_products));
         if(typeof suppliers!=='undefined' && payload.data.mt_suppliers) suppliers = JSON.parse(JSON.stringify(payload.data.mt_suppliers));
         if(typeof sales!=='undefined' && payload.data.mt_sales) sales = JSON.parse(JSON.stringify(payload.data.mt_sales));
-        if(typeof config!=='undefined' && payload.data.mt_config) config = Object.assign(config, payload.data.mt_config);
+        if(typeof config!=='undefined' && payload.data.mt_config){ config = Object.assign(config, payload.data.mt_config); if(typeof restoreOfflineImages==='function') restoreOfflineImages(config); }
         if(typeof projects!=='undefined' && payload.data.mt_projects) projects = JSON.parse(JSON.stringify(payload.data.mt_projects));
         if(typeof applyConfig==='function') applyConfig();
         if(typeof renderProducts==='function') renderProducts();
@@ -3638,11 +3667,13 @@ input,textarea,select,[contenteditable]{
   .admin-tabs{position:relative;}
   .admin-tabs button{position:relative;}
   .admin-tabs .tab-count{
-    position:absolute!important;top:-4px!important;right:-4px!important;
+    position:absolute!important;top:-6px!important;right:-6px!important;
     margin:0!important;min-width:18px!important;height:18px!important;
     font-size:.62rem!important;padding:0 4px!important;
     box-shadow:0 0 0 2px var(--bg-secondary,#111);z-index:2;
   }
+  /* En mobile ocultar span de texto de los tabs pero NO el tab-count */
+  .admin-tabs button>span:not(.tab-count){display:none!important;}
   /* Más espacio inferior en proveedores en android */
   #panel-suppliers{padding-bottom:90px!important;}
   #panel-suppliers .table-responsive{margin-bottom:30px;}
