@@ -204,6 +204,17 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
   #contactModal .modal{max-width:94vw!important;}
   #contactModal .contact-card{gap:8px!important;}
   #contactCreatorPhoto{width:60px!important;height:60px!important;font-size:1.4rem!important;margin-bottom:10px!important;}
+  /* Modal producto sin scroll en Android */
+  #productDetailModal .modal{padding:14px!important;max-height:92dvh!important;overflow-y:auto!important;}
+  #productDetailModal .detail-layout{gap:12px!important;}
+  #productDetailModal .main-image-wrap{aspect-ratio:4/3!important;max-height:38vw!important;}
+  #productDetailModal .detail-info{gap:8px!important;}
+  #productDetailModal .detail-info h2{font-size:.95rem!important;}
+  #productDetailModal .detail-info div[style*="2.4rem"]{font-size:1.5rem!important;}
+  #productDetailModal .detail-info p{font-size:.8rem!important;line-height:1.5!important;display:-webkit-box!important;-webkit-line-clamp:3!important;-webkit-box-orient:vertical!important;overflow:hidden!important;}
+  #productDetailModal .gallery img{width:48px!important;height:48px!important;}
+  #productDetailModal .detail-info>div[style*="display:flex"][style*="gap:18px"]{font-size:.75rem!important;}
+  #productDetailModal .btn{padding:12px 14px!important;font-size:.85rem!important;}
 }
 
 
@@ -841,7 +852,10 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <div class="form-group pw-wrap"><input type="password" autocomplete="new-password" id="creatorPassword" placeholder="Contraseña del creador" onkeydown="if(event.key==='Enter')loginCreator()"><button type="button" class="pw-toggle" onclick="togglePw('creatorPassword',this)"><i class="fas fa-eye"></i></button></div>
 <button class="btn btn-primary btn-block" onclick="loginCreator()" style="border-radius:50px;"><i class="fas fa-right-to-bracket"></i> Ingresar</button>
 <p id="creatorError" style="color:var(--rojo);text-align:center;margin-top:14px;display:none;font-weight:600;font-size:.88rem;"><i class="fas fa-circle-exclamation"></i> Contraseña incorrecta</p>
-<button class="btn btn-secondary btn-block btn-sm" onclick="showPage('admin-login')" style="margin-top:14px;border-radius:50px;"><i class="fas fa-arrow-left"></i> Volver</button>
+<div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--glass-border);">
+<p style="font-size:.82rem;color:var(--text-muted);">¿Eres el administrador?</p>
+<button class="btn btn-outline btn-block btn-sm" onclick="showPage('admin-login')" style="margin-top:10px;border-radius:50px;"><i class="fas fa-shield-halved"></i> Volver al Admin</button>
+</div>
 <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--glass-border);">
 <button class="btn btn-secondary btn-block btn-sm" onclick="showCreatorRecovery()" style="border-radius:50px;"><i class="fas fa-key"></i> ¿Olvidé mi contraseña?</button>
 </div>
