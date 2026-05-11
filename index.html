@@ -207,7 +207,8 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
   /* Modal producto sin scroll horizontal en Android */
   #productDetailModal .modal{padding:14px!important;max-height:92dvh!important;overflow-y:auto!important;overflow-x:hidden!important;width:100%!important;box-sizing:border-box!important;}
   #productDetailModal .detail-layout{gap:12px!important;width:100%!important;box-sizing:border-box!important;}
-  #productDetailModal .main-image-wrap{aspect-ratio:4/3!important;max-height:38vw!important;}
+  #productDetailModal .detail-images{width:100%!important;box-sizing:border-box!important;}
+  #productDetailModal .main-image-wrap{aspect-ratio:16/10!important;max-height:none!important;width:calc(100% - 0px)!important;margin:0 auto!important;display:block!important;}
   #productDetailModal .detail-info{gap:8px!important;width:100%!important;box-sizing:border-box!important;min-width:0!important;}
   #productDetailModal .detail-info h2{font-size:.95rem!important;}
   #productDetailModal .detail-info div[style*="2.4rem"]{font-size:1.5rem!important;}
@@ -433,7 +434,7 @@ tr:hover td{background:rgba(255,109,0,.03);}
 .form-row{grid-template-columns:1fr;}
 .modal{padding:22px;margin:10px;border-radius:18px;}
 .admin-tabs button{padding:8px 12px;font-size:.72rem;}
-.admin-tabs button span{display:none;}
+.admin-tabs button span:not(.tab-count){display:none;}
 .products-grid{grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:14px;}
 .detail-layout{grid-template-columns:1fr;}
 .cart-panel{max-width:100%;}
