@@ -280,12 +280,12 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 
 /* ===== ADMIN ===== */
 .admin-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:24px;background:var(--bg-secondary);padding:8px;border-radius:16px;border:1px solid var(--glass-border);}
+/* Ocultar header de portada en admin en TODOS los dispositivos */
+body.admin-mode .header{display:none!important;}
+body.admin-mode #page-admin{padding-top:0!important;}
 /* Admin tabs sticky en desktop */
 @media(min-width:641px){
   #page-admin .admin-tabs{position:sticky;top:0;z-index:100;border-radius:0 0 16px 16px;margin-left:-20px;margin-right:-20px;padding:10px 20px;}
-  /* Ocultar header de portada cuando se está en admin */
-  body.admin-mode .header{display:none!important;}
-  body.admin-mode #page-admin{padding-top:0!important;}
 }
 .admin-tabs button{padding:10px 18px;border-radius:12px;color:var(--text-secondary);background:transparent;font-weight:700;transition:all .3s;font-size:.84rem;border:none;display:inline-flex;align-items:center;gap:6px;}
 .admin-tabs button i{font-size:.9rem;}
