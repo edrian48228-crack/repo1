@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T11:01:20.152Z",
+  "exportedAt": "2026-05-12T11:02:20.679Z",
   "data": {
     "mt_products": [
       {
@@ -193,30 +193,6 @@
         "createdAt": 1778580898475,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-portatil-1778580893660-0974r9e7.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580904375_ciwuk8",
-        "name": "casco",
-        "price": 6000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778580898607-05ilzcic.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580904375,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778580898607-05ilzcic.webp"
         ]
       },
       {
@@ -964,30 +940,6 @@
         ]
       },
       {
-        "id": "prod_1778582472960_3aurtm",
-        "name": "eje de atras",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-eje-de-atras-1778582467106-5cklclfz.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582472960,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-eje-de-atras-1778582467106-5cklclfz.webp"
-        ]
-      },
-      {
         "id": "prod_1778582479373_kkb3ww",
         "name": "extension de 3 metros",
         "price": 3000,
@@ -1705,30 +1657,6 @@
         "createdAt": 1778582691486,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-mochila-de-ni-a-1778582683383-qi5b91vv.webp"
-        ]
-      },
-      {
-        "id": "prod_1778583072862_jwmk0j",
-        "name": "cinta metrica",
-        "price": 1000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778583067232-jyjomuag.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778583072863,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778583067232-jyjomuag.webp"
         ]
       },
       {
