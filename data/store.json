@@ -1,104 +1,8 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:47:07.510Z",
+  "exportedAt": "2026-05-12T10:48:04.126Z",
   "data": {
     "mt_products": [
-      {
-        "id": "p1",
-        "name": "Smartphone Samsung A1+",
-        "price": 27000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "usado",
-        "stock": 2,
-        "minStock": 3,
-        "description": "Smartphone de última generación con cámara de 108MP y pantalla AMOLED. 6 con 128. Incluye una inteligencia artificial Offline. SOLO 7 MESES DE USO",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
-        ],
-        "views": 245,
-        "cartAdds": 42,
-        "sales": 18,
-        "lastSaleDate": "2025-03-28",
-        "createdAt": "2025-01-15",
-        "originalPrice": 30000,
-        "bulkDiscount": 10,
-        "bulkQty": 3,
-        "featured": "si",
-        "__lastRepoImgs": []
-      },
-      {
-        "id": "p2",
-        "name": "Puertos de Telefonos Moviles",
-        "price": 200,
-        "currency": "CUP",
-        "category": "Accesorios",
-        "condition": "nuevo",
-        "stock": 30,
-        "minStock": 5,
-        "description": "Puertos para telefonos moviles tipo b y tipo c",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p2-0-1777985688086-06g4c1st.webp"
-        ],
-        "views": 190,
-        "cartAdds": 35,
-        "sales": 22,
-        "lastSaleDate": "2025-03-30",
-        "createdAt": "2025-01-20",
-        "originalPrice": 220,
-        "bulkDiscount": 15,
-        "bulkQty": 2,
-        "featured": "no",
-        "__lastRepoImgs": []
-      },
-      {
-        "id": "p3",
-        "name": "Smartphone Huawei Nova 5T",
-        "price": 35000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "usado",
-        "stock": 2,
-        "minStock": 10,
-        "description": "Telefonos de uso en perfecto estado. Solo detallito el borde de carmara frontal que no afecta la foto.  Incluye una inteligencia artificial offline",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p3-0-1777985690442-0u1rji2c.webp"
-        ],
-        "views": 156,
-        "cartAdds": 29,
-        "sales": 35,
-        "lastSaleDate": "2025-03-29",
-        "createdAt": "2025-02-01",
-        "originalPrice": 40000,
-        "bulkDiscount": 20,
-        "bulkQty": 5,
-        "featured": "no",
-        "__lastRepoImgs": []
-      },
-      {
-        "id": "p4",
-        "name": "Cargador de Motorina 72V/28A",
-        "price": 12,
-        "currency": "USD",
-        "category": "Dulces",
-        "condition": "nuevo",
-        "stock": 100,
-        "minStock": 15,
-        "description": "Caja de chocolates belgas artesanales - 12 unidades",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
-        ],
-        "views": 321,
-        "cartAdds": 59,
-        "sales": 45,
-        "lastSaleDate": "2025-03-30",
-        "createdAt": "2025-02-10",
-        "originalPrice": 18,
-        "bulkDiscount": 10,
-        "bulkQty": 3,
-        "featured": "si",
-        "__lastRepoImgs": []
-      },
       {
         "id": "p5",
         "name": "Smartphone Realme Note 50",
@@ -2226,6 +2130,14 @@
     "mt_suppliers": null,
     "mt_notifications": [
       {
+        "id": "6431dcf8-4da7-47c9-b512-296868aca099",
+        "type": "best_seller",
+        "message": "\"Puertos de telefonos celulares\" es el más vendido (10)",
+        "productId": "p7",
+        "date": "2026-05-12T10:48:01.336Z",
+        "read": false
+      },
+      {
         "id": "b073d04e-c8ae-4a5b-b712-baebc781b89b",
         "type": "low_stock",
         "message": "\"mochila de niña\" tiene stock bajo (1)",
@@ -3024,7 +2936,7 @@
       {
         "date": "2026-05-12",
         "hour": 12,
-        "count": 6
+        "count": 7
       }
     ],
     "mt_projects": []
