@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:48:58.573Z",
+  "exportedAt": "2026-05-12T10:50:04.742Z",
   "data": {
     "mt_products": [
       {
@@ -604,30 +604,6 @@
         ]
       },
       {
-        "id": "prod_1778582169754_3u8yi2",
-        "name": "cargador",
-        "price": 4000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-1778582164799-t5wzq169.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582169754,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-1778582164799-t5wzq169.webp"
-        ]
-      },
-      {
         "id": "prod_1778582176353_m7tj33",
         "name": "cargador de pilas",
         "price": 2000,
@@ -697,54 +673,6 @@
         "createdAt": 1778582194300,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778582188886-fw47i912.webp"
-        ]
-      },
-      {
-        "id": "prod_1778582200820_mt0exd",
-        "name": "cinta metrica",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778582194303-ut3zm2a6.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582200820,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778582194303-ut3zm2a6.gif"
-        ]
-      },
-      {
-        "id": "prod_1778582206859_q4oxse",
-        "name": "conector",
-        "price": 350,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-conector-1778582200825-3ofek48h.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582206859,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-conector-1778582200825-3ofek48h.gif"
         ]
       },
       {
@@ -2839,7 +2767,7 @@
       {
         "date": "2026-05-12",
         "hour": 12,
-        "count": 8
+        "count": 9
       }
     ],
     "mt_projects": []
