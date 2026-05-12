@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:58:52.124Z",
+  "exportedAt": "2026-05-12T11:00:15.888Z",
   "data": {
     "mt_products": [
       {
@@ -49,30 +49,6 @@
         "createdAt": 1778580850368,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-caja-descodificadora-1778580844342-rv8p8msf.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580856610_ts0itx",
-        "name": "calentadores",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-calentadores-1778580851031-8eutqi6f.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580856610,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-calentadores-1778580851031-8eutqi6f.webp"
         ]
       },
       {
