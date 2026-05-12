@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:30:12.106Z",
+  "exportedAt": "2026-05-12T10:37:24.966Z",
   "data": {
     "mt_products": [
       {
@@ -674,6 +674,414 @@
         "createdAt": 1778580947206,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-toma-corriente-1778580942488-whjdcjil.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582144266_aczico",
+        "name": "calentadores",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-calentadores-1778582138441-s7c57jrg.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582144266,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-calentadores-1778582138441-s7c57jrg.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582150688_5q77k3",
+        "name": "camara 26",
+        "price": 2500,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778582145023-p8c5lmwv.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582150688,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778582145023-p8c5lmwv.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582156989_p2ihrv",
+        "name": "candado",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582151007-7axga25l.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582156989,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582151007-7axga25l.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582164673_ljdeah",
+        "name": "candado",
+        "price": 2800,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582157808-ox1n2l3o.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582164673,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582157808-ox1n2l3o.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582169754_3u8yi2",
+        "name": "cargador",
+        "price": 4000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-1778582164799-t5wzq169.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582169754,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-1778582164799-t5wzq169.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582176353_m7tj33",
+        "name": "cargador de pilas",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778582170612-fnr6vuhu.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582176353,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778582170612-fnr6vuhu.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582182923_vv1wsd",
+        "name": "cargador inalambrico",
+        "price": 1000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-inalambrico-1778582177311-xfzwyt4x.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582182923,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-inalambrico-1778582177311-xfzwyt4x.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582188673_0a9qid",
+        "name": "cargador portatil",
+        "price": 13000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-portatil-1778582183228-ed3rj46i.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582188673,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-portatil-1778582183228-ed3rj46i.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582194300_brg06i",
+        "name": "casco",
+        "price": 6000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778582188886-fw47i912.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582194300,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778582188886-fw47i912.webp"
+        ]
+      },
+      {
+        "id": "prod_1778582200820_mt0exd",
+        "name": "cinta metrica",
+        "price": 2000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778582194303-ut3zm2a6.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582200820,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778582194303-ut3zm2a6.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582206859_q4oxse",
+        "name": "conector",
+        "price": 350,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-conector-1778582200825-3ofek48h.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582206859,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-conector-1778582200825-3ofek48h.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582212503_996y7q",
+        "name": "lampara de cabeza",
+        "price": 3000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-de-cabeza-1778582206866-5h0cvepr.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582212504,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-de-cabeza-1778582206866-5h0cvepr.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582218243_ul273z",
+        "name": "lampara solar",
+        "price": 7000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-solar-1778582212513-ncn4vq1d.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582218243,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-solar-1778582212513-ncn4vq1d.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582225951_wziodt",
+        "name": "micro sd",
+        "price": 500,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-micro-sd-1778582218247-lfxcrvdx.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582225951,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-micro-sd-1778582218247-lfxcrvdx.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582231695_d79xu4",
+        "name": "pulidora",
+        "price": 24000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pulidora-1778582225954-pyn2l8z6.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582231695,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pulidora-1778582225954-pyn2l8z6.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582237239_270zpf",
+        "name": "taladro",
+        "price": 24000,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-taladro-1778582231716-dwlryixk.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582237239,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-taladro-1778582231716-dwlryixk.gif"
+        ]
+      },
+      {
+        "id": "prod_1778582242455_huig4n",
+        "name": "toma corriente",
+        "price": 550,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-toma-corriente-1778582237241-t38pk1ef.gif"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778582242455,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-toma-corriente-1778582237241-t38pk1ef.gif"
         ]
       }
     ],
