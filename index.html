@@ -284,9 +284,8 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 body.admin-mode .header{display:none!important;}
 body.admin-mode #page-admin{padding-top:0!important;}
 /* Admin tabs sticky en desktop */
-@media(min-width:641px){
-  #page-admin .admin-tabs{position:sticky;top:0;z-index:100;border-radius:0 0 16px 16px;margin-left:-20px;margin-right:-20px;padding:10px 20px;}
-}
+/* Admin tabs sticky en TODOS los dispositivos */
+#page-admin .admin-tabs{position:sticky;top:0;z-index:100;border-radius:0 0 16px 16px;margin-left:-20px;margin-right:-20px;padding:10px 20px;}
 .admin-tabs button{padding:10px 18px;border-radius:12px;color:var(--text-secondary);background:transparent;font-weight:700;transition:all .3s;font-size:.84rem;border:none;display:inline-flex;align-items:center;gap:6px;}
 .admin-tabs button i{font-size:.9rem;}
 .admin-tabs button:hover,.admin-tabs button.active{background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;box-shadow:var(--neon-naranja);}
@@ -936,6 +935,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <h3 style="font-size:1rem;color:var(--naranja-brillante);display:flex;align-items:center;gap:8px;"><i class="fas fa-boxes-stacked"></i> PRODUCTOS</h3>
 <div style="display:flex;gap:8px;flex-wrap:wrap;">
 <button class="btn btn-primary btn-sm" onclick="openProductForm()" style="border-radius:50px;"><i class="fas fa-plus"></i> Nuevo</button>
+<button class="btn btn-secondary btn-sm" onclick="openBulkImport()" style="border-radius:50px;"><i class="fas fa-folder-open"></i> Importar carpeta</button>
 <button class="btn btn-danger btn-sm" onclick="deleteAllProducts()" style="border-radius:50px;"><i class="fas fa-trash-can"></i> Eliminar todos</button>
 </div>
 </div>
@@ -1261,6 +1261,41 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <div class="modal" style="max-width:920px;">
 <button class="modal-close" onclick="closeModal('productDetailModal')"><i class="fas fa-times"></i></button>
 <div id="productDetailContent"></div>
+</div>
+</div>
+
+<!-- BULK IMPORT MODAL -->
+<div class="modal-overlay" id="bulkImportModal">
+<div class="modal" style="max-width:680px;">
+<button class="modal-close" onclick="closeModal('bulkImportModal')"><i class="fas fa-times"></i></button>
+<h2><i class="fas fa-folder-open" style="color:var(--naranja-brillante);"></i> IMPORTAR PRODUCTOS DESDE CARPETA</h2>
+<div style="background:var(--bg-secondary);border-radius:14px;padding:14px 18px;margin-bottom:18px;font-size:.83rem;color:var(--text-muted);line-height:1.7;">
+  <strong style="color:var(--text-primary);">Formato del nombre:</strong> El nombre del producto va primero, y el precio al final separado por <code>_</code>, <code>-</code> o espacio.<br>
+  <span style="color:var(--verde);">✓ Camiseta azul talle 2_7000.jpg</span> &nbsp;·&nbsp;
+  <span style="color:var(--verde);">✓ Zapato cuero-15000.webp</span> &nbsp;·&nbsp;
+  <span style="color:var(--verde);">✓ Bolso modelo 3 7500.jpg</span>
+</div>
+<div class="form-group">
+  <label><i class="fas fa-folder"></i> Seleccionar carpeta de imágenes</label>
+  <input type="file" id="bulkImportInput" webkitdirectory multiple accept="image/*" style="margin-top:6px;" onchange="previewBulkImport(this)">
+</div>
+<div id="bulkImportPreview" style="display:none;margin-top:16px;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+    <span id="bulkImportCount" style="font-weight:700;color:var(--naranja-brillante);"></span>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <label style="font-size:.8rem;color:var(--text-muted);">Categoría:</label>
+      <select id="bulkImportCategory" style="border-radius:50px;padding:6px 12px;font-size:.8rem;"></select>
+      <label style="font-size:.8rem;color:var(--text-muted);">Stock:</label>
+      <input type="number" id="bulkImportStock" value="1" min="1" style="width:60px;border-radius:50px;padding:6px 10px;font-size:.8rem;">
+    </div>
+  </div>
+  <div id="bulkImportList" style="max-height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;"></div>
+  <div id="bulkImportErrors" style="display:none;margin-top:10px;background:rgba(255,23,68,.08);border:1px solid rgba(255,23,68,.2);border-radius:12px;padding:12px;font-size:.8rem;color:var(--rojo);"></div>
+  <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;">
+    <button class="btn btn-primary" onclick="confirmBulkImport()" style="border-radius:50px;flex:1;"><i class="fas fa-rocket"></i> <span id="bulkImportSaveBtn">Crear productos</span></button>
+    <button class="btn btn-secondary" onclick="closeModal('bulkImportModal')" style="border-radius:50px;"><i class="fas fa-times"></i> Cancelar</button>
+  </div>
+</div>
 </div>
 </div>
 
@@ -2482,6 +2517,187 @@ window.open(`https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}?text=
 }
 
 // ===== IMPORT/EXPORT =====
+// ===== IMPORTACIÓN MASIVA DESDE CARPETA =====
+let _bulkFiles = []; // archivos pendientes de confirmar
+
+function openBulkImport(){
+  _bulkFiles = [];
+  document.getElementById('bulkImportInput').value='';
+  document.getElementById('bulkImportPreview').style.display='none';
+  document.getElementById('bulkImportList').innerHTML='';
+  document.getElementById('bulkImportErrors').style.display='none';
+  // Poblar selector de categorías
+  const sel=document.getElementById('bulkImportCategory');
+  sel.innerHTML=config.categories.map(c=>`<option value="${c}">${c}</option>`).join('');
+  openModal('bulkImportModal');
+}
+
+// Regex: extrae nombre y precio del nombre de archivo
+// Lógica: el precio es el ÚLTIMO número al final del nombre (antes de la extensión)
+// Soporta: "Camiseta azul 2_7000.jpg" → nombre="Camiseta azul 2", precio=7000
+// Soporta: "Zapato modelo3-15000.5.webp" → nombre="Zapato modelo3", precio=15000.5
+function parseFileName(filename){
+  const noExt = filename.replace(/\.[^.]+$/, '').trim();
+  // Busca separador (_  -  espacio) seguido de número SOLO al final
+  const m = noExt.match(/^(.*?)[\s_-]+(\d+(?:[.,]\d+)?)$/);
+  if(!m) return null;
+  const name = m[1].trim();
+  const price = parseFloat(m[2].replace(',','.'));
+  if(!name || isNaN(price) || price <= 0) return null;
+  // Redondear precio: si está muy cerca de entero, usar entero
+  const rounded = Math.abs(price - Math.round(price)) < 0.01 ? Math.round(price) : Math.round(price*100)/100;
+  return { name, price: rounded };
+}
+
+async function previewBulkImport(input){
+  const files = Array.from(input.files).filter(f=>f.type.startsWith('image/'));
+  if(!files.length){ showToast('<i class="fas fa-exclamation-circle"></i> No se encontraron imágenes'); return; }
+
+  _bulkFiles = [];
+  const list = document.getElementById('bulkImportList');
+  const errDiv = document.getElementById('bulkImportErrors');
+  list.innerHTML = '<p style="color:var(--text-muted);font-size:.82rem;text-align:center;padding:16px;"><i class="fas fa-spinner fa-spin"></i> Analizando '+files.length+' imágenes...</p>';
+  document.getElementById('bulkImportPreview').style.display = 'block';
+  errDiv.style.display = 'none';
+
+  const errors = [];
+  const items = [];
+
+  for(const file of files){
+    const fname = file.name;
+    const parsed = parseFileName(fname);
+    if(!parsed){
+      errors.push(fname + ' — no se pudo extraer nombre y precio');
+      continue;
+    }
+    const thumbUrl = URL.createObjectURL(file);
+    items.push({ file, name: parsed.name, price: parsed.price, thumbUrl, originalName: fname });
+  }
+
+  _bulkFiles = items;
+
+  // Render preview cards
+  list.innerHTML = items.map((it,i)=>`
+    <div style="display:flex;align-items:center;gap:10px;background:var(--bg-secondary);border-radius:12px;padding:10px 14px;border:1px solid var(--glass-border);">
+      <img src="${it.thumbUrl}" style="width:52px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;">
+      <div style="flex:1;min-width:0;">
+        <input type="text" value="${it.name.replace(/"/g,'&quot;')}" data-idx="${i}" data-field="name"
+          onchange="_bulkEdit(this)" style="width:100%;border-radius:8px;padding:5px 8px;font-size:.82rem;margin-bottom:4px;">
+        <div style="display:flex;gap:6px;align-items:center;">
+          <span style="font-size:.75rem;color:var(--text-muted);">Precio:</span>
+          <input type="number" value="${it.price}" data-idx="${i}" data-field="price"
+            onchange="_bulkEdit(this)" style="width:90px;border-radius:8px;padding:5px 8px;font-size:.82rem;">
+          <span style="font-size:.7rem;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${it.originalName}</span>
+        </div>
+      </div>
+      <button onclick="_bulkRemove(${i})" style="background:none;border:none;color:var(--rojo);font-size:1rem;cursor:pointer;flex-shrink:0;" title="Quitar"><i class="fas fa-times-circle"></i></button>
+    </div>`).join('');
+
+  document.getElementById('bulkImportCount').textContent = items.length + ' producto(s) listos para importar';
+  document.getElementById('bulkImportSaveBtn').textContent = 'Crear ' + items.length + ' productos';
+
+  if(errors.length){
+    errDiv.style.display = 'block';
+    errDiv.innerHTML = '<strong><i class="fas fa-triangle-exclamation"></i> ' + errors.length + ' archivo(s) sin precio en el nombre:</strong><br>' + errors.join('<br>');
+  }
+}
+
+function _bulkEdit(input){
+  const idx = parseInt(input.dataset.idx);
+  const field = input.dataset.field;
+  if(field === 'price'){
+    let v = parseFloat(input.value);
+    if(!isNaN(v)) _bulkFiles[idx].price = Math.abs(v-Math.round(v))<0.01?Math.round(v):Math.round(v*100)/100;
+  } else {
+    _bulkFiles[idx][field] = input.value;
+  }
+}
+
+function _bulkRemove(idx){
+  _bulkFiles.splice(idx,1);
+  // Re-render
+  previewBulkImport._rerender();
+}
+
+// Re-render helper after removal
+previewBulkImport._rerender = function(){
+  const list = document.getElementById('bulkImportList');
+  list.innerHTML = _bulkFiles.map((it,i)=>`
+    <div style="display:flex;align-items:center;gap:10px;background:var(--bg-secondary);border-radius:12px;padding:10px 14px;border:1px solid var(--glass-border);">
+      <img src="${it.thumbUrl}" style="width:52px;height:52px;object-fit:cover;border-radius:8px;flex-shrink:0;">
+      <div style="flex:1;min-width:0;">
+        <input type="text" value="${it.name.replace(/"/g,'&quot;')}" data-idx="${i}" data-field="name"
+          onchange="_bulkEdit(this)" style="width:100%;border-radius:8px;padding:5px 8px;font-size:.82rem;margin-bottom:4px;">
+        <div style="display:flex;gap:6px;align-items:center;">
+          <span style="font-size:.75rem;color:var(--text-muted);">Precio:</span>
+          <input type="number" value="${it.price}" data-idx="${i}" data-field="price"
+            onchange="_bulkEdit(this)" style="width:90px;border-radius:8px;padding:5px 8px;font-size:.82rem;">
+          <span style="font-size:.7rem;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${it.originalName}</span>
+        </div>
+      </div>
+      <button onclick="_bulkRemove(${i})" style="background:none;border:none;color:var(--rojo);font-size:1rem;cursor:pointer;flex-shrink:0;" title="Quitar"><i class="fas fa-times-circle"></i></button>
+    </div>`).join('');
+  document.getElementById('bulkImportCount').textContent = _bulkFiles.length + ' producto(s) listos para importar';
+  document.getElementById('bulkImportSaveBtn').textContent = 'Crear ' + _bulkFiles.length + ' productos';
+};
+
+async function confirmBulkImport(){
+  if(!_bulkFiles.length){ showToast('<i class="fas fa-exclamation-circle"></i> No hay productos'); return; }
+  const category = document.getElementById('bulkImportCategory').value;
+  const stock = parseInt(document.getElementById('bulkImportStock').value)||1;
+  const btn = document.querySelector('#bulkImportModal .btn-primary');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
+
+  const token = (typeof __ghTokenCache!=='undefined'&&__ghTokenCache)?__ghTokenCache:null;
+  const creds = (typeof ghGetCreds==='function')?ghGetCreds():null;
+  const canUploadGH = !!(token && creds && creds.owner && creds.repo && typeof ghUploadImage==='function' && typeof ghToWebp==='function');
+
+  let created = 0;
+  for(let i=0;i<_bulkFiles.length;i++){
+    const it = _bulkFiles[i];
+    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${i+1}/${_bulkFiles.length} — ${it.name.substring(0,20)}...`;
+    try{
+      let imgUrl = '';
+      // Leer como base64
+      const raw = await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(it.file);});
+      if(canUploadGH){
+        // Convertir a WebP y subir a GitHub
+        const conv = await ghToWebp(raw,1200,0.85);
+        const prefix = 'prod-'+it.name.toLowerCase().replace(/[^a-z0-9]/g,'-').substring(0,20);
+        imgUrl = await ghUploadImage(conv.dataUrl, prefix, token);
+      } else {
+        // Sin GitHub: guardar base64 directamente (se subirá al hacer sync)
+        if(typeof ghToWebp==='function'){
+          const conv = await ghToWebp(raw,1200,0.85);
+          imgUrl = conv.dataUrl;
+        } else {
+          imgUrl = raw;
+        }
+      }
+      const id = 'prod_'+Date.now()+'_'+Math.random().toString(36).substr(2,6);
+      const newProduct = {
+        id, name:it.name, price:it.price,
+        currency: config.currencies&&config.currencies[0]?config.currencies[0]:'USD',
+        category, condition:'nuevo', stock, minStock:5,
+        description:'', images:[imgUrl],
+        originalPrice:0, bulkDiscount:0, bulkQty:3, featured:'no',
+        views:0, sales:0, createdAt:Date.now()
+      };
+      products.push(newProduct);
+      created++;
+    }catch(err){
+      console.error('Error importando',it.name,err);
+    }
+  }
+  save('mt_products', products);
+  renderProducts();
+  renderAdminProducts();
+  if(typeof updateTabCounts==='function') updateTabCounts();
+  closeModal('bulkImportModal');
+  showToast(`<i class="fas fa-check-circle"></i> ${created} producto(s) importados correctamente`);
+}
+
 function exportData(){const data=JSON.stringify({products,sales,config,suppliers,notifications,visits},null,2);const blob=new Blob([data],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='megatienda-datos.json';a.click();}
 function importData(){const file=document.getElementById('importFile').files[0];if(!file){alert('Seleccione JSON');return;}const reader=new FileReader();reader.onload=function(e){try{const data=JSON.parse(e.target.result);if(data.products){products=data.products;products.forEach(p=>{if(p.originalPrice===undefined)p.originalPrice=0;if(p.bulkDiscount===undefined)p.bulkDiscount=0;if(p.bulkQty===undefined)p.bulkQty=3;if(p.featured===undefined)p.featured='no';});save('mt_products',products);}if(data.sales){sales=data.sales;save('mt_sales',sales);}if(data.config){config={...DEFAULT_CONFIG,...data.config};save('mt_config',config);}if(data.suppliers){suppliers=data.suppliers;save('mt_suppliers',suppliers);}if(data.notifications){notifications=data.notifications;save('mt_notifications',notifications);}if(data.visits){visits=data.visits;save('mt_visits',visits);}applyConfig();renderProducts();if(isAdmin){renderAdminProducts();renderSuppliers();renderDashboard();renderNotifications();}showToast('<i class="fas fa-check-circle"></i> Datos importados');}catch{alert('❌ JSON no válido');}};reader.readAsText(file);}
 function downloadSystem(){const a=document.createElement('a');const blob=new Blob(['<!DOCTYPE html>'+document.documentElement.outerHTML],{type:'text/html'});a.href=URL.createObjectURL(blob);a.download='MegaTienda.html';a.click();}
