@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T11:02:20.679Z",
+  "exportedAt": "2026-05-12T11:03:36.076Z",
   "data": {
     "mt_products": [
       {
@@ -505,30 +505,6 @@
         "createdAt": 1778582212504,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-de-cabeza-1778582206866-5h0cvepr.gif"
-        ]
-      },
-      {
-        "id": "prod_1778582218243_ul273z",
-        "name": "lampara solar",
-        "price": 7000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-solar-1778582212513-ncn4vq1d.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582218243,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-solar-1778582212513-ncn4vq1d.gif"
         ]
       },
       {
@@ -2753,6 +2729,54 @@
     "mt_suppliers": null,
     "mt_notifications": [
       {
+        "id": "58b82330-492b-4735-af3a-63cdbf44b331",
+        "type": "low_stock",
+        "message": "\"tarjeta clasica\" tiene stock bajo (1)",
+        "productId": "prod_1778583529606_hbvzn3",
+        "date": "2026-05-12T11:02:50.295Z",
+        "read": false
+      },
+      {
+        "id": "56a819e9-c0e2-440e-bc8f-a3657647ea40",
+        "type": "low_stock",
+        "message": "\"pesa\" tiene stock bajo (1)",
+        "productId": "prod_1778583521495_7drp0t",
+        "date": "2026-05-12T11:02:50.295Z",
+        "read": false
+      },
+      {
+        "id": "18b1340f-d096-4e25-9f3f-c812f5625b63",
+        "type": "low_stock",
+        "message": "\"oxido litro blanco\" tiene stock bajo (1)",
+        "productId": "prod_1778583512800_xpdwbe",
+        "date": "2026-05-12T11:02:50.295Z",
+        "read": false
+      },
+      {
+        "id": "7bb583a5-f846-4d5d-ac3d-42aace86c446",
+        "type": "low_stock",
+        "message": "\"otg tipo c y b\" tiene stock bajo (1)",
+        "productId": "prod_1778583505361_6icgrh",
+        "date": "2026-05-12T11:02:50.295Z",
+        "read": false
+      },
+      {
+        "id": "6394e14b-5c2a-4545-8665-76ff7204ad25",
+        "type": "low_stock",
+        "message": "\"nintendo clasic mini\" tiene stock bajo (1)",
+        "productId": "prod_1778583498407_rer6fq",
+        "date": "2026-05-12T11:02:50.295Z",
+        "read": false
+      },
+      {
+        "id": "274f5b67-0fc8-4a81-bdec-a0e0bcfb4575",
+        "type": "low_stock",
+        "message": "\"monitor\" tiene stock bajo (1)",
+        "productId": "prod_1778583491709_gwh17z",
+        "date": "2026-05-12T11:02:50.295Z",
+        "read": false
+      },
+      {
         "id": "cfafd8ea-a561-4b1d-9a9c-2c997e20e774",
         "type": "low_stock",
         "message": "\"zapatos\" tiene stock bajo (1)",
@@ -3856,6 +3880,11 @@
         "date": "2026-05-12",
         "hour": 12,
         "count": 10
+      },
+      {
+        "date": "2026-05-12",
+        "hour": 13,
+        "count": 1
       }
     ],
     "mt_projects": []
