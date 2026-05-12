@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T11:00:15.888Z",
+  "exportedAt": "2026-05-12T11:01:20.152Z",
   "data": {
     "mt_products": [
       {
@@ -49,30 +49,6 @@
         "createdAt": 1778580850368,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-caja-descodificadora-1778580844342-rv8p8msf.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580863393_orys1r",
-        "name": "camara 26",
-        "price": 2500,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778580857331-c5uz6fnj.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580863393,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778580857331-c5uz6fnj.webp"
         ]
       },
       {
@@ -481,78 +457,6 @@
         "createdAt": 1778582150688,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778582145023-p8c5lmwv.webp"
-        ]
-      },
-      {
-        "id": "prod_1778582156989_p2ihrv",
-        "name": "candado",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582151007-7axga25l.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582156989,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582151007-7axga25l.webp"
-        ]
-      },
-      {
-        "id": "prod_1778582164673_ljdeah",
-        "name": "candado",
-        "price": 2800,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582157808-ox1n2l3o.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582164673,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778582157808-ox1n2l3o.webp"
-        ]
-      },
-      {
-        "id": "prod_1778582176353_m7tj33",
-        "name": "cargador de pilas",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778582170612-fnr6vuhu.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582176353,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778582170612-fnr6vuhu.webp"
         ]
       },
       {
