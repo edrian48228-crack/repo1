@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T09:47:39.016Z",
+  "exportedAt": "2026-05-12T09:48:48.788Z",
   "data": {
     "mt_products": [
       {
@@ -244,7 +244,7 @@
       }
     ],
     "mt_config": {
-      "storeName": "MegaTienda Online",
+      "storeName": "ElEstantico",
       "whatsapp": "+5354693549",
       "facebook": "https://facebook.com/megatienda",
       "email": "tienda@ejemplo.com",
