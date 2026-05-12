@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:15:49.715Z",
+  "exportedAt": "2026-05-12T10:17:17.400Z",
   "data": {
     "mt_products": [
       {
@@ -762,6 +762,158 @@
     "mt_suppliers": null,
     "mt_notifications": [
       {
+        "id": "ab016e00-963b-48b0-90ce-8e2974ee643b",
+        "type": "low_stock",
+        "message": "\"toma corriente\" tiene stock bajo (1)",
+        "productId": "prod_1778580947206_1ebgzk",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "635b39bc-804d-4042-b748-1f164bcb753f",
+        "type": "low_stock",
+        "message": "\"taladro\" tiene stock bajo (1)",
+        "productId": "prod_1778580942486_o1gt50",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "aecbe505-9bc7-4127-85ea-b413581e1516",
+        "type": "low_stock",
+        "message": "\"pulidora\" tiene stock bajo (1)",
+        "productId": "prod_1778580937355_eq9xs3",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "20998491-9dc3-448f-b0f4-4625ef2b1715",
+        "type": "low_stock",
+        "message": "\"micro sd\" tiene stock bajo (1)",
+        "productId": "prod_1778580932501_oqui6h",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "05c6fbe9-2d5a-4a2d-9d0e-1d1bf552d9d9",
+        "type": "low_stock",
+        "message": "\"lampara solar\" tiene stock bajo (1)",
+        "productId": "prod_1778580926161_pnsve6",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "33da7e03-80a4-412e-973c-37b63ae91a46",
+        "type": "low_stock",
+        "message": "\"lampara de cabeza\" tiene stock bajo (1)",
+        "productId": "prod_1778580920814_gbtsic",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "f8e24c5d-543c-41b6-8a90-e6e0566d2596",
+        "type": "low_stock",
+        "message": "\"conector\" tiene stock bajo (1)",
+        "productId": "prod_1778580915604_y6qsa8",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "b6bb86ae-bcc3-4f90-8c32-b328dc97bdea",
+        "type": "low_stock",
+        "message": "\"cinta metrica\" tiene stock bajo (1)",
+        "productId": "prod_1778580909948_twm43p",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "68c977d9-04dd-4fde-9ce3-a44daeb169fc",
+        "type": "low_stock",
+        "message": "\"casco\" tiene stock bajo (1)",
+        "productId": "prod_1778580904375_ciwuk8",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "0b8960ef-53d2-4527-89b0-932c23bc4026",
+        "type": "low_stock",
+        "message": "\"cargador portatil\" tiene stock bajo (1)",
+        "productId": "prod_1778580898475_eokuv2",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "b69147c2-c402-42c7-88ba-8588f5dd8083",
+        "type": "low_stock",
+        "message": "\"cargador inalambrico\" tiene stock bajo (1)",
+        "productId": "prod_1778580893470_heq12b",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "8a287571-7ab8-4a6e-b78a-8d3caea681a3",
+        "type": "low_stock",
+        "message": "\"cargador de pilas\" tiene stock bajo (1)",
+        "productId": "prod_1778580886952_qlv27m",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "5a7f6a03-0b8a-4edd-ab68-f00b48ce471c",
+        "type": "low_stock",
+        "message": "\"cargador\" tiene stock bajo (1)",
+        "productId": "prod_1778580880703_ymyv1p",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "e9706a87-b1c7-4e36-bb86-29b724ea7220",
+        "type": "low_stock",
+        "message": "\"candado\" tiene stock bajo (1)",
+        "productId": "prod_1778580875565_3k8g4m",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "b1e063a7-b1c2-4fe6-8dec-693517e297d2",
+        "type": "low_stock",
+        "message": "\"candado\" tiene stock bajo (1)",
+        "productId": "prod_1778580869459_z72sqg",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "1296ae62-1e26-4b3b-9726-a27b1fd0eaca",
+        "type": "low_stock",
+        "message": "\"camara 26\" tiene stock bajo (1)",
+        "productId": "prod_1778580863393_orys1r",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "a960200e-64b8-48c1-b505-9237f330b0b0",
+        "type": "low_stock",
+        "message": "\"calentadores\" tiene stock bajo (1)",
+        "productId": "prod_1778580856610_ts0itx",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "26e990d8-14be-4baa-a46a-a30211a82288",
+        "type": "low_stock",
+        "message": "\"caja descodificadora\" tiene stock bajo (1)",
+        "productId": "prod_1778580850368_pxogzg",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
+        "id": "cf0d072f-d9f4-4f41-b02e-1542030586dc",
+        "type": "low_stock",
+        "message": "\"cables tipo b y c\" tiene stock bajo (1)",
+        "productId": "prod_1778580844334_0jn70u",
+        "date": "2026-05-12T10:17:14.652Z",
+        "read": false
+      },
+      {
         "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
         "message": "\"Placa de Samsung A32 5g\" tiene stock bajo (2)",
@@ -914,6 +1066,11 @@
       },
       {
         "date": "2026-05-07",
+        "hour": 12,
+        "count": 1
+      },
+      {
+        "date": "2026-05-12",
         "hour": 12,
         "count": 1
       }
