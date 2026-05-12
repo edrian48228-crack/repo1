@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T11:12:01.613Z",
+  "exportedAt": "2026-05-12T11:13:10.525Z",
   "data": {
     "mt_products": [
       {
@@ -2638,10 +2638,10 @@
       "clientFacebook": "",
       "clientWhatsapp": "+5354693549",
       "avatarEmoji": "🛒",
-      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778584295304-wv09gwyk.webp",
+      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778584337895-ed7on3k4.webp",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778584264758-1sz203eu.webp",
+      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778584381171-afh9nnak.webp",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -2652,8 +2652,8 @@
       "hideAvatar": false,
       "hideMonetizeButtons": false,
       "securityDisabled": false,
-      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778584264758-1sz203eu.webp",
-      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778584295304-wv09gwyk.webp"
+      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778584381171-afh9nnak.webp",
+      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778584337895-ed7on3k4.webp"
     },
     "mt_suppliers": null,
     "mt_notifications": [
@@ -3813,7 +3813,7 @@
       {
         "date": "2026-05-12",
         "hour": 13,
-        "count": 2
+        "count": 4
       }
     ],
     "mt_projects": []
