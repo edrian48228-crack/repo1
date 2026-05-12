@@ -1,81 +1,8 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:48:04.126Z",
+  "exportedAt": "2026-05-12T10:48:58.573Z",
   "data": {
     "mt_products": [
-      {
-        "id": "p5",
-        "name": "Smartphone Realme Note 50",
-        "price": 45000,
-        "currency": "USD",
-        "category": "Electrónica",
-        "condition": "usado",
-        "stock": 5,
-        "minStock": 2,
-        "description": "Tiene todos sus accesorios. 8 de RAM y 128 de almacenamiento. Trae una inteligencia Offline. SOLO 6 MESES DE USO",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p5-0-1777984594268-z3sh0j4s.webp"
-        ],
-        "views": 412,
-        "cartAdds": 16,
-        "sales": 3,
-        "lastSaleDate": "2025-03-25",
-        "createdAt": "2025-01-05",
-        "originalPrice": 50000,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "si",
-        "__lastRepoImgs": []
-      },
-      {
-        "id": "p7",
-        "name": "Puertos de telefonos celulares",
-        "price": 200,
-        "currency": "USD",
-        "category": "Electrónica",
-        "condition": "reparado",
-        "stock": 8,
-        "minStock": 3,
-        "description": "Puertos para telefonos celulares",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p7-0-1777985631440-lqytija6.webp"
-        ],
-        "views": 167,
-        "cartAdds": 20,
-        "sales": 10,
-        "lastSaleDate": "2025-03-27",
-        "createdAt": "2025-03-01",
-        "originalPrice": 220,
-        "bulkDiscount": 5,
-        "bulkQty": 2,
-        "featured": "no",
-        "__lastRepoImgs": []
-      },
-      {
-        "id": "p8",
-        "name": "Smartphone Relme Note 50",
-        "price": 48000,
-        "currency": "CUP",
-        "category": "Accesorios",
-        "condition": "nuevo",
-        "stock": 20,
-        "minStock": 5,
-        "description": "Telefonos movil con inteligencia offline incluida. 8 con 256.",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-0-1777984598071-aiq9i8oi.webp",
-          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-1-1778094434984-5o0qodgc.webp"
-        ],
-        "views": 78,
-        "cartAdds": 9,
-        "sales": 5,
-        "lastSaleDate": "2025-03-20",
-        "createdAt": "2025-03-05",
-        "originalPrice": 55000,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "__lastRepoImgs": []
-      },
       {
         "id": "cc1c2346-a6af-4ab8-91e1-3f1f5e18fcb1",
         "name": "Pantallas para moviles",
@@ -722,30 +649,6 @@
         "createdAt": 1778582176353,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778582170612-fnr6vuhu.webp"
-        ]
-      },
-      {
-        "id": "prod_1778582182923_vv1wsd",
-        "name": "cargador inalambrico",
-        "price": 1000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-inalambrico-1778582177311-xfzwyt4x.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582182923,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-inalambrico-1778582177311-xfzwyt4x.webp"
         ]
       },
       {
@@ -2936,7 +2839,7 @@
       {
         "date": "2026-05-12",
         "hour": 12,
-        "count": 7
+        "count": 8
       }
     ],
     "mt_projects": []
