@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T10:20:04.555Z",
+  "exportedAt": "2026-05-07T10:59:27.290Z",
   "data": {
     "mt_products": [
       {
@@ -25,7 +25,9 @@
         "bulkDiscount": 10,
         "bulkQty": 3,
         "featured": "si",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
+        ]
       },
       {
         "id": "p2",
@@ -49,7 +51,9 @@
         "bulkDiscount": 15,
         "bulkQty": 2,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p2-0-1777985688086-06g4c1st.webp"
+        ]
       },
       {
         "id": "p3",
@@ -73,7 +77,9 @@
         "bulkDiscount": 20,
         "bulkQty": 5,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p3-0-1777985690442-0u1rji2c.webp"
+        ]
       },
       {
         "id": "p4",
@@ -97,7 +103,9 @@
         "bulkDiscount": 10,
         "bulkQty": 3,
         "featured": "si",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
+        ]
       },
       {
         "id": "p5",
@@ -121,7 +129,9 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "si",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p5-0-1777984594268-z3sh0j4s.webp"
+        ]
       },
       {
         "id": "p7",
@@ -145,7 +155,9 @@
         "bulkDiscount": 5,
         "bulkQty": 2,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p7-0-1777985631440-lqytija6.webp"
+        ]
       },
       {
         "id": "p8",
@@ -170,7 +182,10 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-0-1777984598071-aiq9i8oi.webp",
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-1-1778094434984-5o0qodgc.webp"
+        ]
       },
       {
         "id": "cc1c2346-a6af-4ab8-91e1-3f1f5e18fcb1",
@@ -194,7 +209,9 @@
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-06T19:10:41.218Z",
-        "__lastRepoImgs": []
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-cc1c2346-0-1778094643937-fmvlj921.webp"
+        ]
       },
       {
         "id": "215b18d6-1501-4950-a935-ecfb465f0a67",
@@ -218,462 +235,8 @@
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-06T19:12:13.504Z",
-        "__lastRepoImgs": []
-      },
-      {
-        "id": "prod_1778580844334_0jn70u",
-        "name": "cables tipo b y c",
-        "price": 500,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cables-tipo-b-y-c-1778580838571-livjufvx.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580844334,
         "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cables-tipo-b-y-c-1778580838571-livjufvx.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580850368_pxogzg",
-        "name": "caja descodificadora",
-        "price": 15000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-caja-descodificadora-1778580844342-rv8p8msf.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580850368,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-caja-descodificadora-1778580844342-rv8p8msf.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580856610_ts0itx",
-        "name": "calentadores",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-calentadores-1778580851031-8eutqi6f.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580856610,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-calentadores-1778580851031-8eutqi6f.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580863393_orys1r",
-        "name": "camara 26",
-        "price": 2500,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778580857331-c5uz6fnj.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580863393,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-camara-26-1778580857331-c5uz6fnj.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580869459_z72sqg",
-        "name": "candado",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778580863852-q4gewzhr.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580869459,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778580863852-q4gewzhr.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580875565_3k8g4m",
-        "name": "candado",
-        "price": 2800,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778580870101-hz3ktzm4.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580875565,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778580870101-hz3ktzm4.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580880703_ymyv1p",
-        "name": "cargador",
-        "price": 4000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-1778580875644-dsotmr85.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580880703,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-1778580875644-dsotmr85.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580886952_qlv27m",
-        "name": "cargador de pilas",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778580881259-cztwaq1f.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580886952,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778580881259-cztwaq1f.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580893470_heq12b",
-        "name": "cargador inalambrico",
-        "price": 1000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-inalambrico-1778580887963-wu14wisg.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580893470,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-inalambrico-1778580887963-wu14wisg.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580898475_eokuv2",
-        "name": "cargador portatil",
-        "price": 13000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-portatil-1778580893660-0974r9e7.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580898475,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-portatil-1778580893660-0974r9e7.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580904375_ciwuk8",
-        "name": "casco",
-        "price": 6000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778580898607-05ilzcic.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580904375,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-casco-1778580898607-05ilzcic.webp"
-        ]
-      },
-      {
-        "id": "prod_1778580909948_twm43p",
-        "name": "cinta metrica",
-        "price": 2000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778580904378-bgt28djv.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580909948,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cinta-metrica-1778580904378-bgt28djv.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580915604_y6qsa8",
-        "name": "conector",
-        "price": 350,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-conector-1778580909950-dpbegzey.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580915604,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-conector-1778580909950-dpbegzey.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580920814_gbtsic",
-        "name": "lampara de cabeza",
-        "price": 3000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-de-cabeza-1778580915609-ko1567kv.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580920814,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-de-cabeza-1778580915609-ko1567kv.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580926161_pnsve6",
-        "name": "lampara solar",
-        "price": 7000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-solar-1778580920819-fhg7cko1.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580926161,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-solar-1778580920819-fhg7cko1.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580932501_oqui6h",
-        "name": "micro sd",
-        "price": 500,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-micro-sd-1778580926167-jkvqsrfj.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580932501,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-micro-sd-1778580926167-jkvqsrfj.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580937355_eq9xs3",
-        "name": "pulidora",
-        "price": 24000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pulidora-1778580932504-rwvnyf10.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580937355,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pulidora-1778580932504-rwvnyf10.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580942486_o1gt50",
-        "name": "taladro",
-        "price": 24000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-taladro-1778580937360-rvd9a2z1.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580942486,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-taladro-1778580937360-rvd9a2z1.gif"
-        ]
-      },
-      {
-        "id": "prod_1778580947206_1ebgzk",
-        "name": "toma corriente",
-        "price": 550,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-toma-corriente-1778580942488-whjdcjil.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778580947206,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-toma-corriente-1778580942488-whjdcjil.gif"
+          "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-215b18d6-0-1778094736194-6l94ar2z.webp"
         ]
       }
     ],
@@ -746,7 +309,7 @@
       "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778497517664-h7kf2d5s.webp",
+      "logoImage": "",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -756,163 +319,10 @@
       "projects": [],
       "hideAvatar": false,
       "hideMonetizeButtons": false,
-      "securityDisabled": false,
-      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778497517664-h7kf2d5s.webp"
+      "securityDisabled": false
     },
     "mt_suppliers": null,
     "mt_notifications": [
-      {
-        "id": "ab016e00-963b-48b0-90ce-8e2974ee643b",
-        "type": "low_stock",
-        "message": "\"toma corriente\" tiene stock bajo (1)",
-        "productId": "prod_1778580947206_1ebgzk",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "635b39bc-804d-4042-b748-1f164bcb753f",
-        "type": "low_stock",
-        "message": "\"taladro\" tiene stock bajo (1)",
-        "productId": "prod_1778580942486_o1gt50",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "aecbe505-9bc7-4127-85ea-b413581e1516",
-        "type": "low_stock",
-        "message": "\"pulidora\" tiene stock bajo (1)",
-        "productId": "prod_1778580937355_eq9xs3",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "20998491-9dc3-448f-b0f4-4625ef2b1715",
-        "type": "low_stock",
-        "message": "\"micro sd\" tiene stock bajo (1)",
-        "productId": "prod_1778580932501_oqui6h",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "05c6fbe9-2d5a-4a2d-9d0e-1d1bf552d9d9",
-        "type": "low_stock",
-        "message": "\"lampara solar\" tiene stock bajo (1)",
-        "productId": "prod_1778580926161_pnsve6",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "33da7e03-80a4-412e-973c-37b63ae91a46",
-        "type": "low_stock",
-        "message": "\"lampara de cabeza\" tiene stock bajo (1)",
-        "productId": "prod_1778580920814_gbtsic",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "f8e24c5d-543c-41b6-8a90-e6e0566d2596",
-        "type": "low_stock",
-        "message": "\"conector\" tiene stock bajo (1)",
-        "productId": "prod_1778580915604_y6qsa8",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "b6bb86ae-bcc3-4f90-8c32-b328dc97bdea",
-        "type": "low_stock",
-        "message": "\"cinta metrica\" tiene stock bajo (1)",
-        "productId": "prod_1778580909948_twm43p",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "68c977d9-04dd-4fde-9ce3-a44daeb169fc",
-        "type": "low_stock",
-        "message": "\"casco\" tiene stock bajo (1)",
-        "productId": "prod_1778580904375_ciwuk8",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "0b8960ef-53d2-4527-89b0-932c23bc4026",
-        "type": "low_stock",
-        "message": "\"cargador portatil\" tiene stock bajo (1)",
-        "productId": "prod_1778580898475_eokuv2",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "b69147c2-c402-42c7-88ba-8588f5dd8083",
-        "type": "low_stock",
-        "message": "\"cargador inalambrico\" tiene stock bajo (1)",
-        "productId": "prod_1778580893470_heq12b",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "8a287571-7ab8-4a6e-b78a-8d3caea681a3",
-        "type": "low_stock",
-        "message": "\"cargador de pilas\" tiene stock bajo (1)",
-        "productId": "prod_1778580886952_qlv27m",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "5a7f6a03-0b8a-4edd-ab68-f00b48ce471c",
-        "type": "low_stock",
-        "message": "\"cargador\" tiene stock bajo (1)",
-        "productId": "prod_1778580880703_ymyv1p",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "e9706a87-b1c7-4e36-bb86-29b724ea7220",
-        "type": "low_stock",
-        "message": "\"candado\" tiene stock bajo (1)",
-        "productId": "prod_1778580875565_3k8g4m",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "b1e063a7-b1c2-4fe6-8dec-693517e297d2",
-        "type": "low_stock",
-        "message": "\"candado\" tiene stock bajo (1)",
-        "productId": "prod_1778580869459_z72sqg",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "1296ae62-1e26-4b3b-9726-a27b1fd0eaca",
-        "type": "low_stock",
-        "message": "\"camara 26\" tiene stock bajo (1)",
-        "productId": "prod_1778580863393_orys1r",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "a960200e-64b8-48c1-b505-9237f330b0b0",
-        "type": "low_stock",
-        "message": "\"calentadores\" tiene stock bajo (1)",
-        "productId": "prod_1778580856610_ts0itx",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "26e990d8-14be-4baa-a46a-a30211a82288",
-        "type": "low_stock",
-        "message": "\"caja descodificadora\" tiene stock bajo (1)",
-        "productId": "prod_1778580850368_pxogzg",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
-      {
-        "id": "cf0d072f-d9f4-4f41-b02e-1542030586dc",
-        "type": "low_stock",
-        "message": "\"cables tipo b y c\" tiene stock bajo (1)",
-        "productId": "prod_1778580844334_0jn70u",
-        "date": "2026-05-12T10:17:14.652Z",
-        "read": false
-      },
       {
         "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
@@ -1068,11 +478,6 @@
         "date": "2026-05-07",
         "hour": 12,
         "count": 1
-      },
-      {
-        "date": "2026-05-12",
-        "hour": 12,
-        "count": 3
       }
     ],
     "mt_projects": []
