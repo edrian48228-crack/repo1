@@ -1124,6 +1124,28 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <button class="btn btn-secondary btn-block" id="btnDownloadSystem" onclick="downloadSystem()" style="margin-top:10px;border-radius:50px;display:none;"><i class="fas fa-file-code"></i> Descargar Sistema HTML</button>
 </div>
 </div>
+
+<!-- GESTOR DE IMÁGENES DEL REPOSITORIO -->
+<div style="margin-top:28px;border-top:1px solid var(--glass-border);padding-top:22px;">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+  <h4 style="font-size:.95rem;color:var(--naranja-brillante);display:flex;align-items:center;gap:8px;margin:0;"><i class="fas fa-images"></i> GESTOR DE IMÁGENES DEL REPO</h4>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;">
+    <button class="btn btn-outline btn-sm" onclick="ghImgManagerLoad()" style="border-radius:50px;"><i class="fas fa-rotate-right"></i> Cargar imágenes</button>
+    <button class="btn btn-danger btn-sm" onclick="ghImgManagerDeleteAll()" style="border-radius:50px;"><i class="fas fa-trash-can"></i> Eliminar todas</button>
+  </div>
+</div>
+<div id="ghImgManagerStatus" style="font-size:.8rem;color:var(--text-muted);margin-bottom:10px;"></div>
+<div id="ghImgManagerGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;"></div>
+<div id="ghImgManagerSelected" style="display:none;margin-top:14px;padding:12px 16px;background:rgba(255,23,68,.08);border:1px solid rgba(255,23,68,.2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+  <span id="ghImgManagerSelCount" style="font-size:.85rem;font-weight:700;color:var(--rojo);"></span>
+  <div style="display:flex;gap:8px;">
+    <button class="btn btn-danger btn-sm" onclick="ghImgManagerDeleteSelected()" style="border-radius:50px;"><i class="fas fa-trash-can"></i> Eliminar seleccionadas</button>
+    <button class="btn btn-secondary btn-sm" onclick="ghImgManagerClearSel()" style="border-radius:50px;">Cancelar</button>
+  </div>
+</div>
+</div>
+
+</div>
 </div>
 
 <!-- LICENSE (creator only) -->
@@ -2537,9 +2559,103 @@ const msg=`📄 *Licencia - ${config.storeName}*\n\n🔑 Clave: ${config.license
 window.open(`https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 
-// ===== IMPORT/EXPORT =====
-// ===== IMPORTACIÓN MASIVA DESDE CARPETA =====
-let _bulkFiles = []; // archivos pendientes de confirmar
+// ===== GESTOR DE IMAGENES DEL REPOSITORIO =====
+let _ghImgList = [];
+
+async function ghImgManagerLoad(){
+  const status=document.getElementById('ghImgManagerStatus');
+  const grid=document.getElementById('ghImgManagerGrid');
+  const token=(typeof __ghTokenCache!=='undefined'&&__ghTokenCache)?__ghTokenCache:null;
+  if(!token){status.textContent='Necesitas autenticarte con GitHub primero.';return;}
+  status.innerHTML='<i class="fas fa-spinner fa-spin"></i> Cargando imagenes...';
+  grid.innerHTML='';_ghImgList=[];
+  try{
+    const c=ghGetCreds();
+    const branch=c.branch||'main';
+    const r=await ghApi('contents/img?ref='+encodeURIComponent(branch)+'&_='+Date.now(),{token});
+    if(r.status===404){status.textContent='La carpeta img/ esta vacia o no existe.';return;}
+    if(!r.ok) throw new Error('Error '+r.status);
+    const files=await r.json();
+    const imgs=files.filter(f=>f.type==='file'&&/\.(webp|jpg|jpeg|png|gif|svg)$/i.test(f.name));
+    if(!imgs.length){status.textContent='No hay imagenes en img/.';return;}
+    _ghImgList=imgs.map(f=>({
+      name:f.name,path:f.path,sha:f.sha,
+      url:'https://raw.githubusercontent.com/'+c.owner+'/'+c.repo+'/'+branch+'/'+f.path,
+      selected:false
+    }));
+    status.innerHTML='<i class="fas fa-images"></i> <strong>'+_ghImgList.length+'</strong> imagen(es). Toca para seleccionar.';
+    _ghImgManagerRender();
+  }catch(e){status.innerHTML='<i class="fas fa-circle-exclamation" style="color:var(--rojo);"></i> Error: '+e.message;}
+}
+
+function _ghImgManagerRender(){
+  const grid=document.getElementById('ghImgManagerGrid');
+  grid.innerHTML=_ghImgList.map((img,i)=>
+    '<div onclick="_ghImgToggle('+i+')" style="cursor:pointer;border-radius:12px;overflow:hidden;border:2px solid '+(img.selected?'var(--rojo)':'var(--glass-border)')+';position:relative;background:var(--bg-secondary);">'+
+    '<img src="'+img.url+'" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;" loading="lazy" onerror="this.style.display='none'">'+
+    (img.selected?'<div style="position:absolute;inset:0;background:rgba(255,23,68,.35);display:flex;align-items:center;justify-content:center;"><i class="fas fa-check-circle" style="color:#fff;font-size:1.6rem;"></i></div>':'')+
+    '<p style="font-size:.6rem;color:var(--text-muted);padding:4px 6px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;margin:0;">'+img.name+'</p></div>'
+  ).join('');
+  const sel=_ghImgList.filter(i=>i.selected);
+  const selBar=document.getElementById('ghImgManagerSelected');
+  if(sel.length){
+    selBar.style.display='flex';
+    document.getElementById('ghImgManagerSelCount').textContent=sel.length+' imagen(es) seleccionada(s)';
+  } else { selBar.style.display='none'; }
+}
+
+function _ghImgToggle(idx){_ghImgList[idx].selected=!_ghImgList[idx].selected;_ghImgManagerRender();}
+function ghImgManagerClearSel(){_ghImgList.forEach(i=>i.selected=false);_ghImgManagerRender();}
+
+async function _ghImgDelete(img,token){
+  await ghDeleteFile(img.path,img.sha,'img: delete '+img.name,token);
+  if('caches' in window){
+    try{
+      const names=await caches.keys();
+      for(const n of names){const cache=await caches.open(n);await cache.delete(img.url).catch(()=>{});}
+    }catch(_){}
+  }
+  if(typeof folderImages!=='undefined') delete folderImages[img.name];
+}
+
+async function ghImgManagerDeleteSelected(){
+  const sel=_ghImgList.filter(i=>i.selected);
+  if(!sel.length) return;
+  if(!confirm('Eliminar '+sel.length+' imagen(es) del repositorio y cache?\n\nEsta accion no se puede deshacer.')) return;
+  const token=(typeof __ghTokenCache!=='undefined'&&__ghTokenCache)?__ghTokenCache:null;
+  if(!token){showToast('<i class="fas fa-exclamation-circle"></i> Autenticate con GitHub primero');return;}
+  const status=document.getElementById('ghImgManagerStatus');
+  let done=0;
+  for(const img of sel){
+    status.innerHTML='<i class="fas fa-spinner fa-spin"></i> Eliminando '+(done+1)+'/'+sel.length+': '+img.name+'...';
+    try{await _ghImgDelete(img,token);done++;}catch(e){if(typeof ghLog==='function')ghLog('Error borrando '+img.name+': '+e.message,'warn');}
+  }
+  showToast('<i class="fas fa-check-circle"></i> '+done+' imagen(es) eliminadas del repo y cache');
+  await ghImgManagerLoad();
+}
+
+async function ghImgManagerDeleteAll(){
+  if(!_ghImgList.length){showToast('<i class="fas fa-info-circle"></i> Carga las imagenes primero');return;}
+  if(!confirm('Eliminar TODAS las '+_ghImgList.length+' imagenes del repositorio y cache?\n\nEsta accion no se puede deshacer.')) return;
+  const token=(typeof __ghTokenCache!=='undefined'&&__ghTokenCache)?__ghTokenCache:null;
+  if(!token){showToast('<i class="fas fa-exclamation-circle"></i> Autenticate con GitHub primero');return;}
+  const status=document.getElementById('ghImgManagerStatus');
+  let done=0;
+  for(const img of _ghImgList){
+    status.innerHTML='<i class="fas fa-spinner fa-spin"></i> Eliminando '+(done+1)+'/'+_ghImgList.length+': '+img.name+'...';
+    try{await _ghImgDelete(img,token);done++;}catch(e){if(typeof ghLog==='function')ghLog('Error borrando '+img.name+': '+e.message,'warn');}
+  }
+  if('caches' in window){
+    try{const names=await caches.keys();for(const n of names){if(n.includes('img'))await caches.delete(n);}}catch(_){}
+  }
+  showToast('<i class="fas fa-check-circle"></i> '+done+' imagen(es) eliminadas del repo y cache');
+  await ghImgManagerLoad();
+}
+
+// ===== IMPORTACION MASIVA DESDE CARPETA =====
+let _bulkFiles = [];
+
+function openBulkImport(){
 
 function openBulkImport(){
   _bulkFiles = [];
