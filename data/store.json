@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-12T11:03:36.076Z",
+  "exportedAt": "2026-05-12T11:04:37.919Z",
   "data": {
     "mt_products": [
       {
@@ -505,30 +505,6 @@
         "createdAt": 1778582212504,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-lampara-de-cabeza-1778582206866-5h0cvepr.gif"
-        ]
-      },
-      {
-        "id": "prod_1778582225951_wziodt",
-        "name": "micro sd",
-        "price": 500,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-micro-sd-1778582218247-lfxcrvdx.gif"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582225951,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-micro-sd-1778582218247-lfxcrvdx.gif"
         ]
       },
       {
@@ -1492,30 +1468,6 @@
         ]
       },
       {
-        "id": "prod_1778582652064_t7m8yk",
-        "name": "maquina electrica",
-        "price": 12000,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-maquina-electrica-1778582646404-8q570z30.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778582652064,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-maquina-electrica-1778582646404-8q570z30.webp"
-        ]
-      },
-      {
         "id": "prod_1778582658500_bcpy4d",
         "name": "maquinas de pelar",
         "price": 9800,
@@ -1729,30 +1681,6 @@
         "createdAt": 1778583099830,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pesas-1778583093126-s1pup3de.webp"
-        ]
-      },
-      {
-        "id": "prod_1778583105651_9p83qi",
-        "name": "pila recargable con oferta",
-        "price": 1200,
-        "currency": "CUP",
-        "category": "Electrónica",
-        "condition": "nuevo",
-        "stock": 1,
-        "minStock": 5,
-        "description": "",
-        "images": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pila-recargable-con--1778583100301-qw8b612q.webp"
-        ],
-        "originalPrice": 0,
-        "bulkDiscount": 0,
-        "bulkQty": 3,
-        "featured": "no",
-        "views": 0,
-        "sales": 0,
-        "createdAt": 1778583105651,
-        "__lastRepoImgs": [
-          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-pila-recargable-con--1778583100301-qw8b612q.webp"
         ]
       },
       {
