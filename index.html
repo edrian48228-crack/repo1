@@ -3543,45 +3543,66 @@ async function ghPublicPull(c){
   let deferredPrompt=null;
 
   // ===== DYNAMIC MANIFEST: usa logo y nombre de la tienda como icono y nombre de la APK =====
-  function injectDynamicManifest(){
+  // Convierte cualquier logo (data: o URL externa) a PNG 512x512 via canvas para el manifest
+  async function buildManifestIcon(logoSrc){
+    return new Promise((resolve)=>{
+      if(!logoSrc){resolve(null);return;}
+      const img=new Image();
+      img.crossOrigin='anonymous';
+      img.onload=function(){
+        try{
+          const size=512;
+          const canvas=document.createElement('canvas');
+          canvas.width=size;canvas.height=size;
+          const ctx=canvas.getContext('2d');
+          ctx.fillStyle='#050508';
+          ctx.fillRect(0,0,size,size);
+          const scale=Math.max(size/img.width,size/img.height);
+          const w=img.width*scale,h=img.height*scale;
+          ctx.drawImage(img,(size-w)/2,(size-h)/2,w,h);
+          resolve(canvas.toDataURL('image/png',1.0));
+        }catch(e){resolve(logoSrc.startsWith('data:')?logoSrc:null);}
+      };
+      img.onerror=function(){resolve(logoSrc.startsWith('data:')?logoSrc:null);};
+      img.src=logoSrc;
+    });
+  }
+
+  async function injectDynamicManifest(){
     try{
       const storeName=(typeof config!=='undefined'&&config.storeName)?config.storeName:'MegaTienda Online';
       const shortName=storeName.length>12?storeName.split(' ')[0]:storeName;
       const logoImg=(typeof config!=='undefined'&&config.logoImage)?config.logoImage:null;
       const icons=[];
-      if(logoImg&&logoImg.startsWith('data:')){
-        // Use the store logo (base64) as the PWA icon
-        icons.push({src:logoImg,sizes:'192x192',type:logoImg.split(';')[0].split(':')[1]||'image/png',purpose:'any maskable'});
-        icons.push({src:logoImg,sizes:'512x512',type:logoImg.split(';')[0].split(':')[1]||'image/png',purpose:'any maskable'});
-      } else {
+      if(logoImg){
+        const iconDataUrl=await buildManifestIcon(logoImg);
+        if(iconDataUrl){
+          icons.push({src:iconDataUrl,sizes:'192x192',type:'image/png',purpose:'any'});
+          icons.push({src:iconDataUrl,sizes:'512x512',type:'image/png',purpose:'any maskable'});
+        }
+      }
+      if(!icons.length){
         icons.push({src:'icon-192.png',sizes:'192x192',type:'image/png',purpose:'any'});
         icons.push({src:'icon-512.png',sizes:'512x512',type:'image/png',purpose:'any'});
         icons.push({src:'icon-512-maskable.png',sizes:'512x512',type:'image/png',purpose:'maskable'});
       }
       const manifest={
-        name:storeName,
-        short_name:shortName,
+        name:storeName,short_name:shortName,
         description:'Tu tienda online con productos al mejor precio',
-        start_url:'./',
-        scope:'./',
-        display:'standalone',
-        orientation:'portrait',
-        background_color:'#050508',
-        theme_color:'#050508',
-        lang:'es',
-        icons
+        start_url:'./',scope:'./',display:'standalone',
+        orientation:'portrait',background_color:'#050508',
+        theme_color:'#050508',lang:'es',icons
       };
       const blob=new Blob([JSON.stringify(manifest)],{type:'application/manifest+json'});
       const url=URL.createObjectURL(blob);
-      // Remove existing manifest link and replace with dynamic one
       let link=document.querySelector('link[rel="manifest"]');
       if(!link){link=document.createElement('link');link.rel='manifest';document.head.appendChild(link);}
       if(link._dynamicUrl) URL.revokeObjectURL(link._dynamicUrl);
       link._dynamicUrl=url;
       link.href=url;
-    }catch(err){console.warn('[PWA] manifest dinámico falló:',err);}
+    }catch(err){console.warn('[PWA] manifest dinamico fallo:',err);}
   }
-  // Inject manifest immediately and hook applyConfig to re-inject when config changes
+  // Inyectar manifest al inicio y re-inyectar cuando cambie config
   injectDynamicManifest();
   const _origApplyConfigPWA=window.applyConfig;
   window.applyConfig=function(){
