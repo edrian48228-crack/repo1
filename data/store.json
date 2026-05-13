@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-13T20:20:39.446Z",
+  "exportedAt": "2026-05-13T20:21:36.410Z",
   "data": {
     "mt_products": [
       {
@@ -3005,7 +3005,7 @@
     "mt_config": {
       "storeName": "Mi Estantico",
       "whatsapp": "+5358293406",
-      "facebook": "https://facebook.com/megatienda",
+      "facebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
       "email": "tienda@ejemplo.com",
       "creatorName": "Edrian Cruz Down",
       "creatorWhatsapp": "+5354693449",
@@ -3043,13 +3043,13 @@
       "clientChannel": "",
       "clientWebsite": "",
       "clientApk": "",
-      "clientFacebook": "",
+      "clientFacebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
       "clientWhatsapp": "+5358293406",
       "avatarEmoji": "🛒",
-      "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
+      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778703663656-pmvuouyf.webp",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "",
+      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778703679955-uri77jvk.webp",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -3059,7 +3059,9 @@
       "projects": [],
       "hideAvatar": false,
       "hideMonetizeButtons": false,
-      "securityDisabled": false
+      "securityDisabled": false,
+      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778703679955-uri77jvk.webp",
+      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778703663656-pmvuouyf.webp"
     },
     "mt_suppliers": null,
     "mt_notifications": [
