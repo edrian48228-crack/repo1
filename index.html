@@ -280,32 +280,41 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 
 /* ===== ADMIN ===== */
 .admin-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:24px;background:var(--bg-secondary);padding:8px;border-radius:16px;border:1px solid var(--glass-border);}
-/* Ocultar header de portada en admin en TODOS los dispositivos */
-body.admin-mode .header{display:none!important;}
-body.admin-mode #page-admin{padding-top:0!important;}
-/* Admin tabs sticky en desktop */
-/* Admin tabs fijos en TODOS los dispositivos */
-#page-admin .admin-tabs{
-  position:sticky;top:0;z-index:200;
-  border-radius:0 0 16px 16px;
-  margin-left:-20px;margin-right:-20px;padding:10px 20px;
-  background:var(--bg-secondary);
-}
-/* En Android overflow-x:hidden del body rompe sticky — usar fixed */
+/* Ocultar header de portada en admin — solo mobile */
 @media(max-width:640px){
-  #page-admin .admin-tabs{
-    position:fixed;top:0;left:0;right:0;
-    margin:0;border-radius:0 0 16px 16px;
-    padding:8px 12px;z-index:200;
-    border-bottom:1px solid var(--glass-border);
-    backdrop-filter:blur(16px);
-    -webkit-backdrop-filter:blur(16px);
+  body.admin-mode .header{display:none!important;}
+  body.admin-mode #page-admin{padding-top:0!important;}
+}
+/* adminFixedBar: en desktop es solo un wrapper visual normal */
+#adminFixedBar{
+  display:contents;
+}
+/* En mobile: todo el bloque título+tabs queda fijo */
+@media(max-width:640px){
+  #adminFixedBar{
+    display:block;
+    position:fixed!important;top:0!important;left:0!important;right:0!important;
+    margin:0!important;border-radius:0 0 14px 14px!important;
+    background:#0c0c14!important;
+    border-bottom:1px solid rgba(255,109,0,.2)!important;
+    box-shadow:0 4px 20px rgba(0,0,0,.7)!important;
+    z-index:9999!important;
+    padding-bottom:4px!important;
   }
-  #page-admin .container{padding-top:0;}
-  #page-admin .admin-tabs+*,
-  #page-admin .container>.admin-tabs~*:first-of-type{margin-top:0;}
-  /* Compensar altura de la barra fija */
-  body.admin-mode #page-admin .container{padding-top:64px!important;}
+  #page-admin[style*="display:none"] #adminFixedBar{display:none!important;}
+  #adminContent{padding-top:116px!important;}
+  /* En mobile los tabs dentro del fixedBar sin borde propio */
+  #adminFixedBar .admin-tabs{
+    margin:0!important;padding:6px 8px 8px!important;
+    border:none!important;border-radius:0!important;
+    background:transparent!important;
+    margin-bottom:0!important;
+  }
+  /* En mobile el container interno no agrega padding lateral */
+  #adminFixedBar .container{
+    padding-left:10px!important;padding-right:10px!important;
+    padding-top:8px!important;
+  }
 }
 .admin-tabs button{padding:10px 18px;border-radius:12px;color:var(--text-secondary);background:transparent;font-weight:700;transition:all .3s;font-size:.84rem;border:none;display:inline-flex;align-items:center;gap:6px;}
 .admin-tabs button i{font-size:.9rem;}
@@ -897,12 +906,13 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 
 <!-- ADMIN PANEL -->
 <div id="page-admin" class="page" style="display:none;">
-<div class="container section">
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
-<h2 style="font-family:'Orbitron',sans-serif;font-size:1.2rem;letter-spacing:1px;display:flex;align-items:center;gap:10px;"><i class="fas fa-cog" style="color:var(--naranja-brillante);"></i> PANEL DE ADMINISTRACIÓN</h2>
-<div style="display:flex;gap:8px;align-items:center;">
-<span id="roleIndicator" style="padding:8px 18px;border-radius:50px;font-size:.78rem;font-weight:700;"></span>
-<button class="btn btn-outline btn-sm" onclick="logoutAdmin()" style="border-radius:50px;"><i class="fas fa-right-from-bracket"></i> Salir</button>
+<div id="adminFixedBar">
+<div class="container" style="padding-top:10px;padding-bottom:0;">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:0;">
+<h2 style="font-family:'Orbitron',sans-serif;font-size:.95rem;letter-spacing:1px;display:flex;align-items:center;gap:8px;margin:0;color:var(--text-primary);"><i class="fas fa-cog" style="color:var(--naranja-brillante);"></i> ADMINISTRACIÓN</h2>
+<div style="display:flex;gap:6px;align-items:center;">
+<span id="roleIndicator" style="padding:5px 12px;border-radius:50px;font-size:.72rem;font-weight:700;"></span>
+<button class="btn btn-outline btn-sm" onclick="logoutAdmin()" style="border-radius:50px;padding:6px 12px;font-size:.75rem;"><i class="fas fa-right-from-bracket"></i> Salir</button>
 </div>
 </div>
 <div class="admin-tabs" id="adminTabs">
@@ -917,6 +927,9 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <button onclick="showAdminTab('creator-config',this)" id="tabCreatorConfig" style="display:none;"><i class="fas fa-crown"></i> <span>Creador</span></button>
 <button onclick="showAdminTab('github-sync',this)" id="tabGithubSync" style="display:none;"><i class="fab fa-github"></i> <span>GitHub <span id="ghSyncDot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#888;margin-left:4px;vertical-align:middle;"></span></span></button>
 </div>
+</div><!-- /container inside adminFixedBar -->
+</div><!-- /adminFixedBar -->
+<div class="container section" id="adminContent">
 
 <!-- DASHBOARD -->
 <div class="admin-panel active" id="panel-dashboard">
@@ -1915,7 +1928,7 @@ showPage('admin');setupAdminUI();
 function setupAdminUI(){
 document.getElementById('tabLicense').style.display=isCreator?'inline-flex':'none';
 document.getElementById('tabCreatorConfig').style.display=isCreator?'inline-flex':'none';
-document.getElementById('tabGithubSync').style.display=isCreator?'inline-flex':'none';
+document.getElementById('tabGithubSync').style.display=(isAdmin||isCreator)?'inline-flex':'none';
 const ri=document.getElementById('roleIndicator');
 if(isCreator){ri.innerHTML='<i class="fas fa-crown"></i> CREADOR';ri.style.background='linear-gradient(135deg,var(--naranja),var(--amarillo))';ri.style.color='#111';}
 else{ri.innerHTML='<i class="fas fa-shield-halved"></i> ADMIN';ri.style.background='var(--bg-secondary)';ri.style.color='var(--text-secondary)';ri.style.border='1px solid var(--glass-border)';}
@@ -1936,7 +1949,7 @@ if(tab==='license'&&isCreator)updateLicenseUI();
 if(tab==='products')renderAdminProducts();
 if(tab==='suppliers')renderSuppliers();
 if(tab==='projects')renderAdminProjects();
-if(tab==='github-sync'&&isCreator&&typeof ghLoadUI==='function')ghLoadUI();
+if(tab==='github-sync'&&(isAdmin||isCreator)&&typeof ghLoadUI==='function')ghLoadUI();
 }
 
 function resetStats(){
@@ -2542,14 +2555,23 @@ window.open(`https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}?text=
 let _bulkFiles = []; // archivos pendientes de confirmar
 
 function openBulkImport(){
+  // Limpiar completamente la sesión anterior
   _bulkFiles = [];
-  document.getElementById('bulkImportInput').value='';
+  // Recrear el file input para que el navegador olvide la selección anterior
+  const oldInp = document.getElementById('bulkImportInput');
+  const newInp = oldInp.cloneNode(true);
+  newInp.value = '';
+  newInp.onchange = function(){ previewBulkImport(this); };
+  oldInp.parentNode.replaceChild(newInp, oldInp);
+  // Limpiar UI
   document.getElementById('bulkImportPreview').style.display='none';
   document.getElementById('bulkImportList').innerHTML='';
   document.getElementById('bulkImportErrors').style.display='none';
+  document.getElementById('bulkImportCount').textContent='';
+  document.getElementById('bulkImportSaveBtn').textContent='Crear productos';
   // Poblar selector de categorías
   const sel=document.getElementById('bulkImportCategory');
-  sel.innerHTML=config.categories.map(c=>`<option value="${c}">${c}</option>`).join('');
+  sel.innerHTML=config.categories.map(cat=>`<option value="${cat}">${cat}</option>`).join('');
   openModal('bulkImportModal');
 }
 
