@@ -285,27 +285,30 @@ body.admin-mode .header{display:none!important;}
 body.admin-mode #page-admin{padding-top:0!important;}
 /* Admin tabs sticky en desktop */
 /* Admin tabs fijos en TODOS los dispositivos */
-#page-admin .admin-tabs{
+/* adminFixedBar: header + tabs siempre fijos en desktop y mobile */
+#adminFixedBar{
   position:sticky;top:0;z-index:200;
+  background:#0c0c14;
+  border-bottom:1px solid var(--glass-border);
   border-radius:0 0 16px 16px;
-  margin-left:-20px;margin-right:-20px;padding:10px 20px;
-  background:var(--bg-secondary);
+  margin-left:-20px;margin-right:-20px;
+  padding-bottom:6px;
 }
-/* En Android overflow-x:hidden del body rompe sticky — usar fixed */
+#page-admin .admin-tabs{
+  margin:0;padding:6px 8px;
+  border:none;border-radius:0;
+  background:transparent;
+}
 @media(max-width:640px){
-  #page-admin .admin-tabs{
-    position:fixed;top:0;left:0;right:0;
-    margin:0;border-radius:0 0 16px 16px;
-    padding:8px 12px;z-index:200;
-    border-bottom:1px solid var(--glass-border);
-    backdrop-filter:blur(16px);
-    -webkit-backdrop-filter:blur(16px);
+  #adminFixedBar{
+    position:fixed!important;top:0!important;left:0!important;right:0!important;
+    margin:0!important;border-radius:0 0 14px 14px!important;
+    background:#0c0c14!important;
+    box-shadow:0 4px 20px rgba(0,0,0,.7)!important;
+    z-index:9999!important;
   }
-  #page-admin .container{padding-top:0;}
-  #page-admin .admin-tabs+*,
-  #page-admin .container>.admin-tabs~*:first-of-type{margin-top:0;}
-  /* Compensar altura de la barra fija */
-  body.admin-mode #page-admin .container{padding-top:64px!important;}
+  #page-admin[style*="display:none"] #adminFixedBar{display:none!important;}
+  body.admin-mode #page-admin .container{padding-top:110px!important;}
 }
 .admin-tabs button{padding:10px 18px;border-radius:12px;color:var(--text-secondary);background:transparent;font-weight:700;transition:all .3s;font-size:.84rem;border:none;display:inline-flex;align-items:center;gap:6px;}
 .admin-tabs button i{font-size:.9rem;}
@@ -724,6 +727,8 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 </nav>
 </div>
 </header>
+<!-- Botón flotante para ocultar botones promo en mobile -->
+<button id="promoToggleBtn" onclick="togglePromoButtons()" title="Ocultar/mostrar botones promocionales" style="display:none;position:fixed;bottom:76px;right:16px;z-index:990;width:36px;height:36px;border-radius:50%;background:var(--bg-card);border:1px solid var(--glass-border);color:var(--text-muted);font-size:.8rem;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.4);"><i class="fas fa-eye-slash" id="promoToggleIcon"></i></button>
 
 <!-- FLOATING AVATAR -->
 <div class="avatar-float" id="avatarFloat" onclick="window.scrollTo({top:0,behavior:'smooth'})">
@@ -897,12 +902,12 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 
 <!-- ADMIN PANEL -->
 <div id="page-admin" class="page" style="display:none;">
-<div class="container section">
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
-<h2 style="font-family:'Orbitron',sans-serif;font-size:1.2rem;letter-spacing:1px;display:flex;align-items:center;gap:10px;"><i class="fas fa-cog" style="color:var(--naranja-brillante);"></i> PANEL DE ADMINISTRACIÓN</h2>
-<div style="display:flex;gap:8px;align-items:center;">
-<span id="roleIndicator" style="padding:8px 18px;border-radius:50px;font-size:.78rem;font-weight:700;"></span>
-<button class="btn btn-outline btn-sm" onclick="logoutAdmin()" style="border-radius:50px;"><i class="fas fa-right-from-bracket"></i> Salir</button>
+<div id="adminFixedBar">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 16px 0;flex-wrap:wrap;gap:6px;">
+<h2 style="font-family:'Orbitron',sans-serif;font-size:.95rem;letter-spacing:1px;display:flex;align-items:center;gap:8px;margin:0;"><i class="fas fa-cog" style="color:var(--naranja-brillante);"></i> ADMINISTRACIÓN</h2>
+<div style="display:flex;gap:6px;align-items:center;">
+<span id="roleIndicator" style="padding:5px 12px;border-radius:50px;font-size:.72rem;font-weight:700;"></span>
+<button class="btn btn-outline btn-sm" onclick="logoutAdmin()" style="border-radius:50px;font-size:.75rem;padding:6px 12px;"><i class="fas fa-right-from-bracket"></i> Salir</button>
 </div>
 </div>
 <div class="admin-tabs" id="adminTabs">
@@ -917,6 +922,9 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <button onclick="showAdminTab('creator-config',this)" id="tabCreatorConfig" style="display:none;"><i class="fas fa-crown"></i> <span>Creador</span></button>
 <button onclick="showAdminTab('github-sync',this)" id="tabGithubSync" style="display:none;"><i class="fab fa-github"></i> <span>GitHub <span id="ghSyncDot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#888;margin-left:4px;vertical-align:middle;"></span></span></button>
 </div>
+</div>
+
+<div class="container section" id="adminContent">
 
 <!-- DASHBOARD -->
 <div class="admin-panel active" id="panel-dashboard">
@@ -1915,7 +1923,7 @@ showPage('admin');setupAdminUI();
 function setupAdminUI(){
 document.getElementById('tabLicense').style.display=isCreator?'inline-flex':'none';
 document.getElementById('tabCreatorConfig').style.display=isCreator?'inline-flex':'none';
-document.getElementById('tabGithubSync').style.display=isCreator?'inline-flex':'none';
+document.getElementById('tabGithubSync').style.display=(isAdmin||isCreator)?'inline-flex':'none';
 const ri=document.getElementById('roleIndicator');
 if(isCreator){ri.innerHTML='<i class="fas fa-crown"></i> CREADOR';ri.style.background='linear-gradient(135deg,var(--naranja),var(--amarillo))';ri.style.color='#111';}
 else{ri.innerHTML='<i class="fas fa-shield-halved"></i> ADMIN';ri.style.background='var(--bg-secondary)';ri.style.color='var(--text-secondary)';ri.style.border='1px solid var(--glass-border)';}
@@ -1936,7 +1944,7 @@ if(tab==='license'&&isCreator)updateLicenseUI();
 if(tab==='products')renderAdminProducts();
 if(tab==='suppliers')renderSuppliers();
 if(tab==='projects')renderAdminProjects();
-if(tab==='github-sync'&&isCreator&&typeof ghLoadUI==='function')ghLoadUI();
+if(tab==='github-sync'&&(isAdmin||isCreator)&&typeof ghLoadUI==='function')ghLoadUI();
 }
 
 function resetStats(){
@@ -2542,14 +2550,21 @@ window.open(`https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}?text=
 let _bulkFiles = []; // archivos pendientes de confirmar
 
 function openBulkImport(){
+  // Limpiar completamente todo lo de la sesion anterior
   _bulkFiles = [];
-  document.getElementById('bulkImportInput').value='';
+  const inp=document.getElementById('bulkImportInput');
+  // Recrear el input para forzar limpieza real en todos los navegadores
+  const newInp=inp.cloneNode(true);
+  inp.parentNode.replaceChild(newInp,inp);
+  newInp.onchange=function(){previewBulkImport(this);};
   document.getElementById('bulkImportPreview').style.display='none';
   document.getElementById('bulkImportList').innerHTML='';
   document.getElementById('bulkImportErrors').style.display='none';
+  document.getElementById('bulkImportCount').textContent='';
+  document.getElementById('bulkImportSaveBtn').textContent='Crear productos';
   // Poblar selector de categorías
   const sel=document.getElementById('bulkImportCategory');
-  sel.innerHTML=config.categories.map(c=>`<option value="${c}">${c}</option>`).join('');
+  sel.innerHTML=config.categories.map(cat=>`<option value="${cat}">${cat}</option>`).join('');
   openModal('bulkImportModal');
 }
 
@@ -2719,8 +2734,70 @@ async function confirmBulkImport(){
   showToast(`<i class="fas fa-check-circle"></i> ${created} producto(s) importados correctamente`);
 }
 
+// ===== BOTÓN FLOTANTE OCULTAR/MOSTRAR BOTONES PROMO =====
+(function(){
+  let _promoHidden=false;
+  window.togglePromoButtons=function(){
+    _promoHidden=!_promoHidden;
+    document.querySelectorAll('.promo-btn').forEach(b=>b.style.setProperty('display',_promoHidden?'none':'','important'));
+    const icon=document.getElementById('promoToggleIcon');
+    const btn=document.getElementById('promoToggleBtn');
+    if(icon)icon.className=_promoHidden?'fas fa-eye':'fas fa-eye-slash';
+    if(btn)btn.title=_promoHidden?'Mostrar botones promo':'Ocultar botones promo';
+  };
+  function checkPromoBtn(){
+    const hasMobile=window.innerWidth<=640;
+    const hasPromo=document.querySelectorAll('.promo-btn').length>0;
+    const tb=document.getElementById('promoToggleBtn');
+    if(tb)tb.style.display=(hasMobile&&hasPromo)?'flex':'none';
+  }
+  window.addEventListener('resize',checkPromoBtn);
+  setTimeout(checkPromoBtn,600);
+})();
+
 function exportData(){const data=JSON.stringify({products,sales,config,suppliers,notifications,visits},null,2);const blob=new Blob([data],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='megatienda-datos.json';a.click();}
-function importData(){const file=document.getElementById('importFile').files[0];if(!file){alert('Seleccione JSON');return;}const reader=new FileReader();reader.onload=function(e){try{const data=JSON.parse(e.target.result);if(data.products){products=data.products;products.forEach(p=>{if(p.originalPrice===undefined)p.originalPrice=0;if(p.bulkDiscount===undefined)p.bulkDiscount=0;if(p.bulkQty===undefined)p.bulkQty=3;if(p.featured===undefined)p.featured='no';});save('mt_products',products);}if(data.sales){sales=data.sales;save('mt_sales',sales);}if(data.config){config={...DEFAULT_CONFIG,...data.config};save('mt_config',config);}if(data.suppliers){suppliers=data.suppliers;save('mt_suppliers',suppliers);}if(data.notifications){notifications=data.notifications;save('mt_notifications',notifications);}if(data.visits){visits=data.visits;save('mt_visits',visits);}applyConfig();renderProducts();if(isAdmin){renderAdminProducts();renderSuppliers();renderDashboard();renderNotifications();}showToast('<i class="fas fa-check-circle"></i> Datos importados');}catch{alert('❌ JSON no válido');}};reader.readAsText(file);}
+function importData(){
+  const file=document.getElementById('importFile').files[0];
+  if(!file){alert('Seleccione un archivo JSON');return;}
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      // Limpiar BOM y espacios que algunos editores agregan
+      const txt=e.target.result.replace(/^﻿/,'').trim();
+      const data=JSON.parse(txt);
+      let imported=[];
+      if(data.products&&Array.isArray(data.products)){
+        products=data.products;
+        products.forEach(p=>{
+          if(p.originalPrice===undefined)p.originalPrice=0;
+          if(p.bulkDiscount===undefined)p.bulkDiscount=0;
+          if(p.bulkQty===undefined)p.bulkQty=3;
+          if(p.featured===undefined)p.featured='no';
+          if(!p.images)p.images=[];
+        });
+        save('mt_products',products);imported.push('productos('+products.length+')');
+      }
+      if(data.sales&&Array.isArray(data.sales)){sales=data.sales;save('mt_sales',sales);imported.push('ventas');}
+      if(data.config&&typeof data.config==='object'){config={...DEFAULT_CONFIG,...data.config};save('mt_config',config);imported.push('config');}
+      if(data.suppliers&&Array.isArray(data.suppliers)){suppliers=data.suppliers;save('mt_suppliers',suppliers);imported.push('proveedores');}
+      if(data.notifications&&Array.isArray(data.notifications)){notifications=data.notifications;save('mt_notifications',notifications);imported.push('notificaciones');}
+      if(data.visits){visits=data.visits;save('mt_visits',visits);imported.push('visitas');}
+      if(data.projects&&Array.isArray(data.projects)){projects=data.projects;save('mt_projects',projects);imported.push('proyectos');}
+      applyConfig();renderProducts();
+      if(isAdmin){renderAdminProducts();renderSuppliers();renderDashboard();renderNotifications();}
+      if(typeof updateTabCounts==='function')updateTabCounts();
+      showToast('<i class="fas fa-check-circle"></i> Importado: '+imported.join(', '));
+      // Limpiar el input para permitir reimportar el mismo archivo
+      document.getElementById('importFile').value='';
+    }catch(err){
+      alert('Error al importar JSON:
+'+err.message+'
+
+Verifica que el archivo no esté corrupto.');
+    }
+  };
+  reader.readAsText(file);
+}
 function downloadSystem(){const a=document.createElement('a');const blob=new Blob(['<!DOCTYPE html>'+document.documentElement.outerHTML],{type:'text/html'});a.href=URL.createObjectURL(blob);a.download='MegaTienda.html';a.click();}
 
 // ===== MODALS =====
@@ -3847,6 +3924,29 @@ async function ghPublicPull(c){
     injectDynamicManifest();
   };
   window.__injectDynamicManifest=injectDynamicManifest;
+
+  // Favicon dinámico con el logo de la tienda (para Windows/browser tab)
+  async function injectDynamicFavicon(){
+    try{
+      const logoImg=(typeof config!=='undefined'&&config.logoImage)?config.logoImage:null;
+      if(!logoImg) return;
+      const iconDataUrl=await buildManifestIcon(logoImg);
+      if(!iconDataUrl) return;
+      // Reemplazar favicon
+      let link=document.querySelector('link[rel="icon"]')||document.querySelector('link[rel="shortcut icon"]');
+      if(!link){link=document.createElement('link');link.rel='icon';document.head.appendChild(link);}
+      link.type='image/png';
+      link.href=iconDataUrl;
+    }catch(e){}
+  }
+  injectDynamicFavicon();
+  const _origApplyConfigFav=window.applyConfig;
+  window.applyConfig=function(){
+    if(_origApplyConfigFav) _origApplyConfigFav.apply(this,arguments);
+    injectDynamicFavicon();
+    injectDynamicManifest();
+  };
+  window.__injectDynamicFavicon=injectDynamicFavicon;
 
   window.addEventListener('beforeinstallprompt', (e)=>{
     e.preventDefault(); deferredPrompt=e;
