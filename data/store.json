@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-13T19:16:08.638Z",
+  "exportedAt": "2026-05-13T19:17:13.796Z",
   "data": {
     "mt_products": [
       {
@@ -917,7 +917,7 @@
     "mt_config": {
       "storeName": "Mi Estantico",
       "whatsapp": "+5358293406",
-      "facebook": "https://facebook.com/megatienda",
+      "facebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
       "email": "tienda@ejemplo.com",
       "creatorName": "Edrian Cruz Down",
       "creatorWhatsapp": "+5354693449",
@@ -952,16 +952,16 @@
       "licenseKey": "MEGA-2025-TRIAL",
       "licenseExpiry": "2026-12-31",
       "licenseActive": true,
-      "clientChannel": "",
+      "clientChannel": "t.me/Argos780513",
       "clientWebsite": "",
       "clientApk": "",
-      "clientFacebook": "",
+      "clientFacebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
       "clientWhatsapp": "+5358293406",
       "avatarEmoji": "🛒",
-      "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
+      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778699813265-0f685qhl.webp",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "",
+      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778699823803-j8p5ml10.webp",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -971,7 +971,9 @@
       "projects": [],
       "hideAvatar": false,
       "hideMonetizeButtons": false,
-      "securityDisabled": false
+      "securityDisabled": false,
+      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778699823803-j8p5ml10.webp",
+      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778699813265-0f685qhl.webp"
     },
     "mt_suppliers": null,
     "mt_notifications": [
