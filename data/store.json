@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-14T10:23:02.249Z",
+  "exportedAt": "2026-05-14T10:24:25.783Z",
   "data": {
     "mt_products": [
       {
@@ -16,10 +16,10 @@
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p1-0-1777984549243-shca8t7d.webp"
         ],
-        "views": 245,
-        "cartAdds": 42,
-        "sales": 18,
-        "lastSaleDate": "2025-03-28",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-01-15",
         "originalPrice": 30000,
         "bulkDiscount": 10,
@@ -40,10 +40,10 @@
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p2-0-1777985688086-06g4c1st.webp"
         ],
-        "views": 190,
-        "cartAdds": 35,
-        "sales": 22,
-        "lastSaleDate": "2025-03-30",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-01-20",
         "originalPrice": 220,
         "bulkDiscount": 15,
@@ -64,10 +64,10 @@
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p3-0-1777985690442-0u1rji2c.webp"
         ],
-        "views": 156,
-        "cartAdds": 29,
-        "sales": 35,
-        "lastSaleDate": "2025-03-29",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-02-01",
         "originalPrice": 40000,
         "bulkDiscount": 20,
@@ -88,10 +88,10 @@
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p4-0-1777984587975-85c3hopb.webp"
         ],
-        "views": 321,
-        "cartAdds": 59,
-        "sales": 45,
-        "lastSaleDate": "2025-03-30",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-02-10",
         "originalPrice": 18,
         "bulkDiscount": 10,
@@ -112,10 +112,10 @@
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p5-0-1777984594268-z3sh0j4s.webp"
         ],
-        "views": 412,
-        "cartAdds": 16,
-        "sales": 3,
-        "lastSaleDate": "2025-03-25",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-01-05",
         "originalPrice": 50000,
         "bulkDiscount": 0,
@@ -136,10 +136,10 @@
         "images": [
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p7-0-1777985631440-lqytija6.webp"
         ],
-        "views": 167,
-        "cartAdds": 20,
-        "sales": 10,
-        "lastSaleDate": "2025-03-27",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-03-01",
         "originalPrice": 220,
         "bulkDiscount": 5,
@@ -161,10 +161,10 @@
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-0-1777984598071-aiq9i8oi.webp",
           "https://raw.githubusercontent.com/edrian48228-crack/repotienda/main/img/prod-p8-1-1778094434984-5o0qodgc.webp"
         ],
-        "views": 78,
-        "cartAdds": 9,
-        "sales": 5,
-        "lastSaleDate": "2025-03-20",
+        "views": 0,
+        "cartAdds": 0,
+        "sales": 0,
+        "lastSaleDate": null,
         "createdAt": "2025-03-05",
         "originalPrice": 55000,
         "bulkDiscount": 0,
@@ -190,7 +190,7 @@
         "bulkQty": 3,
         "featured": "si",
         "views": 0,
-        "cartAdds": 4,
+        "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-06T19:10:41.218Z",
@@ -213,36 +213,15 @@
         "bulkDiscount": 15,
         "bulkQty": 3,
         "featured": "si",
-        "views": 1,
-        "cartAdds": 2,
+        "views": 0,
+        "cartAdds": 0,
         "sales": 0,
         "lastSaleDate": null,
         "createdAt": "2026-05-06T19:12:13.504Z",
         "__lastRepoImgs": []
       }
     ],
-    "mt_sales": [
-      {
-        "id": "782c3839-e5fa-42bd-a042-8a37147319c3",
-        "productId": "p2",
-        "productName": "Auriculares Inalámbricos",
-        "quantity": 1,
-        "total": 45,
-        "currency": "USD",
-        "paymentMethod": "Efectivo",
-        "date": "2026-05-05T13:00:48.469Z"
-      },
-      {
-        "id": "dca443fe-0698-4535-90ca-af73bd2a1f44",
-        "productId": "p4",
-        "productName": "Chocolates Artesanales",
-        "quantity": 1,
-        "total": 12,
-        "currency": "USD",
-        "paymentMethod": "Efectivo",
-        "date": "2026-05-05T13:00:48.469Z"
-      }
-    ],
+    "mt_sales": [],
     "mt_config": {
       "storeName": "MegaTienda Online",
       "whatsapp": "+5354693549",
@@ -409,63 +388,7 @@
         "read": false
       }
     ],
-    "mt_visits": [
-      {
-        "date": "2026-05-02",
-        "hour": 21,
-        "count": 7
-      },
-      {
-        "date": "2026-05-02",
-        "hour": 22,
-        "count": 9
-      },
-      {
-        "date": "2026-05-03",
-        "hour": 9,
-        "count": 7
-      },
-      {
-        "date": "2026-05-05",
-        "hour": 14,
-        "count": 7
-      },
-      {
-        "date": "2026-05-06",
-        "hour": 20,
-        "count": 5
-      },
-      {
-        "date": "2026-05-06",
-        "hour": 21,
-        "count": 5
-      },
-      {
-        "date": "2026-05-06",
-        "hour": 22,
-        "count": 4
-      },
-      {
-        "date": "2026-05-06",
-        "hour": 1,
-        "count": 2
-      },
-      {
-        "date": "2026-05-07",
-        "hour": 2,
-        "count": 1
-      },
-      {
-        "date": "2026-05-07",
-        "hour": 12,
-        "count": 1
-      },
-      {
-        "date": "2026-05-14",
-        "hour": 12,
-        "count": 3
-      }
-    ],
+    "mt_visits": [],
     "mt_projects": []
   }
 }
