@@ -1,8 +1,57 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-15T21:24:46.423Z",
+  "exportedAt": "2026-05-15T21:25:41.545Z",
   "data": {
-    "mt_products": [],
+    "mt_products": [
+      {
+        "id": "prod_1778880322428_ni1jw5",
+        "name": "bridas largas",
+        "price": 25,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-bridas-largas-1778880317505-p3ijmlxz.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778880322428,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-bridas-largas-1778880317505-p3ijmlxz.webp"
+        ]
+      },
+      {
+        "id": "prod_1778880329774_bf1n5i",
+        "name": "brocha 400 y",
+        "price": 1200,
+        "currency": "CUP",
+        "category": "Electrónica",
+        "condition": "nuevo",
+        "stock": 1,
+        "minStock": 5,
+        "description": "",
+        "images": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-brocha-400-y-1778880323823-foqx7kgj.webp"
+        ],
+        "originalPrice": 0,
+        "bulkDiscount": 0,
+        "bulkQty": 3,
+        "featured": "no",
+        "views": 0,
+        "sales": 0,
+        "createdAt": 1778880329774,
+        "__lastRepoImgs": [
+          "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-brocha-400-y-1778880323823-foqx7kgj.webp"
+        ]
+      }
+    ],
     "mt_sales": [],
     "mt_config": {
       "storeName": "MegaTienda Online",
@@ -65,6 +114,22 @@
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "5432055a-a045-4163-a76d-547e8ef1ac59",
+        "type": "low_stock",
+        "message": "\"brocha 400 y\" tiene stock bajo (1)",
+        "productId": "prod_1778880329774_bf1n5i",
+        "date": "2026-05-15T21:25:38.807Z",
+        "read": false
+      },
+      {
+        "id": "c543f8ec-3a22-438a-a567-e7fb4540bda2",
+        "type": "low_stock",
+        "message": "\"bridas largas\" tiene stock bajo (1)",
+        "productId": "prod_1778880322428_ni1jw5",
+        "date": "2026-05-15T21:25:38.807Z",
+        "read": false
+      },
       {
         "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
@@ -179,7 +244,7 @@
       {
         "date": "2026-05-15",
         "hour": 23,
-        "count": 2
+        "count": 3
       }
     ],
     "mt_projects": []
