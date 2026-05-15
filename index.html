@@ -44,9 +44,9 @@ select option{background:var(--bg-secondary);color:var(--text-primary);}
 h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.creator-section h4{font-family:'Nunito',Arial Black,Arial,sans-serif;font-weight:900;}
 
 /* ===== PASSWORD TOGGLE ===== */
-.pw-wrap{position:relative;}
-.pw-wrap input{padding-right:48px;}
-.pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);font-size:1rem;padding:4px;cursor:pointer;transition:.3s;}
+.pw-wrap{position:relative;display:block;}
+.pw-wrap input{padding-right:48px;display:block;width:100%;box-sizing:border-box;}
+.pw-toggle{position:absolute;right:10px;bottom:0;height:48px;display:flex;align-items:center;justify-content:center;width:36px;background:none;border:none;color:var(--text-muted);font-size:1rem;padding:0;cursor:pointer;transition:.3s;}
 .pw-toggle:hover{color:var(--naranja-brillante);}
 
 /* ===== OWN STORE BUTTON ===== */
@@ -188,7 +188,7 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 .section-title i{font-size:1.2rem;color:var(--naranja-brillante);}
 
 /* ===== MODAL ===== */
-.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:2000;justify-content:center;align-items:center;padding:20px;}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:10000;justify-content:center;align-items:center;padding:20px;}
 .modal-overlay.show{display:flex;}
 .modal{background:var(--bg-card);border:1px solid var(--glass-border);border-radius:22px;max-width:850px;width:100%;max-height:90vh;overflow-y:auto;padding:34px;position:relative;animation:modal-enter .45s cubic-bezier(.25,.8,.25,1);}
 @keyframes modal-enter{from{transform:translateY(50px) scale(.92);opacity:0;}to{transform:translateY(0) scale(1);opacity:1;}}
@@ -197,13 +197,19 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 .modal h2{font-family:'Nunito',Arial Black,sans-serif;font-size:1.2rem;margin-bottom:24px;color:var(--text-primary);padding-right:50px;letter-spacing:1px;display:flex;align-items:center;gap:10px;font-weight:900;}
 
 @media(max-width:640px){
-  .modal-overlay{padding:10px!important;align-items:flex-start!important;padding-top:24px!important;}
+  .modal-overlay{padding:10px!important;align-items:center!important;padding-top:10px!important;}
   .modal{padding:18px!important;border-radius:16px!important;max-height:88vh!important;}
   .modal h2{font-size:1rem!important;margin-bottom:14px!important;padding-right:42px!important;}
   .modal-close{width:34px!important;height:34px!important;font-size:1.05rem!important;top:10px!important;right:10px!important;}
   #contactModal .modal{max-width:94vw!important;}
   #contactModal .contact-card{gap:8px!important;}
   #contactCreatorPhoto{width:60px!important;height:60px!important;font-size:1.4rem!important;margin-bottom:10px!important;}
+  /* Login compacto en Android */
+  #page-admin-login .container,#page-creator-login .container{padding-top:8px!important;padding-bottom:8px!important;}
+  #page-admin-login [style*="min-height:420px"],#page-creator-login [style*="min-height:420px"]{min-height:0!important;padding:20px 18px!important;}
+  #page-admin-login [style*="width:72px"],#page-creator-login [style*="width:72px"]{width:48px!important;height:48px!important;font-size:1.3rem!important;margin-bottom:10px!important;}
+  #page-admin-login [style*="margin-top:20px"],#page-creator-login [style*="margin-top:20px"]{margin-top:10px!important;padding-top:10px!important;}
+  #page-admin-login [style*="margin-top:14px"],#page-creator-login [style*="margin-top:14px"]{margin-top:6px!important;padding-top:6px!important;}
   /* Modal producto sin scroll horizontal en Android */
   #productDetailModal .modal{padding:14px!important;max-height:92dvh!important;overflow-y:auto!important;overflow-x:hidden!important;width:100%!important;box-sizing:border-box!important;}
   #productDetailModal .detail-layout{gap:12px!important;width:100%!important;box-sizing:border-box!important;}
@@ -733,6 +739,13 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 </nav>
 </div>
 </header>
+<!-- Barra colapsable botones promo — solo mobile -->
+<div id="promoCollapseBar" style="display:none;position:relative;z-index:50;">
+<button id="promoCollapseBtn" onclick="togglePromoBar()" style="width:100%;border:none;cursor:pointer;background:linear-gradient(90deg,rgba(255,109,0,.12),rgba(255,23,68,.08));border-bottom:1px solid rgba(255,109,0,.2);padding:5px 16px;display:flex;align-items:center;justify-content:space-between;font-size:.72rem;font-weight:700;color:var(--text-muted);letter-spacing:.5px;">
+<span id="promoCollapseLbl"><i class="fas fa-eye-slash"></i> Ocultar promociones</span>
+<i class="fas fa-chevron-up" id="promoCollapseIcon" style="font-size:.65rem;transition:transform .3s;"></i>
+</button>
+</div>
 
 <!-- FLOATING AVATAR -->
 <div class="avatar-float" id="avatarFloat" onclick="window.scrollTo({top:0,behavior:'smooth'})">
@@ -839,7 +852,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 </div>
 </div>
 <div class="footer-col">
-<h4><i class="fas fa-headset"></i> Contacto</h4>
+<h4><i class="fas fa-headset"></i> Contacto del Vendedor de la Tienda</h4>
 <div id="footerContactLinks"></div>
 </div>
 <div class="footer-col">
@@ -847,10 +860,17 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <div id="footerClientLinks"></div>
 </div>
 <div class="footer-col">
-<h4><i class="fas fa-crown"></i> Creador</h4>
+<h4><i class="fas fa-crown"></i> Creador del Sistema de Tiendas</h4>
 <div id="footerCreatorInfo"></div>
 </div>
 </div>
+</div>
+<!-- QR Section -->
+<div id="qrSection" style="text-align:center;padding:28px 0 10px;display:none;">
+<h3 class="section-title" style="margin-bottom:16px;"><i class="fas fa-qrcode"></i> ACCEDE A NUESTRA TIENDA</h3>
+<p style="color:var(--text-muted);font-size:.85rem;margin-bottom:16px;">Escanea el código QR para visitar la tienda desde tu móvil</p>
+<div id="qrCodeContainer" style="display:inline-block;background:#fff;padding:16px;border-radius:16px;box-shadow:0 0 30px rgba(255,109,0,.15);"></div>
+<p id="qrUrlLabel" style="color:var(--text-muted);font-size:.75rem;margin-top:12px;word-break:break-all;"></p>
 </div>
 <div class="footer-bottom">
 <div class="footer-creator-badge">
@@ -863,7 +883,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 
 <!-- ADMIN LOGIN -->
 <div id="page-admin-login" class="page" style="display:none;">
-<div class="container section" style="max-width:420px;margin:0 auto;padding-top:80px;padding-bottom:40px;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
+<div class="container section" style="max-width:420px;margin:0 auto;padding-top:0;padding-bottom:20px;min-height:calc(100dvh - 56px);display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
 <div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,23,68,.04));border:1px solid rgba(255,23,68,.2);border-radius:22px;padding:40px;text-align:center;width:100%;min-height:420px;display:flex;flex-direction:column;justify-content:center;">
 <button class="modal-close" onclick="showPage('store')" style="position:absolute;top:14px;right:18px;font-size:1.2rem;background:var(--bg-secondary);color:var(--text-muted);font-weight:700;z-index:10;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid var(--glass-border);" aria-label="Cerrar"><i class="fas fa-times"></i></button><div style="width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--rojo),var(--naranja));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;box-shadow:var(--neon-rojo);"><i class="fas fa-shield-halved" style="color:#fff;"></i></div>
 <h2 style="font-family:'Orbitron',sans-serif;font-size:1.1rem;letter-spacing:1px;margin-bottom:8px;">PANEL ADMIN</h2>
@@ -884,7 +904,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 
 <!-- CREATOR LOGIN -->
 <div id="page-creator-login" class="page" style="display:none;">
-<div class="container section" style="max-width:420px;margin:0 auto;padding-top:80px;padding-bottom:40px;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
+<div class="container section" style="max-width:420px;margin:0 auto;padding-top:0;padding-bottom:20px;min-height:calc(100dvh - 56px);display:flex;flex-direction:column;justify-content:center;align-items:center;box-sizing:border-box;">
 <div style="position:relative;background:linear-gradient(135deg,var(--bg-card),rgba(255,109,0,.04));border:1px solid rgba(255,109,0,.25);border-radius:22px;padding:40px;text-align:center;width:100%;min-height:420px;display:flex;flex-direction:column;justify-content:center;">
 <button class="modal-close" onclick="showPage('store')" style="position:absolute;top:14px;right:18px;font-size:1.2rem;background:var(--bg-secondary);color:var(--text-muted);font-weight:700;z-index:10;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid var(--glass-border);" aria-label="Cerrar"><i class="fas fa-times"></i></button>
 <div style="width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--naranja),var(--amarillo));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;"><i class="fas fa-crown" style="color:#111;"></i></div>
@@ -1011,13 +1031,23 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 </div>
 </div>
 <div class="admin-search">
-<select id="adminNotifFilter" onchange="renderNotifications()" style="max-width:220px;">
-<option value="">Todas</option>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:nowrap;width:100%;">
+<select id="adminNotifFilter" onchange="renderNotifications()" style="flex:1;min-width:0;">
+<option value="">Todos los tipos</option>
 <option value="low_stock">Stock bajo</option>
 <option value="slow_sale">Venta lenta</option>
 <option value="best_seller">Más vendido</option>
 <option value="license_expiry">Licencia</option>
 </select>
+<select id="adminNotifAge" onchange="renderNotifications()" style="flex:1;min-width:0;">
+<option value="">Cualquier fecha</option>
+<option value="today">Hoy</option>
+<option value="week">Últimos 7 días</option>
+<option value="old">Más de 7 días</option>
+<option value="month_old">Más de 30 días</option>
+</select>
+<button class="btn btn-danger btn-sm" onclick="deleteOldNotifications()" style="border-radius:50px;white-space:nowrap;flex-shrink:0;"><i class="fas fa-broom"></i> Limpiar</button>
+</div>
 </div>
 <div id="notificationsList"></div>
 </div>
@@ -1634,6 +1664,12 @@ if(page==='store')document.getElementById('navStore').classList.add('active');
 if(page.includes('admin')||page.includes('creator'))document.getElementById('navAdmin').classList.add('active');
 // Ocultar header de portada en desktop cuando se está en panel admin
 if(page==='admin'){document.body.classList.add('admin-mode');}else{document.body.classList.remove('admin-mode');}
+// Ocultar botones promo en páginas de login
+const _isLogin=(page==='admin-login'||page==='creator-login');
+const _promoRow=document.getElementById('promoRow');
+const _promoBar=document.getElementById('promoCollapseBar');
+if(_promoRow)_promoRow.style.display=_isLogin?'none':'';
+if(_promoBar)_promoBar.style.display=_isLogin?'none':'';
 if(page==='store'){renderProducts();renderRecommended();document.getElementById('heroVisitCount').textContent=getVisitsToday();}
 // Limpia campos sensibles al entrar a páginas de login (autocompletado del navegador)
 if(page==='admin-login'){const ap=document.getElementById('adminPassword');if(ap){ap.value='';setTimeout(()=>ap.value='',50);}}
@@ -1815,7 +1851,9 @@ openModal('productDetailModal');
 
 // ===== CART =====
 function addToCart(id){
-const p=products.find(x=>x.id===id);if(!p||p.stock<=0)return;
+const p=products.find(x=>x.id===id);
+if(!p) return;
+if(p.stock<=0){showToast('<i class="fas fa-ban"></i> "'+p.name+'" está agotado');return;}
 p.cartAdds++;save('mt_products',products);
 const existing=cart.find(c=>c.id===id);
 if(existing){if(existing.qty<p.stock)existing.qty++;else return;}
@@ -1823,7 +1861,7 @@ else{cart.push({id:p.id,name:p.name,price:p.price,originalPrice:p.originalPrice|
 updateCartBadge();showToast(`<i class="fas fa-check-circle"></i> "${p.name}" añadido al carrito`);
 }
 
-function showToast(msg){const t=document.createElement('div');t.className='mt-toast';t.style.cssText='position:fixed;top:80px;right:20px;background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;padding:16px 24px;border-radius:16px;font-weight:600;z-index:5000;animation:modal-enter .3s;box-shadow:0 10px 40px rgba(0,0,0,.5);max-width:340px;font-size:.9rem;display:flex;align-items:center;gap:8px;';t.innerHTML=msg;document.body.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transition='.3s';setTimeout(()=>t.remove(),300);},2500);}
+function showToast(msg){const t=document.createElement('div');t.className='mt-toast';t.style.cssText='position:fixed;top:80px;right:20px;background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;padding:16px 24px;border-radius:16px;font-weight:600;z-index:99999;animation:modal-enter .3s;box-shadow:0 10px 40px rgba(0,0,0,.5);max-width:340px;font-size:.9rem;display:flex;align-items:center;gap:8px;';t.innerHTML=msg;document.body.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transition='.3s';setTimeout(()=>t.remove(),300);},2500);}
 
 function renderCart(){
 const items=document.getElementById('cartItems');
@@ -2157,7 +2195,10 @@ generateNotifications();
 
 function renderNotifications(){
 const filter=document.getElementById('adminNotifFilter')?document.getElementById('adminNotifFilter').value:'';
-const filtered=filter?notifications.filter(n=>n.type===filter):notifications;
+const ageFilter=document.getElementById('adminNotifAge')?document.getElementById('adminNotifAge').value:'';
+const now=Date.now();const DAY=86400000;
+let filtered=filter?notifications.filter(n=>n.type===filter):[...notifications];
+if(ageFilter){filtered=filtered.filter(n=>{const age=now-new Date(n.date).getTime();if(ageFilter==='today')return age<DAY;if(ageFilter==='week')return age<7*DAY;if(ageFilter==='old')return age>=7*DAY;if(ageFilter==='month_old')return age>=30*DAY;return true;});}
 const iconMap={low_stock:'<i class="fas fa-triangle-exclamation"></i>',slow_sale:'<i class="fas fa-clock"></i>',best_seller:'<i class="fas fa-trophy"></i>',license_expiry:'<i class="fas fa-key"></i>'};
 document.getElementById('notificationsList').innerHTML=filtered.length?filtered.map(n=>`
 <div class="notification notif-${n.type} ${n.read?'':'notif-unread'}">
@@ -2166,6 +2207,14 @@ document.getElementById('notificationsList').innerHTML=filtered.length?filtered.
 <span style="font-size:.7rem;color:var(--text-muted);white-space:nowrap;">${new Date(n.date).toLocaleDateString('es')} · ${new Date(n.date).toLocaleTimeString('es',{hour:'2-digit',minute:'2-digit'})}</span>
 <button class="btn-icon btn-secondary btn-sm" onclick="event.stopPropagation();deleteNotification('${n.id}')" title="Eliminar" style="margin-left:6px;"><i class="fas fa-xmark"></i></button>
 </div>`).join(''):'<p style="text-align:center;color:var(--text-muted);padding:40px;"><i class="fas fa-bell-slash" style="font-size:2rem;display:block;margin-bottom:12px;opacity:.3;"></i>No hay notificaciones</p>';
+}
+function deleteOldNotifications(){
+  const cutoff=Date.now()-7*86400000;
+  const before=notifications.length;
+  notifications=notifications.filter(n=>new Date(n.date).getTime()>=cutoff);
+  save('mt_notifications',notifications);renderNotifications();updateNotifBadge();
+  if(typeof updateTabCounts==='function')updateTabCounts();
+  showToast('<i class="fas fa-broom"></i> '+(before-notifications.length)+' notificación(es) antiguas eliminadas');
 }
 function markAllNotifRead(){notifications.forEach(n=>n.read=true);save('mt_notifications',notifications);renderNotifications();updateNotifBadge();showToast('<i class="fas fa-check"></i> Todas leídas');}
 function deleteNotification(id){notifications=notifications.filter(n=>n.id!==id);save('mt_notifications',notifications);renderNotifications();updateNotifBadge();}
@@ -2378,18 +2427,19 @@ if(config.clientFacebook)clientLinks+=`<a href="${config.clientFacebook}" target
 if(config.clientWhatsapp)clientLinks+=`<a href="https://wa.me/${(config.clientWhatsapp||'').replace(/[^0-9]/g,'')}" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>`;
 document.getElementById('footerClientLinks').innerHTML=clientLinks||'<span style="color:var(--text-muted);font-size:.82rem;">No configurados</span>';
 
-// Contact modal
+// Contact modal — datos de la TIENDA
 const photoEl=document.getElementById('contactCreatorPhoto');
-if(config.creatorPhoto){photoEl.innerHTML=`<img src="${config.creatorPhoto}" style="width:100%;height:100%;object-fit:cover;" alt="${config.creatorName}">`;}
-else{photoEl.innerHTML='<i class="fas fa-user"></i>';}
-document.getElementById('contactCreatorNameLabel').textContent=config.creatorName+' — Desarrollador del sistema';
+const _contactImg=config.logoImage||config.avatarImage||'';
+if(_contactImg){photoEl.innerHTML=`<img src="${_contactImg}" style="width:100%;height:100%;object-fit:cover;" alt="${config.storeName}">`;}
+else{photoEl.innerHTML='<i class="fas fa-store"></i>';}
+document.getElementById('contactCreatorNameLabel').textContent=(config.storeName||'Tienda')+' — Vendedor de la tienda';
 
 let cards='';
-if(config.creatorWhatsapp)cards+=`<a class="contact-item wa" href="https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}" target="_blank"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><div style="font-size:.82rem;color:var(--text-muted);">${config.creatorWhatsapp}</div></div></a>`;
-if(config.creatorFacebook)cards+=`<a class="contact-item fb" href="${config.creatorFacebook}" target="_blank"><i class="fab fa-facebook"></i><div><strong>Facebook</strong><div style="font-size:.82rem;color:var(--text-muted);">Visitar perfil</div></div></a>`;
-if(config.creatorEmail)cards+=`<a class="contact-item em" href="mailto:${config.creatorEmail}"><i class="fas fa-envelope"></i><div><strong>Email</strong><div style="font-size:.82rem;color:var(--text-muted);">${config.creatorEmail}</div></div></a>`;
-if(config.creatorPhone)cards+=`<a class="contact-item ph" href="tel:${config.creatorPhone}"><i class="fas fa-phone"></i><div><strong>Teléfono</strong><div style="font-size:.82rem;color:var(--text-muted);">${config.creatorPhone}</div></div></a>`;
-document.getElementById('contactCards').innerHTML=cards;
+if(config.whatsapp)cards+=`<a class="contact-item wa" href="https://wa.me/${config.whatsapp.replace(/[^0-9]/g,'')}" target="_blank"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><div style="font-size:.82rem;color:var(--text-muted);">${config.whatsapp}</div></div></a>`;
+if(config.facebook)cards+=`<a class="contact-item fb" href="${config.facebook}" target="_blank"><i class="fab fa-facebook"></i><div><strong>Facebook</strong><div style="font-size:.82rem;color:var(--text-muted);">Visitar página</div></div></a>`;
+if(config.email)cards+=`<a class="contact-item em" href="mailto:${config.email}"><i class="fas fa-envelope"></i><div><strong>Email</strong><div style="font-size:.82rem;color:var(--text-muted);">${config.email}</div></div></a>`;
+if(config.phone)cards+=`<a class="contact-item ph" href="tel:${config.phone}"><i class="fas fa-phone"></i><div><strong>Teléfono</strong><div style="font-size:.82rem;color:var(--text-muted);">${config.phone}</div></div></a>`;
+document.getElementById('contactCards').innerHTML=cards||'<p style="color:var(--text-muted);font-size:.85rem;text-align:center;padding:16px;">Configura los datos de contacto en Ajustes.</p>';
 
 // Footer creator info
 const creatorInfoEl=document.getElementById('footerCreatorInfo');
@@ -2551,6 +2601,30 @@ window.open(`https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}?text=
 }
 
 // ===== IMPORT/EXPORT =====
+// ===== TOGGLE BOTONES PROMO (mobile) =====
+(function(){
+  let _promoVisible=true;
+  window.togglePromoBar=function(){
+    _promoVisible=!_promoVisible;
+    const row=document.getElementById('promoRow');
+    const lbl=document.getElementById('promoCollapseLbl');
+    const icon=document.getElementById('promoCollapseIcon');
+    if(row){if(_promoVisible)row.classList.remove('promo-hidden');else row.classList.add('promo-hidden');}
+    if(lbl)lbl.innerHTML=_promoVisible?'<i class="fas fa-eye-slash"></i> Ocultar promociones':'<i class="fas fa-eye"></i> Mostrar promociones';
+    if(icon)icon.style.transform=_promoVisible?'':'rotate(180deg)';
+  };
+  function checkPromoBtn(){
+    const isMobile=window.innerWidth<=640;
+    const hasPromo=[document.getElementById('ownStoreBtn'),document.getElementById('affiliateBtn')].some(b=>b&&b.style.display!=='none'&&b.href&&b.href!=='#');
+    const bar=document.getElementById('promoCollapseBar');
+    if(bar)bar.style.display=(isMobile&&hasPromo)?'block':'none';
+  }
+  window.addEventListener('resize',checkPromoBtn);
+  const _prevAC2=window.applyConfig;
+  window.applyConfig=function(){if(_prevAC2)_prevAC2.apply(this,arguments);setTimeout(checkPromoBtn,100);};
+  setTimeout(checkPromoBtn,600);
+})();
+
 // ===== IMPORTACIÓN MASIVA DESDE CARPETA =====
 let _bulkFiles = []; // archivos pendientes de confirmar
 
@@ -2742,7 +2816,32 @@ async function confirmBulkImport(){
 }
 
 function exportData(){const data=JSON.stringify({products,sales,config,suppliers,notifications,visits},null,2);const blob=new Blob([data],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='megatienda-datos.json';a.click();}
-function importData(){const file=document.getElementById('importFile').files[0];if(!file){alert('Seleccione JSON');return;}const reader=new FileReader();reader.onload=function(e){try{const data=JSON.parse(e.target.result);if(data.products){products=data.products;products.forEach(p=>{if(p.originalPrice===undefined)p.originalPrice=0;if(p.bulkDiscount===undefined)p.bulkDiscount=0;if(p.bulkQty===undefined)p.bulkQty=3;if(p.featured===undefined)p.featured='no';});save('mt_products',products);}if(data.sales){sales=data.sales;save('mt_sales',sales);}if(data.config){config={...DEFAULT_CONFIG,...data.config};save('mt_config',config);}if(data.suppliers){suppliers=data.suppliers;save('mt_suppliers',suppliers);}if(data.notifications){notifications=data.notifications;save('mt_notifications',notifications);}if(data.visits){visits=data.visits;save('mt_visits',visits);}applyConfig();renderProducts();if(isAdmin){renderAdminProducts();renderSuppliers();renderDashboard();renderNotifications();}showToast('<i class="fas fa-check-circle"></i> Datos importados');}catch{alert('❌ JSON no válido');}};reader.readAsText(file);}
+function importData(){
+  const fileInput=document.getElementById('importFile');
+  const file=fileInput.files[0];
+  if(!file){alert('Selecciona un archivo JSON primero');return;}
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      const txt=e.target.result.replace(/^\uFEFF/,'').trim();
+      const data=JSON.parse(txt);
+      const imported=[];
+      if(data.products&&Array.isArray(data.products)){products=data.products;products.forEach(p=>{if(p.originalPrice===undefined)p.originalPrice=0;if(p.bulkDiscount===undefined)p.bulkDiscount=0;if(p.bulkQty===undefined)p.bulkQty=3;if(p.featured===undefined)p.featured='no';if(!p.images)p.images=[];});save('mt_products',products);imported.push('productos('+products.length+')');}
+      if(data.sales&&Array.isArray(data.sales)){sales=data.sales;save('mt_sales',sales);imported.push('ventas');}
+      if(data.config&&typeof data.config==='object'){config=Object.assign({},DEFAULT_CONFIG,data.config);save('mt_config',config);imported.push('config');}
+      if(data.suppliers&&Array.isArray(data.suppliers)){suppliers=data.suppliers;save('mt_suppliers',suppliers);imported.push('proveedores');}
+      if(data.notifications&&Array.isArray(data.notifications)){notifications=data.notifications;save('mt_notifications',notifications);imported.push('notificaciones');}
+      if(data.visits){visits=data.visits;save('mt_visits',visits);imported.push('visitas');}
+      if(data.projects&&Array.isArray(data.projects)){projects=data.projects;save('mt_projects',projects);imported.push('proyectos');}
+      applyConfig();renderProducts();
+      if(isAdmin){renderAdminProducts();renderSuppliers();renderDashboard();renderNotifications();}
+      if(typeof updateTabCounts==='function')updateTabCounts();
+      fileInput.value='';
+      showToast('<i class="fas fa-check-circle"></i> Importado: '+imported.join(', '));
+    }catch(err){alert('Error al importar:\n'+err.message+'\n\nVerifica que sea el JSON exportado por este sistema.');}
+  };
+  reader.readAsText(file);
+}
 function downloadSystem(){const a=document.createElement('a');const blob=new Blob(['<!DOCTYPE html>'+document.documentElement.outerHTML],{type:'text/html'});a.href=URL.createObjectURL(blob);a.download='MegaTienda.html';a.click();}
 
 // ===== MODALS =====
@@ -3872,17 +3971,35 @@ async function ghPublicPull(c){
 
   window.addEventListener('beforeinstallprompt', (e)=>{
     e.preventDefault(); deferredPrompt=e;
+    const alreadyInstalled=localStorage.getItem('pwa_installed');
+    if(!alreadyInstalled){
+      setTimeout(async()=>{
+        if(!deferredPrompt) return;
+        try{
+          deferredPrompt.prompt();
+          const choice=await deferredPrompt.userChoice;
+          if(choice.outcome==='accepted'){localStorage.setItem('pwa_installed','1');deferredPrompt=null;return;}
+        }catch(_){}
+        deferredPrompt=null;
+        _showPwaInstallBtn();
+      },1200);
+      return;
+    }
+    _showPwaInstallBtn();
+  });
+  function _showPwaInstallBtn(){
     if(document.getElementById('pwaInstallBtn')) return;
     const btn=document.createElement('button');
     btn.id='pwaInstallBtn';
     btn.innerHTML='<i class="fas fa-download"></i> Instalar app';
-    btn.style.cssText='position:fixed;bottom:20px;left:20px;z-index:9998;padding:10px 18px;border-radius:50px;background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;border:none;font-weight:700;font-size:.85rem;box-shadow:var(--neon-naranja);cursor:pointer;display:flex;align-items:center;gap:8px;';
-    btn.onclick=async ()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); const c=await deferredPrompt.userChoice; if(c.outcome==='accepted') btn.remove(); deferredPrompt=null; };
+    btn.style.cssText='position:fixed;bottom:20px;left:20px;z-index:99998;padding:10px 18px;border-radius:50px;background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;border:none;font-weight:700;font-size:.85rem;box-shadow:var(--neon-naranja);cursor:pointer;display:flex;align-items:center;gap:8px;';
+    btn.onclick=async()=>{if(!deferredPrompt){btn.remove();return;}deferredPrompt.prompt();const ch=await deferredPrompt.userChoice;if(ch.outcome==='accepted'){localStorage.setItem('pwa_installed','1');btn.remove();}deferredPrompt=null;};
     document.body.appendChild(btn);
-  });
+  }
   window.addEventListener('appinstalled', ()=>{
-    const b=document.getElementById('pwaInstallBtn'); if(b) b.remove();
-    if(typeof showToast==='function') showToast('<i class="fas fa-check-circle"></i> App instalada');
+    localStorage.setItem('pwa_installed','1');
+    const b=document.getElementById('pwaInstallBtn');if(b)b.remove();
+    if(typeof showToast==='function') showToast('<i class="fas fa-check-circle"></i> ¡App instalada correctamente!');
   });
 })();
 
@@ -4259,6 +4376,7 @@ input,textarea,select,[contenteditable="true"]{
 
 /* === PATCH v19: promo buttons in own row & supplier icons horizontal === */
 .promo-row{display:flex;flex-wrap:nowrap;gap:10px;align-items:center;justify-content:flex-end;margin-left:auto;}
+.promo-row.promo-hidden{display:none!important;}
 .promo-row:empty{display:none;}
 .sup-actions{display:inline-flex!important;flex-wrap:nowrap!important;gap:8px;align-items:center;}
 .sup-actions .sup-act{flex:0 0 auto;}
@@ -4333,6 +4451,39 @@ input,textarea,select,[contenteditable="true"]{
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
   else init();
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+// ===== QR CODE DE LA TIENDA =====
+(function(){
+  let _qrInstance=null;
+  function renderStoreQR(){
+    const url=config.clientWebsite||config.ownStoreUrl||window.location.href.split('?')[0];
+    const section=document.getElementById('qrSection');
+    const container=document.getElementById('qrCodeContainer');
+    const label=document.getElementById('qrUrlLabel');
+    if(!section||!container) return;
+    // Mostrar solo si hay URL configurada o siempre (URL actual)
+    section.style.display='block';
+    if(label) label.textContent=url;
+    container.innerHTML='';
+    try{
+      _qrInstance=new QRCode(container,{
+        text:url,width:180,height:180,
+        colorDark:'#050508',colorLight:'#ffffff',
+        correctLevel:QRCode.CorrectLevel.H
+      });
+    }catch(e){container.innerHTML='<p style="color:var(--text-muted);font-size:.8rem;">QR no disponible</p>';}
+  }
+  // Hook sobre applyConfig
+  const _prevACqr=window.applyConfig;
+  window.applyConfig=function(){
+    if(_prevACqr)_prevACqr.apply(this,arguments);
+    setTimeout(renderStoreQR,200);
+  };
+  // Inicial
+  setTimeout(renderStoreQR,800);
 })();
 </script>
 </body>
