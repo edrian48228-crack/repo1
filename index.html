@@ -46,7 +46,10 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 /* ===== PASSWORD TOGGLE ===== */
 .pw-wrap{position:relative;}
 .pw-wrap input{padding-right:48px;}
-.pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);font-size:1rem;padding:4px;cursor:pointer;transition:.3s;}
+/* El botón ojo se posiciona relativo al input, no al wrapper completo.
+   Se coloca desde abajo para que siempre quede centrado en el input aunque haya label */
+.pw-wrap .pw-toggle{position:absolute;right:12px;bottom:0;height:50px;width:36px;display:flex;align-items:center;justify-content:center;background:none;border:none;color:var(--text-muted);font-size:1rem;padding:0;cursor:pointer;transition:.3s;}
+.pw-wrap .pw-toggle:hover{color:var(--naranja-brillante);}
 .pw-toggle:hover{color:var(--naranja-brillante);}
 
 /* ===== OWN STORE BUTTON ===== */
@@ -188,7 +191,7 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 .section-title i{font-size:1.2rem;color:var(--naranja-brillante);}
 
 /* ===== MODAL ===== */
-.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:2000;justify-content:center;align-items:center;padding:20px;}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:10000;justify-content:center;align-items:center;padding:20px;}
 .modal-overlay.show{display:flex;}
 .modal{background:var(--bg-card);border:1px solid var(--glass-border);border-radius:22px;max-width:850px;width:100%;max-height:90vh;overflow-y:auto;padding:34px;position:relative;animation:modal-enter .45s cubic-bezier(.25,.8,.25,1);}
 @keyframes modal-enter{from{transform:translateY(50px) scale(.92);opacity:0;}to{transform:translateY(0) scale(1);opacity:1;}}
@@ -197,7 +200,8 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
 .modal h2{font-family:'Nunito',Arial Black,sans-serif;font-size:1.2rem;margin-bottom:24px;color:var(--text-primary);padding-right:50px;letter-spacing:1px;display:flex;align-items:center;gap:10px;font-weight:900;}
 
 @media(max-width:640px){
-  .modal-overlay{padding:10px!important;align-items:flex-start!important;padding-top:24px!important;}
+  .modal-overlay{padding:10px!important;align-items:flex-start!important;padding-top:env(safe-area-inset-top, 16px)!important;overflow-y:auto!important;}
+  .modal-overlay .modal{margin-top:8px!important;}
   .modal{padding:18px!important;border-radius:16px!important;max-height:88vh!important;}
   .modal h2{font-size:1rem!important;margin-bottom:14px!important;padding-right:42px!important;}
   .modal-close{width:34px!important;height:34px!important;font-size:1.05rem!important;top:10px!important;right:10px!important;}
@@ -298,6 +302,12 @@ h1,h2,h3,h4,h5,h6,.section-title,.admin-tabs button,.nav-btn,.footer-col h4,.cre
   body.admin-mode .header{display:none!important;}
   body.admin-mode #page-admin{padding-top:0!important;}
 }
+/* Ocultar header en páginas de login (admin/creator) en todos los dispositivos */
+body.login-mode .header{display:none!important;}
+body.login-mode #page-admin-login,
+body.login-mode #page-creator-login{padding-top:0!important;}
+body.login-mode #page-admin-login .container,
+body.login-mode #page-creator-login .container{min-height:100dvh!important;}
 /* adminFixedBar: en desktop es solo un wrapper visual normal */
 #adminFixedBar{
   display:contents;
@@ -742,7 +752,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <nav id="mainNav">
 <button class="nav-btn active" onclick="showPage('store')" id="navStore"><i class="fas fa-store"></i> <span class="nav-text">Tienda</span></button>
 <button class="nav-btn" onclick="openCart()" id="navCart"><i class="fas fa-shopping-bag"></i> <span class="nav-text">Carrito</span> <span class="cart-badge" id="cartBadge">0</span></button>
-<button class="nav-btn" onclick="document.getElementById('channelSection')?.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(()=>{var el=document.querySelector('.contact-trigger');el&&el.click();},400)" id="navContact"><i class="fas fa-headset"></i> <span class="nav-text">Contacto</span></button><button class="nav-btn" onclick="document.querySelector('.projects-section')?.scrollIntoView({behavior:'smooth',block:'start'})" id="navProjects"><i class="fas fa-folder-open"></i> <span class="nav-text">Proyectos</span></button><button class="nav-btn nav-btn-admin" onclick="showPage('admin-login')" id="navAdmin" style="position:relative;"><i class="fas fa-shield-halved"></i> <span class="nav-text">Admin</span> <span class="notif-badge" id="notifBadge" style="display:none;">0</span></button>
+<button class="nav-btn" onclick="document.getElementById('channelSection')?.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(()=>{var el=document.querySelector('.contact-trigger');el&&el.click();},400)" id="navContact"><i class="fas fa-headset"></i> <span class="nav-text">Contacto</span></button><button class="nav-btn" onclick="document.querySelector('.projects-section')?.scrollIntoView({behavior:'smooth',block:'start'})" id="navProjects"><i class="fas fa-folder-open"></i> <span class="nav-text">Proyectos</span></button><button class="nav-btn" onclick="showQRModal()" id="navQR" title="QR de la tienda"><i class="fas fa-qrcode"></i> <span class="nav-text">QR</span></button><button class="nav-btn nav-btn-admin" onclick="showPage('admin-login')" id="navAdmin" style="position:relative;"><i class="fas fa-shield-halved"></i> <span class="nav-text">Admin</span> <span class="notif-badge" id="notifBadge" style="display:none;">0</span></button>
 </nav>
 </div>
 </header>
@@ -868,15 +878,16 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 </div>
 </div>
 <div class="footer-col">
-<h4><i class="fas fa-headset"></i> Contacto del Vendedor</h4>
+<h4><i class="fas fa-headset"></i> Contacto del Vendedor de la Tienda</h4>
 <div id="footerContactLinks"></div>
 </div>
 <div class="footer-col">
 <h4><i class="fas fa-compass"></i> Enlaces</h4>
 <div id="footerClientLinks"></div>
+<a href="#" onclick="showQRModal();return false;" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 16px;border-radius:50px;background:linear-gradient(135deg,rgba(255,109,0,.15),rgba(255,23,68,.1));border:1px solid rgba(255,109,0,.3);color:var(--naranja-brillante);font-size:.85rem;font-weight:700;transition:.3s;" title="Ver QR de acceso a la tienda"><i class="fas fa-qrcode"></i> Ver QR de acceso</a>
 </div>
 <div class="footer-col">
-<h4><i class="fas fa-crown"></i> Creador del Sistema de Ventas</h4>
+<h4><i class="fas fa-crown"></i> Creador del Sistema de Tiendas para cualquier negocio</h4>
 <div id="footerCreatorInfo"></div>
 </div>
 </div>
@@ -888,6 +899,18 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <p style="font-size:.78rem;margin-top:12px;color:var(--text-muted);">Sistema con licencia protegida © <span id="footerYear">2026</span> — Todos los derechos reservados</p>
 </div>
 </footer>
+</div>
+
+<!-- QR MODAL -->
+<div class="modal-overlay" id="qrModal">
+<div class="modal" style="max-width:380px;text-align:center;position:relative;">
+<button class="modal-close" onclick="closeModal('qrModal')"><i class="fas fa-times"></i></button>
+<h3 style="font-family:'Orbitron',sans-serif;font-size:1rem;letter-spacing:1px;margin-bottom:6px;"><i class="fas fa-qrcode" style="color:var(--naranja-brillante);"></i> Acceso QR a la Tienda</h3>
+<p style="font-size:.8rem;color:var(--text-muted);margin-bottom:18px;">Escanea este código para acceder directamente a la tienda</p>
+<div id="qrCodeContainer" style="display:flex;justify-content:center;align-items:center;background:#fff;border-radius:16px;padding:16px;margin:0 auto 16px;width:220px;height:220px;box-sizing:border-box;"></div>
+<p id="qrUrlText" style="font-size:.72rem;color:var(--text-muted);word-break:break-all;margin-bottom:14px;"></p>
+<button class="btn btn-primary btn-block" onclick="downloadQR()" style="border-radius:50px;"><i class="fas fa-download"></i> Descargar QR</button>
+</div>
 </div>
 
 <!-- ADMIN LOGIN -->
@@ -1671,6 +1694,9 @@ const el=document.getElementById('page-'+page);if(el)el.style.display='block';
 document.querySelectorAll('#mainNav .nav-btn').forEach(b=>b.classList.remove('active'));
 if(page==='store')document.getElementById('navStore').classList.add('active');
 if(page.includes('admin')||page.includes('creator'))document.getElementById('navAdmin').classList.add('active');
+// Ocultar header en páginas de login
+const isLoginPage=(page==='admin-login'||page==='creator-login');
+if(isLoginPage){document.body.classList.add('login-mode');}else{document.body.classList.remove('login-mode');}
 // Ocultar header de portada en desktop cuando se está en panel admin
 if(page==='admin'){document.body.classList.add('admin-mode');}else{document.body.classList.remove('admin-mode');}
 // Ocultar botones promo en páginas de login
@@ -1873,7 +1899,7 @@ else{cart.push({id:p.id,name:p.name,price:p.price,originalPrice:p.originalPrice|
 updateCartBadge();showToast(`<i class="fas fa-check-circle"></i> "${p.name}" añadido al carrito`);
 }
 
-function showToast(msg){const t=document.createElement('div');t.className='mt-toast';t.style.cssText='position:fixed;top:80px;right:20px;background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;padding:16px 24px;border-radius:16px;font-weight:600;z-index:5000;animation:modal-enter .3s;box-shadow:0 10px 40px rgba(0,0,0,.5);max-width:340px;font-size:.9rem;display:flex;align-items:center;gap:8px;';t.innerHTML=msg;document.body.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transition='.3s';setTimeout(()=>t.remove(),300);},2500);}
+function showToast(msg){const t=document.createElement('div');t.className='mt-toast';t.style.cssText='position:fixed;top:max(env(safe-area-inset-top,0px) + 12px, 12px);right:16px;background:linear-gradient(135deg,var(--rojo),var(--naranja));color:#fff;padding:14px 20px;border-radius:16px;font-weight:600;z-index:99999;animation:modal-enter .3s;box-shadow:0 10px 40px rgba(0,0,0,.5);max-width:320px;font-size:.88rem;display:flex;align-items:center;gap:8px;';t.innerHTML=msg;document.body.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transition='.3s';setTimeout(()=>t.remove(),300);},2500);}
 
 function renderCart(){
 const items=document.getElementById('cartItems');
@@ -2906,6 +2932,36 @@ function openModal(id){document.getElementById(id).classList.add('show');documen
 function closeModal(id){document.getElementById(id).classList.remove('show');document.body.style.overflow='';}
 document.querySelectorAll('.modal-overlay').forEach(overlay=>{overlay.addEventListener('click',e=>{if(e.target===overlay){overlay.classList.remove('show');document.body.style.overflow='';}});});
 
+// ===== QR CODE =====
+function showQRModal(){
+  const url=window.location.href.split('?')[0].split('#')[0];
+  document.getElementById('qrUrlText').textContent=url;
+  const container=document.getElementById('qrCodeContainer');
+  container.innerHTML='';
+  // Usar API de Google Charts para generar QR
+  const size=188;
+  const img=document.createElement('img');
+  img.src=`https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(url)}&format=png&margin=0&color=000000&bgcolor=ffffff`;
+  img.alt='QR de la tienda';
+  img.style.cssText=`width:${size}px;height:${size}px;border-radius:8px;`;
+  img.id='qrImg';
+  img.onerror=function(){
+    // Fallback: generar QR manualmente con canvas si la API falla
+    container.innerHTML=`<div style="color:var(--text-muted);font-size:.8rem;padding:10px;"><i class="fas fa-wifi" style="font-size:2rem;display:block;margin-bottom:8px;color:var(--naranja-brillante);"></i>Conéctate a internet para ver el QR</div>`;
+  };
+  container.appendChild(img);
+  openModal('qrModal');
+}
+function downloadQR(){
+  const img=document.getElementById('qrImg');
+  if(!img){showToast('<i class="fas fa-exclamation-circle"></i> QR no disponible');return;}
+  const a=document.createElement('a');
+  a.href=img.src;
+  a.download='qr-tienda.png';
+  a.target='_blank';
+  a.click();
+  showToast('<i class="fas fa-check-circle"></i> Descargando QR…');
+}
 
 // ===== IMAGE FROM DIRECTORY BUTTON =====
 function triggerImageUpload(targetInputId){
