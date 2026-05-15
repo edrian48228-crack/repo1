@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-15T22:43:00.782Z",
+  "exportedAt": "2026-05-15T22:46:34.787Z",
   "data": {
     "mt_products": [
       {
@@ -3046,10 +3046,10 @@
       "clientFacebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
       "clientWhatsapp": "+5358293406",
       "avatarEmoji": "🛒",
-      "avatarImage": "blob:https://edrian48228-crack.github.io/cc553c66-a90a-48e5-bf2f-fabf0d1f5930",
+      "avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778884996464-kmvu6mpb.webp",
       "avatarMessages": "¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!|¡Los mejores precios!|¡Nuevo stock!|¡No te lo pierdas!",
       "logoEmoji": "🛒",
-      "logoImage": "",
+      "logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778885004896-1lyala6z.webp",
       "imgFolder": "",
       "ownStoreUrl": "https://edrian48228-crack.github.io/repo/app/",
       "affiliateUrl": "https://edrian48228-crack.github.io/repo/app/",
@@ -3059,10 +3059,1004 @@
       "projects": [],
       "hideAvatar": false,
       "hideMonetizeButtons": false,
-      "securityDisabled": false
+      "securityDisabled": false,
+      "__last_logoImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfglogoimage-1778885004896-1lyala6z.webp",
+      "__last_avatarImage": "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/cfg-cfgavatarimage-1778884996464-kmvu6mpb.webp"
     },
     "mt_suppliers": null,
     "mt_notifications": [
+      {
+        "id": "afa941ba-c90b-4c0e-8b09-ed5cfc3b4ef4",
+        "type": "low_stock",
+        "message": "\"zapatos\" tiene stock bajo (1)",
+        "productId": "prod_1778884978243_xmjwn6",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "43a4b9ea-d1d6-4485-b89d-17e36f49d4a9",
+        "type": "low_stock",
+        "message": "\"winche\" tiene stock bajo (1)",
+        "productId": "prod_1778884971714_bpatu0",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "84776ca6-3f69-4e20-8860-af43c77e1e7c",
+        "type": "low_stock",
+        "message": "\"ventilador recargable\" tiene stock bajo (1)",
+        "productId": "prod_1778884966465_16nr0x",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "738d80f7-7ddb-4c9a-a9da-1ae470a890da",
+        "type": "low_stock",
+        "message": "\"ventilador\" tiene stock bajo (1)",
+        "productId": "prod_1778884961728_sg1eiu",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "f16cfb36-9ba0-4794-8218-676e26d62f51",
+        "type": "low_stock",
+        "message": "\"varilla de soldar\" tiene stock bajo (1)",
+        "productId": "prod_1778884955715_i2bfrq",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "2ee46cd8-b8ba-4af7-8753-ac2165cec02d",
+        "type": "low_stock",
+        "message": "\"turbina de succion\" tiene stock bajo (1)",
+        "productId": "prod_1778884949684_yepyez",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "ace1bd72-5a43-4fc0-9b9a-37c59619ebf6",
+        "type": "low_stock",
+        "message": "\"turbina\" tiene stock bajo (1)",
+        "productId": "prod_1778884944422_6oxwld",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "134a2d81-e56e-41eb-81b6-ba2e99bc4348",
+        "type": "low_stock",
+        "message": "\"trimer\" tiene stock bajo (1)",
+        "productId": "prod_1778884937522_ihy4y1",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e645ea1f-04bd-404f-8a4c-b7ee6a417d0a",
+        "type": "low_stock",
+        "message": "\"Tornilladora\" tiene stock bajo (1)",
+        "productId": "prod_1778884931886_1re2bu",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "607948b9-4f64-4910-b5b8-55d7a8fc2c34",
+        "type": "low_stock",
+        "message": "\"toma corriente\" tiene stock bajo (1)",
+        "productId": "prod_1778884926475_2b747n",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "0e656f80-75d4-4bd5-80f7-06b1538f4129",
+        "type": "low_stock",
+        "message": "\"tinta impresora\" tiene stock bajo (1)",
+        "productId": "prod_1778884921857_9nhsfs",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "9c809694-e84f-4689-931a-dc75713cff15",
+        "type": "low_stock",
+        "message": "\"telefonos de teclas nuevos\" tiene stock bajo (1)",
+        "productId": "prod_1778884915253_82z72t",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6fdc4250-f8f7-4911-a351-51e37bebc425",
+        "type": "low_stock",
+        "message": "\"teflon\" tiene stock bajo (1)",
+        "productId": "prod_1778884909772_zyjhcf",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "f558ed4f-6967-40b8-8f93-b7a19d7b28d7",
+        "type": "low_stock",
+        "message": "\"teclado\" tiene stock bajo (1)",
+        "productId": "prod_1778884904529_ss0qlu",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "1a18a2e3-b734-4566-ae27-459219586495",
+        "type": "low_stock",
+        "message": "\"tarjeta clasica\" tiene stock bajo (1)",
+        "productId": "prod_1778884898953_qifg5w",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "37311a96-3418-42ec-9517-2e0860fb27d4",
+        "type": "low_stock",
+        "message": "\"tarajas\" tiene stock bajo (1)",
+        "productId": "prod_1778884893633_xklkiy",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "ecfa0f38-7362-42fe-be15-4d18127927c0",
+        "type": "low_stock",
+        "message": "\"taladro\" tiene stock bajo (1)",
+        "productId": "prod_1778884888547_j840qj",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6450b972-d69a-463e-bbe4-a3fd11e2ac1a",
+        "type": "low_stock",
+        "message": "\"taladro\" tiene stock bajo (1)",
+        "productId": "prod_1778884883569_aaoylj",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "d394b9eb-f7c5-4b2c-a904-fcfadcc7cfe0",
+        "type": "low_stock",
+        "message": "\"tabletas dibujo\" tiene stock bajo (1)",
+        "productId": "prod_1778884878143_9sunz8",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "843682aa-1e2e-4ea6-b3c2-edf4d05f4d0b",
+        "type": "low_stock",
+        "message": "\"sprey negro, blanco , rojo y azul\" tiene stock bajo (1)",
+        "productId": "prod_1778884873264_j3di3i",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "1c09c9a0-d8d3-4fe6-8c7c-01abbcff9c90",
+        "type": "low_stock",
+        "message": "\"sombrillas\" tiene stock bajo (1)",
+        "productId": "prod_1778884867704_u1cboo",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "0313ed0a-b8c8-4f9a-995f-9c41c42c3d28",
+        "type": "low_stock",
+        "message": "\"socalos\" tiene stock bajo (1)",
+        "productId": "prod_1778884861888_zssxw2",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "4dd4d49b-df6c-4e16-adbc-b118674fd248",
+        "type": "low_stock",
+        "message": "\"silicona\" tiene stock bajo (1)",
+        "productId": "prod_1778884856650_zppsos",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e5877c0f-92e3-481e-bab1-b9d54dd1c4c1",
+        "type": "low_stock",
+        "message": "\"rodamiento el par\" tiene stock bajo (1)",
+        "productId": "prod_1778884851034_yi0oum",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "206dfba1-1709-4ff4-90a5-1461ef01863f",
+        "type": "low_stock",
+        "message": "\"resistencia de 4 vueltas\" tiene stock bajo (1)",
+        "productId": "prod_1778884845052_jxhml5",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "1c1b48ba-a4c3-478d-8f60-6b4c78fd4c42",
+        "type": "low_stock",
+        "message": "\"reproductor de bateria\" tiene stock bajo (1)",
+        "productId": "prod_1778884839170_198fvq",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "8395fa58-6533-49ea-b4e2-9dc19068a10f",
+        "type": "low_stock",
+        "message": "\"ram ddr3 2 gb\" tiene stock bajo (1)",
+        "productId": "prod_1778884832294_n6lomi",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "72174956-f4f1-4016-9863-c7e3cdfef8da",
+        "type": "low_stock",
+        "message": "\"puntas de cautin\" tiene stock bajo (1)",
+        "productId": "prod_1778884825562_bjkg0e",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "5f6a8f15-8204-47f8-9a8c-d358f35bae56",
+        "type": "low_stock",
+        "message": "\"pulidora\" tiene stock bajo (1)",
+        "productId": "prod_1778884821708_ijna25",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "1bd87811-bbe0-4b3f-90a8-3cb9fc3c1a58",
+        "type": "low_stock",
+        "message": "\"pulidora\" tiene stock bajo (1)",
+        "productId": "prod_1778884817361_4zfxyw",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "7f30c7fb-3539-46bf-bf18-2e255bf47185",
+        "type": "low_stock",
+        "message": "\"protector\" tiene stock bajo (1)",
+        "productId": "prod_1778884812514_k8y9cs",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "70be03c5-6bc9-411d-8d1f-6fb14724c19f",
+        "type": "low_stock",
+        "message": "\"protector\" tiene stock bajo (1)",
+        "productId": "prod_1778884807057_qszq6l",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "08f8f8be-7d69-4975-a520-36d937304d03",
+        "type": "low_stock",
+        "message": "\"pilas recargables\" tiene stock bajo (1)",
+        "productId": "prod_1778884801316_ui8ra9",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "44f289f6-6a03-4878-91a4-a043fd4cb7ad",
+        "type": "low_stock",
+        "message": "\"pilas doble a y triple a\" tiene stock bajo (1)",
+        "productId": "prod_1778884795955_807fbi",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "a3b1f6c3-fdd4-4a7d-99f6-2b700ae45223",
+        "type": "low_stock",
+        "message": "\"pilas\" tiene stock bajo (1)",
+        "productId": "prod_1778884790983_xrgda4",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "09b2a0ba-38aa-42b2-acbd-9b82c6eb6ddd",
+        "type": "low_stock",
+        "message": "\"pila recargable con oferta\" tiene stock bajo (1)",
+        "productId": "prod_1778884784981_nxv7qy",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "90ebdc28-7848-4f0a-ad1c-0984bcb52679",
+        "type": "low_stock",
+        "message": "\"pesas\" tiene stock bajo (1)",
+        "productId": "prod_1778884779560_7tizl6",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "7f33d867-9136-4ad1-9b41-d37f85ad6126",
+        "type": "low_stock",
+        "message": "\"pesa\" tiene stock bajo (1)",
+        "productId": "prod_1778884773992_onvhun",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "ec97b4aa-61db-4606-81a5-9d6956aabc45",
+        "type": "low_stock",
+        "message": "\"pegamento tuberia plastica\" tiene stock bajo (1)",
+        "productId": "prod_1778884768086_822leh",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "3e8e8bae-e455-4022-9a8f-4508edce2118",
+        "type": "low_stock",
+        "message": "\"pegamento\" tiene stock bajo (1)",
+        "productId": "prod_1778884762849_ji3zh4",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "85e41736-43ae-4e5f-b4f6-93155ece8805",
+        "type": "low_stock",
+        "message": "\"pasta termica\" tiene stock bajo (1)",
+        "productId": "prod_1778884757856_cbj4so",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "79785184-330b-474a-ac7b-0cb74ea2f41b",
+        "type": "low_stock",
+        "message": "\"oxido litro blanco\" tiene stock bajo (1)",
+        "productId": "prod_1778884752190_wf5uju",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "d03b6ea5-3de7-4f4a-b2c9-d8cb150f0808",
+        "type": "low_stock",
+        "message": "\"otg tipo c y b\" tiene stock bajo (1)",
+        "productId": "prod_1778884745891_5j4hn9",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "0e26bf2a-ed1b-4163-88b3-ed41ec053bb7",
+        "type": "low_stock",
+        "message": "\"nintendo clasic mini\" tiene stock bajo (1)",
+        "productId": "prod_1778884740427_ijr1ft",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "3a4ee6e1-4b6c-4eee-908d-620e64f03ba3",
+        "type": "low_stock",
+        "message": "\"monitor\" tiene stock bajo (1)",
+        "productId": "prod_1778884734750_ewalgi",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "4d06ed2d-c568-49f9-b802-cafc662ce945",
+        "type": "low_stock",
+        "message": "\"mochila de niña\" tiene stock bajo (1)",
+        "productId": "prod_1778884730436_szzaiq",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "3f6d16ef-7fb2-45ff-a314-3e07604b3324",
+        "type": "low_stock",
+        "message": "\"mochila\" tiene stock bajo (1)",
+        "productId": "prod_1778884723557_h9jvna",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "c4597ea2-3a75-4124-bcfe-62a36ee28d80",
+        "type": "low_stock",
+        "message": "\"micro sd\" tiene stock bajo (1)",
+        "productId": "prod_1778884717587_xveo9o",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e575888a-fdf6-42bf-b2c5-d65f7da8b437",
+        "type": "low_stock",
+        "message": "\"memory card pas2\" tiene stock bajo (1)",
+        "productId": "prod_1778884712571_1sht4h",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "f09d7964-6a7b-42e7-9ff1-58a26d7cbc42",
+        "type": "low_stock",
+        "message": "\"memorias 64gb y 128gb\" tiene stock bajo (1)",
+        "productId": "prod_1778884706231_0x927k",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e53dd399-6bb1-4004-ac49-30c212851f5d",
+        "type": "low_stock",
+        "message": "\"maquinas de pelar\" tiene stock bajo (1)",
+        "productId": "prod_1778884700700_vhep88",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "cea5af28-1529-4dfe-984c-eb43e5888c91",
+        "type": "low_stock",
+        "message": "\"maquina electrica\" tiene stock bajo (1)",
+        "productId": "prod_1778884695124_szb2we",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "3a593db8-2a31-4037-bfef-c891ed9d5bf9",
+        "type": "low_stock",
+        "message": "\"maquina de pelar recargable\" tiene stock bajo (1)",
+        "productId": "prod_1778884689854_rg9gkj",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "9cf302df-b94f-41d7-9a38-6a511eb13acd",
+        "type": "low_stock",
+        "message": "\"maquina de pelar\" tiene stock bajo (1)",
+        "productId": "prod_1778884684569_o40kzs",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6cf5d498-c796-4acd-8c7c-2786a8a2fb7b",
+        "type": "low_stock",
+        "message": "\"mandos usb\" tiene stock bajo (1)",
+        "productId": "prod_1778884678123_i0hbzf",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "f60d9eec-d1a7-48be-9dfd-970ee9acdfee",
+        "type": "low_stock",
+        "message": "\"mando universal\" tiene stock bajo (1)",
+        "productId": "prod_1778884674074_t0clf0",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "5dd281fe-c8f7-4fa2-9cb2-e1f2fa29369c",
+        "type": "low_stock",
+        "message": "\"llavin\" tiene stock bajo (1)",
+        "productId": "prod_1778884667180_koyyw4",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "18423e13-dcbb-48a9-950b-61b41b3307b8",
+        "type": "low_stock",
+        "message": "\"llavin\" tiene stock bajo (1)",
+        "productId": "prod_1778884662363_kmtzro",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "1feac667-6af4-49b8-99c5-a00f8808061c",
+        "type": "low_stock",
+        "message": "\"llavin\" tiene stock bajo (1)",
+        "productId": "prod_1778884657156_bhezfn",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "72ac86d5-a0af-435f-8104-845d64b45ace",
+        "type": "low_stock",
+        "message": "\"llave de paso\" tiene stock bajo (1)",
+        "productId": "prod_1778884651697_9bw4u1",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "0cea5beb-02c4-4705-8edf-8e5ca3dbf97e",
+        "type": "low_stock",
+        "message": "\"llave de cubo\" tiene stock bajo (1)",
+        "productId": "prod_1778884645412_ttiint",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "27d56de9-8cae-47b2-9d17-4b99790b7d7c",
+        "type": "low_stock",
+        "message": "\"llave de angulo\" tiene stock bajo (1)",
+        "productId": "prod_1778884640397_22jxk8",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "b9db5593-02c4-4c70-8af8-561dc545dcb9",
+        "type": "low_stock",
+        "message": "\"linterna\" tiene stock bajo (1)",
+        "productId": "prod_1778884634281_yxy7to",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e814b8d6-a0c5-4440-bd08-3084f4c471e1",
+        "type": "low_stock",
+        "message": "\"lima\" tiene stock bajo (1)",
+        "productId": "prod_1778884629026_m3ypp4",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "11fecbc2-f1ed-4cbf-af43-542d1436f9c4",
+        "type": "low_stock",
+        "message": "\"ligas\" tiene stock bajo (1)",
+        "productId": "prod_1778884624080_0paatv",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "840313ec-d6bb-4547-94d2-fd88c0e150c8",
+        "type": "low_stock",
+        "message": "\"lamparita carga solar\" tiene stock bajo (1)",
+        "productId": "prod_1778884619291_3q07tn",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "b3ec664e-8651-4763-a996-2270ac67f512",
+        "type": "low_stock",
+        "message": "\"lampara solar\" tiene stock bajo (1)",
+        "productId": "prod_1778884613924_3w4q2b",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "325dda20-53de-4e35-b89b-394923c40e08",
+        "type": "low_stock",
+        "message": "\"lampara recargable\" tiene stock bajo (1)",
+        "productId": "prod_1778884608378_nicu33",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "4dd4c69b-eb4e-4d50-84df-51b40e81cd2b",
+        "type": "low_stock",
+        "message": "\"lampara de larga duracion\" tiene stock bajo (1)",
+        "productId": "prod_1778884603277_ncbox3",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "c3679293-6a4c-48de-a6e6-d4786df87a2c",
+        "type": "low_stock",
+        "message": "\"lampara de cabeza\" tiene stock bajo (1)",
+        "productId": "prod_1778884597021_cqs874",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "99b0693c-f9c0-4846-9e29-741f7f4c1e44",
+        "type": "low_stock",
+        "message": "\"juego de teflon\" tiene stock bajo (1)",
+        "productId": "prod_1778884591985_q9chsy",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "73dfd713-809c-4f05-a6c1-9ba6b26cee48",
+        "type": "low_stock",
+        "message": "\"gomas\" tiene stock bajo (1)",
+        "productId": "prod_1778884586661_68dui0",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "992bf8df-d00b-40c4-9b0c-65366bc8ab95",
+        "type": "low_stock",
+        "message": "\"fuente reguldora\" tiene stock bajo (1)",
+        "productId": "prod_1778884581781_5l7a5c",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "d1182061-96f7-463c-b547-cec92f5a6724",
+        "type": "low_stock",
+        "message": "\"fregadero\" tiene stock bajo (1)",
+        "productId": "prod_1778884577221_sqsrm7",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "26f3f31a-757c-4734-9e50-1b6861b9ddb8",
+        "type": "low_stock",
+        "message": "\"fogon de induccion\" tiene stock bajo (1)",
+        "productId": "prod_1778884572629_hgbz81",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "502b7656-d9bf-46cb-81c8-83c651f9a9c4",
+        "type": "low_stock",
+        "message": "\"foco solar\" tiene stock bajo (1)",
+        "productId": "prod_1778884566672_t9nbjq",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "3324e7ad-380c-4c2a-853c-5dc9f66440a0",
+        "type": "low_stock",
+        "message": "\"foco led\" tiene stock bajo (1)",
+        "productId": "prod_1778884561708_2fdt4w",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "18a822a9-6141-4a6c-990f-387f2548a20d",
+        "type": "low_stock",
+        "message": "\"extension de 3 metros\" tiene stock bajo (1)",
+        "productId": "prod_1778884556540_umwnln",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6fc539ef-ed17-4980-b436-502254cb0428",
+        "type": "low_stock",
+        "message": "\"eje de atras\" tiene stock bajo (1)",
+        "productId": "prod_1778884551585_fzpxfk",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "432ffefc-aa2d-4205-88df-b98469fdfdb5",
+        "type": "low_stock",
+        "message": "\"eje atras\" tiene stock bajo (1)",
+        "productId": "prod_1778884547089_3rdbhi",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "47115586-e892-4cff-8bd3-f3ca4b663c53",
+        "type": "low_stock",
+        "message": "\"dvd lg sin mando\" tiene stock bajo (1)",
+        "productId": "prod_1778884542639_q2962s",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "8dc93ecd-d912-46f0-ab81-00539e236283",
+        "type": "low_stock",
+        "message": "\"ducha electrica\" tiene stock bajo (1)",
+        "productId": "prod_1778884537661_ehzctm",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "676f6b7e-ae08-4a29-a55c-7a7a64a7b659",
+        "type": "low_stock",
+        "message": "\"ducha\" tiene stock bajo (1)",
+        "productId": "prod_1778884532510_b8mfxm",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "8719365d-9a55-442e-aaf5-f3fd8e5ccaa1",
+        "type": "low_stock",
+        "message": "\"dispositivo wii\" tiene stock bajo (1)",
+        "productId": "prod_1778884527629_l7ymwx",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "b7136dad-e259-4cf7-98dd-be86152b0384",
+        "type": "low_stock",
+        "message": "\"cuchillo\" tiene stock bajo (1)",
+        "productId": "prod_1778884521669_lydqc9",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "53cc8a2e-cfed-401a-86cc-97ac4b3f63a3",
+        "type": "low_stock",
+        "message": "\"cover de note 10 y  2 micas\" tiene stock bajo (1)",
+        "productId": "prod_1778884515816_bgbyo7",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "21a66448-cdb2-4a99-8465-bca2a82c7325",
+        "type": "low_stock",
+        "message": "\"correa de lada\" tiene stock bajo (1)",
+        "productId": "prod_1778884510501_86hd43",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6a9cb1ba-7410-457d-a25a-59a12411bdc3",
+        "type": "low_stock",
+        "message": "\"conector\" tiene stock bajo (1)",
+        "productId": "prod_1778884505393_vk9j3d",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "791968cc-7e3a-40df-bfc6-e859347151cd",
+        "type": "low_stock",
+        "message": "\"conector\" tiene stock bajo (1)",
+        "productId": "prod_1778884500763_0ijfch",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "2b77b0f2-f239-4309-8bf3-dcc7a7004fc8",
+        "type": "low_stock",
+        "message": "\"cinta metrica\" tiene stock bajo (1)",
+        "productId": "prod_1778884496358_lri3ro",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6663657e-4fb5-4563-b39f-77a8517322c2",
+        "type": "low_stock",
+        "message": "\"cinta metrica\" tiene stock bajo (1)",
+        "productId": "prod_1778884490594_1lkuc7",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e2d5fcc0-3c3f-4b77-9508-51efb79a37f2",
+        "type": "low_stock",
+        "message": "\"cinta metrica\" tiene stock bajo (1)",
+        "productId": "prod_1778884486218_f4j4o6",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "4213f905-68e0-4f20-83fc-cfb51bbde9eb",
+        "type": "low_stock",
+        "message": "\"cheke\" tiene stock bajo (1)",
+        "productId": "prod_1778884480688_fh0zaz",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "dd4a6908-a425-45b8-a28e-48ec65bc4d08",
+        "type": "low_stock",
+        "message": "\"chasis\" tiene stock bajo (1)",
+        "productId": "prod_1778884474996_6k92mn",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "7a817e1d-3b31-4756-b053-d611c6056b83",
+        "type": "low_stock",
+        "message": "\"cautines\" tiene stock bajo (1)",
+        "productId": "prod_1778884469874_azjobv",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "e9cc3f19-edca-435d-8401-64aa280a362c",
+        "type": "low_stock",
+        "message": "\"casco\" tiene stock bajo (1)",
+        "productId": "prod_1778884464282_xtcx0f",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "c5484457-b7e0-49b1-b2bd-80201707b071",
+        "type": "low_stock",
+        "message": "\"cargador portatil\" tiene stock bajo (1)",
+        "productId": "prod_1778884459255_85jqdl",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6b33f946-0934-4789-9cb0-343ac7f71fbd",
+        "type": "low_stock",
+        "message": "\"cargador inalambrico\" tiene stock bajo (1)",
+        "productId": "prod_1778884453970_yzgpey",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "c4f465e3-9cca-4e70-b098-4c0b721fb62a",
+        "type": "low_stock",
+        "message": "\"cargador de pilas\" tiene stock bajo (1)",
+        "productId": "prod_1778884448344_kya2pp",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "8548bed9-3e12-46cb-9f7b-30697569bd14",
+        "type": "low_stock",
+        "message": "\"cargador\" tiene stock bajo (1)",
+        "productId": "prod_1778884442408_89et9s",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "0904c94b-ca53-477e-b4dd-ca308ba0da56",
+        "type": "low_stock",
+        "message": "\"candado\" tiene stock bajo (1)",
+        "productId": "prod_1778884437219_oirvh3",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "37b03af7-8d78-4830-8fab-8ebcf58bdc20",
+        "type": "low_stock",
+        "message": "\"candado\" tiene stock bajo (1)",
+        "productId": "prod_1778884431166_o3bsxc",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "7c6a67f5-1d9f-4253-a916-083d9ee37117",
+        "type": "low_stock",
+        "message": "\"camara 26\" tiene stock bajo (1)",
+        "productId": "prod_1778884426505_xb5bk2",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "6ef5145a-4821-4bc6-b583-77957735a935",
+        "type": "low_stock",
+        "message": "\"calentadores\" tiene stock bajo (1)",
+        "productId": "prod_1778884421015_b7n6bz",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "b95bfc7d-afb1-489b-ba68-2da69b96c6db",
+        "type": "low_stock",
+        "message": "\"caja descodificadora\" tiene stock bajo (1)",
+        "productId": "prod_1778884415337_rxojvw",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "5fd88322-1032-46dc-a95b-a74c43fce535",
+        "type": "low_stock",
+        "message": "\"cables tipo b y c\" tiene stock bajo (1)",
+        "productId": "prod_1778884410543_hcr9ge",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "c1b746f3-22fd-47fd-87e9-208758f066b2",
+        "type": "low_stock",
+        "message": "\"cables de red\" tiene stock bajo (1)",
+        "productId": "prod_1778884404227_rt49sc",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "3cbc983b-c660-4e68-962d-33319595535b",
+        "type": "low_stock",
+        "message": "\"cables\" tiene stock bajo (1)",
+        "productId": "prod_1778884399638_tjcpa5",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "db1c5c4e-f676-4cbf-aa02-1f944d6bfc55",
+        "type": "low_stock",
+        "message": "\"brocha 400 y\" tiene stock bajo (1)",
+        "productId": "prod_1778884394260_n8vba2",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "be54cf59-08a3-483d-a8d9-e0f269a03613",
+        "type": "low_stock",
+        "message": "\"bridas largas\" tiene stock bajo (1)",
+        "productId": "prod_1778884387433_8vc8ig",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "b2613343-568d-4efb-88c0-63bf3f2fffbb",
+        "type": "low_stock",
+        "message": "\"breker 2000\" tiene stock bajo (1)",
+        "productId": "prod_1778884381270_hj5d06",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "97e92a58-a615-4c7e-9470-6fabf87f3010",
+        "type": "low_stock",
+        "message": "\"bombillo recargable\" tiene stock bajo (1)",
+        "productId": "prod_1778884376244_cj5o5e",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "892bdd1b-f70f-459d-b568-05aee97172a1",
+        "type": "low_stock",
+        "message": "\"bombillo recargable 2500 y\" tiene stock bajo (1)",
+        "productId": "prod_1778884371650_4qxzuj",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "678ee4a7-eb85-477c-b679-3cfbda92e7c4",
+        "type": "low_stock",
+        "message": "\"bombillo de moto\" tiene stock bajo (1)",
+        "productId": "prod_1778884366008_u3tdlk",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "dcebd307-66f1-4999-991c-caae2312cae8",
+        "type": "low_stock",
+        "message": "\"bocina bluetooth\" tiene stock bajo (1)",
+        "productId": "prod_1778884360694_61xiuy",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "a6608bfd-e69c-4b6f-bc78-9e527d056e38",
+        "type": "low_stock",
+        "message": "\"bisagras\" tiene stock bajo (1)",
+        "productId": "prod_1778884355099_542baf",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "dd440972-af6f-4b7d-bbba-7d4756d97f26",
+        "type": "low_stock",
+        "message": "\"batidoras\" tiene stock bajo (1)",
+        "productId": "prod_1778884348467_rfq7g5",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "b24bb79c-2cb1-40b1-b3f6-506dfe380ad0",
+        "type": "low_stock",
+        "message": "\"base de tv\" tiene stock bajo (1)",
+        "productId": "prod_1778884343705_a136vb",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "bbf90541-5eaa-4b8e-b890-6221e36a8125",
+        "type": "low_stock",
+        "message": "\"barrenas\" tiene stock bajo (1)",
+        "productId": "prod_1778884337604_jkgopr",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "8cf06f00-4011-4590-8246-a11521ba753f",
+        "type": "low_stock",
+        "message": "\"arco para nino\" tiene stock bajo (1)",
+        "productId": "prod_1778884332174_wcjols",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "c3d1b577-d5c5-421e-85d7-23e2bc53b5a9",
+        "type": "low_stock",
+        "message": "\"antena\" tiene stock bajo (1)",
+        "productId": "prod_1778884326541_eavz4o",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "fa007df0-cec4-42c9-b2c2-4281c8c7f209",
+        "type": "low_stock",
+        "message": "\"aflojalo todo\" tiene stock bajo (1)",
+        "productId": "prod_1778884320650_cf6m9u",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "5899ae40-2477-4d4f-b65f-a1d84bce91b0",
+        "type": "low_stock",
+        "message": "\"adaptador hdmi\" tiene stock bajo (1)",
+        "productId": "prod_1778884315020_j6a1wp",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
+      {
+        "id": "beacaa23-3850-4f72-8781-bfec016862cd",
+        "type": "low_stock",
+        "message": "\"adaptador\" tiene stock bajo (1)",
+        "productId": "prod_1778884309275_ln6zgj",
+        "date": "2026-05-15T22:46:31.400Z",
+        "read": false
+      },
       {
         "id": "6058a72c-1276-4ce1-b166-de94d8f9e50d",
         "type": "low_stock",
@@ -3222,7 +4216,7 @@
       {
         "date": "2026-05-15",
         "hour": 0,
-        "count": 3
+        "count": 4
       }
     ],
     "mt_projects": []
