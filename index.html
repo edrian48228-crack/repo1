@@ -3932,6 +3932,12 @@ async function ghBootstrapPublicPull(){
   if(c && c.token && c.token.data && !c.token.enc && navigator.onLine){
     setTimeout(()=>{ try{ ghPullAll(true); }catch(_){} }, 1500);
   }
+  // Marcar que el pull inicial terminó (éxito o fallo) para que el avatar
+  // pueda inicializarse con los productos correctos del repo actual
+  if(!window.__ghPullDone){
+    window.__ghPullDone = true;
+    if(typeof window.__initAvatarWithProducts==='function') window.__initAvatarWithProducts();
+  }
 }
 
 window.addEventListener('load', ()=>{
@@ -4023,6 +4029,8 @@ async function ghPublicPull(c){
         if(typeof renderRecommended==='function') renderRecommended();
         if(typeof renderCategoryFilters==='function') renderCategoryFilters();
         if(typeof renderAdminProducts==='function' && typeof isAdmin!=='undefined' && isAdmin) renderAdminProducts();
+        // Reinicializar avatar con los productos correctos del repo actual
+        if(typeof window.__initAvatarWithProducts==='function') window.__initAvatarWithProducts();
         if(typeof showToast==='function') showToast('<i class="fas fa-cloud-arrow-down"></i> Datos actualizados desde el servidor');
       }catch(e){
         setTimeout(()=>{ try{ location.replace(location.pathname+'?_=' +Date.now()); }catch{ location.reload(); } }, 400);
@@ -4844,10 +4852,19 @@ body.cart-open #pwaInstallBtn{display:none!important;}
       if(speech) speech.textContent=allMsgs[idx];
     },3500);
   }
+  // Exponer para que ghPublicPull pueda reinicializar el avatar tras cargar datos del repo
+  window.__initAvatarWithProducts = initAvatarWithProducts;
 
   function tryInitAvatar(){
-    if(typeof products!=='undefined') initAvatarWithProducts();
-    else setTimeout(tryInitAvatar,500);
+    // Esperar a que el pull de GitHub haya completado (o fallado) antes de
+    // mostrar productos en el avatar, para evitar mostrar datos de otro repo.
+    // __ghPullDone se establece en true por ghBootstrapPublicPull al terminar.
+    if(window.__ghPullDone){
+      if(typeof products!=='undefined') initAvatarWithProducts();
+    } else {
+      // Si el pull tarda más de 4s, inicializar igual (solo con mensajes de config)
+      setTimeout(()=>{ if(typeof products!=='undefined') initAvatarWithProducts(); }, 4000);
+    }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',tryInitAvatar);
   else setTimeout(tryInitAvatar,800);
