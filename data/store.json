@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T04:36:04.724Z",
+  "exportedAt": "2026-05-16T04:39:23.628Z",
   "data": {
     "mt_products": [
       {
@@ -2909,7 +2909,8 @@
         "createdAt": 1778884961728,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-ventilador-1778884956738-w7n7hcce.webp"
-        ]
+        ],
+        "cartAdds": null
       },
       {
         "id": "prod_1778884966465_16nr0x",
@@ -2928,7 +2929,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "sales": 0,
         "createdAt": 1778884966465,
         "__lastRepoImgs": [
@@ -2957,7 +2958,8 @@
         "createdAt": 1778884971714,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-winche-1778884967125-n0rmwvlj.webp"
-        ]
+        ],
+        "cartAdds": null
       },
       {
         "id": "prod_1778884978243_xmjwn6",
@@ -2981,7 +2983,8 @@
         "createdAt": 1778884978243,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-zapatos-1778884972774-1h92nclq.webp"
-        ]
+        ],
+        "cartAdds": null
       }
     ],
     "mt_sales": [
@@ -4241,7 +4244,7 @@
       {
         "date": "2026-05-16",
         "hour": 6,
-        "count": 6
+        "count": 8
       }
     ],
     "mt_projects": []
