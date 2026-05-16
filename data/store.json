@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T05:03:07.314Z",
+  "exportedAt": "2026-05-16T05:04:21.940Z",
   "data": {
     "mt_products": [
       {
@@ -3010,7 +3010,7 @@
       }
     ],
     "mt_config": {
-      "storeName": "_Mi Estantico_",
+      "storeName": "Mi Estantico",
       "whatsapp": "+5358293406",
       "facebook": "https://www.facebook.com/argos.universo?mibextid=ZbWKwL",
       "email": "tienda@ejemplo.com",
@@ -3034,7 +3034,7 @@
       ],
       "adminPassword": "1234",
       "supplierPassword": "proveedor123",
-      "creatorPassword": "1234",
+      "creatorPassword": "edrian48228",
       "securityQuestion": "¿Nombre de tu primera mascota?",
       "securityAnswer": "shutter",
       "categories": [
@@ -4249,7 +4249,7 @@
       {
         "date": "2026-05-16",
         "hour": 7,
-        "count": 3
+        "count": 4
       }
     ],
     "mt_projects": []
