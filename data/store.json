@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T03:58:19.290Z",
+  "exportedAt": "2026-05-16T04:01:22.739Z",
   "data": {
     "mt_products": [
       {
@@ -626,7 +626,8 @@
         "createdAt": 1778884448344,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-de-pilas-1778884443204-mkq7uw5e.webp"
-        ]
+        ],
+        "cartAdds": null
       },
       {
         "id": "prod_1778884453970_yzgpey",
@@ -674,7 +675,8 @@
         "createdAt": 1778884459255,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-cargador-portatil-1778884454339-r9ho2j4z.webp"
-        ]
+        ],
+        "cartAdds": null
       },
       {
         "id": "prod_1778884464282_xtcx0f",
