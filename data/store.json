@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T04:22:51.894Z",
+  "exportedAt": "2026-05-16T04:30:54.009Z",
   "data": {
     "mt_products": [
       {
@@ -4241,7 +4241,7 @@
       {
         "date": "2026-05-16",
         "hour": 6,
-        "count": 5
+        "count": 6
       }
     ],
     "mt_projects": []
