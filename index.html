@@ -4622,13 +4622,8 @@ body.product-detail-open #pwaInstallBtn{display:none!important;}
 .product-card:hover .card-name{color:var(--naranja-brillante)!important;}
 .product-card:hover .price-current{filter:brightness(1.18);}
 
-/* ── 10. Scroll suavizado del carrito ── */
-.cart-body{
-  scroll-behavior:smooth!important;
-  -webkit-overflow-scrolling:touch!important;
-  overflow-y:auto!important;
-}
-.cart-item{transition:border-color .3s,box-shadow .3s,transform .2s!important;}
+/* Ocultar botón instalar cuando carrito está abierto */
+body.cart-open #pwaInstallBtn{display:none!important;}
 
 /* Footer: 3 columnas en desktop */
 .footer-grid{grid-template-columns:1fr 1fr 1fr!important;}
@@ -4699,6 +4694,26 @@ body.product-detail-open #pwaInstallBtn{display:none!important;}
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',tryPatchDeletes);
   else tryPatchDeletes();
+
+  /* 8b. Ocultar botón instalar cuando carrito está abierto */
+  function patchCart(){
+    const origOpen=window.openCart;
+    const origClose=window.closeCart;
+    if(typeof origOpen==='function'){
+      window.openCart=function(){
+        origOpen.apply(this,arguments);
+        document.body.classList.add('cart-open');
+      };
+    }
+    if(typeof origClose==='function'){
+      window.closeCart=function(){
+        origClose.apply(this,arguments);
+        document.body.classList.remove('cart-open');
+      };
+    }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',patchCart);
+  else patchCart();
 
   /* 8. Ocultar boton instalar cuando productDetailModal abierto */
   function patchModals(){
