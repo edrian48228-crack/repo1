@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T03:57:18.234Z",
+  "exportedAt": "2026-05-16T03:58:19.290Z",
   "data": {
     "mt_products": [
       {
@@ -2830,7 +2830,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "sales": 0,
         "createdAt": 1778884944422,
         "__lastRepoImgs": [
@@ -4234,7 +4234,7 @@
       {
         "date": "2026-05-16",
         "hour": 5,
-        "count": 6
+        "count": 11
       }
     ],
     "mt_projects": []
