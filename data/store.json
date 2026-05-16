@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T03:05:39.417Z",
+  "exportedAt": "2026-05-16T03:37:40.464Z",
   "data": {
     "mt_products": [
       {
@@ -548,12 +548,13 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "sales": 0,
         "createdAt": 1778884431166,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-candado-1778884426808-g4u330vt.webp"
-        ]
+        ],
+        "cartAdds": null
       },
       {
         "id": "prod_1778884437219_oirvh3",
@@ -620,7 +621,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "sales": 0,
         "createdAt": 1778884448344,
         "__lastRepoImgs": [
@@ -4233,7 +4234,7 @@
       {
         "date": "2026-05-16",
         "hour": 5,
-        "count": 1
+        "count": 4
       }
     ],
     "mt_projects": []
