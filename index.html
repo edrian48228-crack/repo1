@@ -1914,20 +1914,20 @@ const isBulk=c.bulkDiscount>0&&c.qty>=c.bulkQty;
 const unitPrice=isBulk?c.price*(1-c.bulkDiscount/100):c.price;
 const hasImg=c.image&&c.image.length>0;
 return `
-<div class="cart-item">
+<div class="cart-item" data-id="${c.id}">
 ${hasImg?`<img src="${c.image}" alt="${c.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
 <div style="display:none;width:72px;height:72px;border-radius:12px;background:var(--bg-secondary);align-items:center;justify-content:center;">${ICON_PLACEHOLDERS[c.category]||ICON_PLACEHOLDERS.default}</div>`:
 `<div style="width:72px;height:72px;border-radius:12px;background:var(--bg-secondary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">${ICON_PLACEHOLDERS[c.category]||ICON_PLACEHOLDERS.default}</div>`}
 <div class="details">
 <h4>${c.name}</h4>
-<div style="color:var(--text-muted);font-size:.82rem;">$${unitPrice.toFixed(2)} ${c.currency}${isBulk?` <span style="color:var(--verde);font-weight:700;">(-${c.bulkDiscount}%)</span>`:''}</div>
+<div class="cart-unit-price" style="color:var(--text-muted);font-size:.82rem;">$${unitPrice.toFixed(2)} ${c.currency}${isBulk?` <span style="color:var(--verde);font-weight:700;">(-${c.bulkDiscount}%)</span>`:''}</div>
 </div>
 <div class="qty-control">
 <button onclick="updateCartQty('${c.id}',-1)"><i class="fas fa-minus"></i></button>
 <span style="font-weight:800;min-width:28px;text-align:center;font-size:1rem;">${c.qty}</span>
 <button onclick="updateCartQty('${c.id}',1)"><i class="fas fa-plus"></i></button>
 </div>
-<div style="font-weight:900;font-size:1.1rem;background:linear-gradient(135deg,var(--naranja),var(--rojo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;min-width:70px;text-align:right;">$${(unitPrice*c.qty).toFixed(2)}</div>
+<div class="cart-item-total" style="font-weight:900;font-size:1.1rem;background:linear-gradient(135deg,var(--naranja),var(--rojo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;min-width:70px;text-align:right;">$${(unitPrice*c.qty).toFixed(2)}</div>
 <button class="btn-icon btn-danger" onclick="removeFromCart('${c.id}')" title="Eliminar"><i class="fas fa-trash-can"></i></button>
 </div>`;}).join('');
 
@@ -1955,8 +1955,48 @@ footer.innerHTML=`
 <button class="btn btn-primary btn-block" onclick="processOrder()" style="border-radius:50px;padding:16px;font-size:1rem;"><i class="fas fa-paper-plane"></i> Enviar Pedido por WhatsApp</button>`;
 }
 
-function updateCartQty(id,delta){const item=cart.find(c=>c.id===id);if(!item)return;const p=products.find(x=>x.id===id);item.qty+=delta;if(item.qty<1)cart=cart.filter(c=>c.id!==id);else if(p&&item.qty>p.stock)item.qty=p.stock;updateCartBadge();renderCart();}
-function removeFromCart(id){cart=cart.filter(c=>c.id!==id);updateCartBadge();renderCart();}
+function _calcTotal(){
+  const totals={};
+  cart.forEach(c=>{const isBulk=c.bulkDiscount>0&&c.qty>=c.bulkQty;const up=isBulk?c.price*(1-c.bulkDiscount/100):c.price;if(!totals[c.currency])totals[c.currency]=0;totals[c.currency]+=up*c.qty;});
+  const el=document.querySelector('.cart-total-value');
+  if(el) el.innerHTML=Object.entries(totals).map(([c,t])=>'<span>$'+t.toFixed(2)+' '+c+'</span>').join('');
+}
+function updateCartQty(id,delta){
+  const item=cart.find(c=>c.id===id);if(!item)return;
+  const p=products.find(x=>x.id===id);
+  const newQty=item.qty+delta;
+  if(newQty<1){removeFromCart(id);return;}
+  if(p&&newQty>p.stock)return;
+  item.qty=newQty;
+  updateCartBadge();
+  // Actualizar solo los nodos del item afectado sin re-renderizar todo
+  const row=document.querySelector('.cart-item[data-id="'+id+'"]');
+  if(row){
+    const isBulk=item.bulkDiscount>0&&item.qty>=item.bulkQty;
+    const unitPrice=isBulk?item.price*(1-item.bulkDiscount/100):item.price;
+    const qtySpan=row.querySelector('.qty-control span');
+    const priceDiv=row.querySelector('.cart-item-total');
+    const unitDiv=row.querySelector('.cart-unit-price');
+    if(qtySpan) qtySpan.textContent=item.qty;
+    if(priceDiv) priceDiv.textContent='$'+(unitPrice*item.qty).toFixed(2);
+    if(unitDiv) unitDiv.textContent='$'+unitPrice.toFixed(2)+' '+item.currency+(isBulk?' (-'+item.bulkDiscount+'%)':'');
+    _calcTotal();
+  } else {
+    renderCart();
+  }
+}
+function removeFromCart(id){
+  cart=cart.filter(c=>c.id!==id);
+  updateCartBadge();
+  const row=document.querySelector('.cart-item[data-id="'+id+'"]');
+  if(row){
+    row.style.transition='opacity .18s,transform .18s';
+    row.style.opacity='0';row.style.transform='translateX(30px)';
+    setTimeout(()=>{ row.remove(); _calcTotal(); if(cart.length===0)renderCart(); },180);
+  } else {
+    renderCart();
+  }
+}
 function updateCartBadge(){document.getElementById('cartBadge').textContent=cart.reduce((s,c)=>s+c.qty,0);}
 
 function processOrder(){
@@ -4634,6 +4674,7 @@ body.cart-open #pwaInstallBtn{display:none!important;}
   overflow-x:hidden !important;
   -webkit-overflow-scrolling:touch !important;
   overscroll-behavior-y:contain !important;
+  contain:strict !important;   /* aísla layout/paint del resto de la página */
 }
 /* Panel: no captura gestos táctiles, los deja pasar al cart-body */
 #cartOverlay .cart-panel{overflow:hidden !important;}
