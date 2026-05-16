@@ -866,28 +866,23 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 <!-- Footer -->
 <footer class="footer">
 <div class="footer-top">
-<div class="footer-grid container">
+<div class="footer-grid container" style="grid-template-columns:1fr 1fr 1fr;">
+<!-- hidden element to keep JS references alive -->
+<span id="footerStoreName" style="display:none;">MegaTienda</span>
+<a class="wa" href="#" id="footerWa" target="_blank" style="display:none;"></a>
+<a class="fb" href="#" id="footerFb" target="_blank" style="display:none;"></a>
+<a class="em" href="#" id="footerEm" style="display:none;"></a>
 <div class="footer-col">
-<h4><i class="fas fa-store"></i> <span id="footerStoreName">MegaTienda</span></h4>
-<p style="font-size:.75rem;color:var(--text-muted);margin-bottom:8px;letter-spacing:.5px;text-transform:uppercase;">Contacto de la tienda de productos</p>
-<p style="font-size:.85rem;line-height:1.7;color:var(--text-muted);">Tu tienda de confianza para encontrar los mejores productos al mejor precio.</p>
-<div class="footer-social" style="justify-content:flex-start;margin-top:14px;">
-<a class="wa" href="#" id="footerWa" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a class="fb" href="#" id="footerFb" target="_blank"><i class="fab fa-facebook"></i></a>
-<a class="em" href="#" id="footerEm"><i class="fas fa-envelope"></i></a>
-</div>
-</div>
-<div class="footer-col">
-<h4><i class="fas fa-headset"></i> Contacto del Vendedor de la Tienda</h4>
+<h4><i class="fas fa-headset"></i> Contacto del Vendedor</h4>
 <div id="footerContactLinks"></div>
 </div>
 <div class="footer-col">
-<h4><i class="fas fa-compass"></i> Enlaces</h4>
+<h4><i class="fas fa-link"></i> Enlaces de la Tienda</h4>
 <div id="footerClientLinks"></div>
 <a href="#" onclick="showQRModal();return false;" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 16px;border-radius:50px;background:linear-gradient(135deg,rgba(255,109,0,.15),rgba(255,23,68,.1));border:1px solid rgba(255,109,0,.3);color:var(--naranja-brillante);font-size:.85rem;font-weight:700;transition:.3s;" title="Ver QR de acceso a la tienda"><i class="fas fa-qrcode"></i> Ver QR de acceso</a>
 </div>
 <div class="footer-col">
-<h4><i class="fas fa-crown"></i> Creador del Sistema de Tiendas para cualquier negocio</h4>
+<h4><i class="fas fa-crown"></i> Creador del Sistema</h4>
 <div id="footerCreatorInfo"></div>
 </div>
 </div>
@@ -2650,7 +2645,9 @@ background:linear-gradient(135deg,var(--verde),var(--cyan),var(--azul));backgrou
 
 function shareLicenseWhatsApp(){
 const msg=`📄 *Licencia - ${config.storeName}*\n\n🔑 Clave: ${config.licenseKey}\n📅 Expiración: ${config.licenseExpiry}\n✅ Estado: ${config.licenseActive?'Activa':'Inactiva'}\n🏪 Tienda: ${config.storeName}\n👨‍💻 Creador: ${config.creatorName}\n📱 Contacto: ${config.creatorWhatsapp}`;
-window.open(`https://wa.me/${config.creatorWhatsapp.replace(/[^0-9]/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
+// Enviar al WhatsApp del cliente (no del creador)
+const targetWa=(config.clientWhatsapp||config.whatsapp||config.creatorWhatsapp||'').replace(/[^0-9]/g,'');
+window.open(`https://wa.me/${targetWa}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 
 // ===== IMPORT/EXPORT =====
@@ -4585,6 +4582,150 @@ input,textarea,select,[contenteditable="true"]{
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
   else init();
+})();
+</script>
+<!-- =============================================================
+     PATCH v18 — Correcciones múltiples solicitadas
+     ============================================================= -->
+<style id="patch-v18-styles">
+
+/* ── 3. Modales CENTRADOS en Android ── */
+@media(max-width:640px){
+  .modal-overlay{
+    padding:10px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding-top:max(env(safe-area-inset-top,10px),10px)!important;
+    overflow-y:auto!important;
+    box-sizing:border-box!important;
+  }
+  .modal-overlay .modal{
+    margin:auto!important;
+    position:relative!important;
+    top:auto!important;left:auto!important;
+  }
+  .modal{max-height:88dvh!important;overflow-y:auto!important;}
+}
+
+/* ── 4. Lightbox por encima del productDetailModal ── */
+.lightbox{z-index:20000!important;}
+.lightbox-close{z-index:20001!important;}
+.lightbox-nav{z-index:20001!important;}
+
+/* ── 8. Barra de estado mas arriba & boton instalar abajo visible ── */
+#ghSyncBar{bottom:72px!important;}
+#pwaInstallBtn{bottom:14px!important;left:14px!important;}
+body.product-detail-open #pwaInstallBtn{display:none!important;}
+
+/* ── 9. Hover precio compatible con hover nombre ── */
+.card-name{transition:color .35s;}
+.product-card:hover .card-name{color:var(--naranja-brillante)!important;}
+.product-card:hover .price-current{filter:brightness(1.18);}
+
+/* ── 10. Scroll suavizado del carrito ── */
+.cart-body{
+  scroll-behavior:smooth!important;
+  -webkit-overflow-scrolling:touch!important;
+  overflow-y:auto!important;
+}
+.cart-item{transition:border-color .3s,box-shadow .3s,transform .2s!important;}
+
+/* Footer: 3 columnas en desktop */
+.footer-grid{grid-template-columns:1fr 1fr 1fr!important;}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr!important;}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr!important;}}
+</style>
+
+<script id="patch-v18-script">
+(function(){
+
+  /* 1. Avatar: incluye 5 productos aleatorios en su ciclo */
+  function buildAvatarProductMsgs(){
+    if(typeof products==='undefined'||!products.length) return [];
+    const shuffled=[...products].sort(()=>Math.random()-.5);
+    return shuffled.slice(0,5).map(p=>'🛒 '+p.name+' — $'+p.price+' '+(p.currency||''));
+  }
+
+  function initAvatarWithProducts(){
+    const configMsgs=(typeof config!=='undefined'&&config.avatarMessages
+      ?config.avatarMessages
+      :'¡Ofertas hoy!|¡Bienvenido!|¡Compra ya!').split('|').filter(Boolean);
+    const productMsgs=buildAvatarProductMsgs();
+    const allMsgs=[...configMsgs,...productMsgs];
+    let idx=0;
+    const el=document.getElementById('avatarSpeech');
+    if(el&&allMsgs.length) el.textContent=allMsgs[0];
+    if(window.__avatarPatchInterval) clearInterval(window.__avatarPatchInterval);
+    window.__avatarPatchInterval=setInterval(()=>{
+      idx=(idx+1)%allMsgs.length;
+      const speech=document.getElementById('avatarSpeech');
+      if(speech) speech.textContent=allMsgs[idx];
+    },3500);
+  }
+
+  function tryInitAvatar(){
+    if(typeof products!=='undefined') initAvatarWithProducts();
+    else setTimeout(tryInitAvatar,500);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',tryInitAvatar);
+  else setTimeout(tryInitAvatar,800);
+
+  /* 4. Lightbox al frente cuando productDetailModal está abierto */
+  document.addEventListener('click',function(e){
+    const img=e.target.closest('#productDetailModal .main-image-wrap img, #productDetailModal .gallery img');
+    if(!img) return;
+    setTimeout(()=>{
+      const lb=document.querySelector('.lightbox.show');
+      if(lb){lb.style.zIndex='20000';lb.style.position='fixed';}
+    },60);
+  });
+
+  /* 6. Mensaje si no hay elementos para eliminar */
+  function patchDelete(fname,countFn,label){
+    if(typeof window[fname]!=='function') return;
+    const orig=window[fname];
+    window[fname]=async function(){
+      if(countFn()===0){
+        if(typeof showToast==='function') showToast('<i class="fas fa-info-circle"></i> No hay '+label+' para eliminar');
+        return;
+      }
+      return orig.apply(this,arguments);
+    };
+  }
+  function tryPatchDeletes(){
+    patchDelete('deleteAllProducts',()=>(typeof products!=='undefined'?products.length:1),'productos');
+    patchDelete('deleteAllSuppliers',()=>(typeof suppliers!=='undefined'?suppliers.length:1),'proveedores');
+    patchDelete('clearAllNotifications',()=>(typeof notifications!=='undefined'?notifications.length:1),'notificaciones');
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',tryPatchDeletes);
+  else tryPatchDeletes();
+
+  /* 8. Ocultar boton instalar cuando productDetailModal abierto */
+  function patchModals(){
+    const origOpen=window.openModal;
+    const origClose=window.closeModal;
+    if(typeof origOpen==='function'){
+      window.openModal=function(id){
+        origOpen.apply(this,arguments);
+        if(id==='productDetailModal') document.body.classList.add('product-detail-open');
+      };
+    }
+    if(typeof origClose==='function'){
+      window.closeModal=function(id){
+        origClose.apply(this,arguments);
+        if(id==='productDetailModal') document.body.classList.remove('product-detail-open');
+      };
+    }
+    // También detectar click en overlay
+    document.querySelectorAll('.modal-overlay').forEach(o=>{
+      o.addEventListener('click',function(e){
+        if(e.target===o&&o.id==='productDetailModal') document.body.classList.remove('product-detail-open');
+      });
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',patchModals);
+  else patchModals();
+
 })();
 </script>
 </body>
