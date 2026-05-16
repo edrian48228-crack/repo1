@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T11:48:41.802Z",
+  "exportedAt": "2026-05-16T11:50:44.537Z",
   "data": {
     "mt_products": [
       {
@@ -2280,7 +2280,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 1,
+        "views": 0,
         "sales": 0,
         "createdAt": 1778884817361,
         "__lastRepoImgs": [
@@ -2352,7 +2352,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 1,
+        "views": 0,
         "sales": 0,
         "createdAt": 1778884832294,
         "__lastRepoImgs": [
@@ -4249,12 +4249,17 @@
       {
         "date": "2026-05-16",
         "hour": 7,
-        "count": 4
+        "count": 5
+      },
+      {
+        "date": "2026-05-16",
+        "hour": 8,
+        "count": 2
       },
       {
         "date": "2026-05-16",
         "hour": 13,
-        "count": 2
+        "count": 4
       }
     ],
     "mt_projects": []
