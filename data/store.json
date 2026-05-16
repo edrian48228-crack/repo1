@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-16T03:04:53.635Z",
+  "exportedAt": "2026-05-16T03:05:39.417Z",
   "data": {
     "mt_products": [
       {
@@ -836,7 +836,7 @@
         "bulkDiscount": 0,
         "bulkQty": 3,
         "featured": "no",
-        "views": 0,
+        "views": 1,
         "sales": 0,
         "createdAt": 1778884496358,
         "__lastRepoImgs": [
@@ -913,7 +913,8 @@
         "createdAt": 1778884510501,
         "__lastRepoImgs": [
           "https://raw.githubusercontent.com/edrian48228-crack/repo1/main/img/prod-correa-de-lada-1778884505832-jaojpjq3.webp"
-        ]
+        ],
+        "cartAdds": null
       },
       {
         "id": "prod_1778884515816_bgbyo7",
