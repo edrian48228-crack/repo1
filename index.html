@@ -4625,16 +4625,20 @@ body.product-detail-open #pwaInstallBtn{display:none!important;}
 /* Ocultar botón instalar cuando carrito está abierto */
 body.cart-open #pwaInstallBtn{display:none!important;}
 
-/* ── CARRITO: scroll nativo suave en Android ── */
-/* El panel NO debe tener overflow:hidden en el body interno */
-#cartOverlay .cart-panel{overflow:hidden;} /* el panel contiene, el body scrollea */
+/* ── CARRITO: scroll 100% nativo Android (sin interferencias) ── */
+/* Neutralizar touch-action heredado de inputs en TODO el overlay */
+#cartOverlay,#cartOverlay *{touch-action:auto !important;}
+/* Solo el body scrollea en Y */
 #cartOverlay .cart-body{
-  -webkit-overflow-scrolling:touch !important; /* momentum scroll iOS/Android */
-  overflow-y:scroll !important;               /* scroll siempre activo */
-  overscroll-behavior:contain !important;     /* no propaga scroll al fondo */
-  touch-action:pan-y !important;             /* el dedo desliza libremente en Y */
-  will-change:scroll-position;               /* GPU hint para fluidez */
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+  overscroll-behavior-y:contain !important;
 }
+/* Panel: no captura gestos táctiles, los deja pasar al cart-body */
+#cartOverlay .cart-panel{overflow:hidden !important;}
+/* Botones: solo tap */
+#cartOverlay button{touch-action:manipulation !important;}
 
 /* ── CARRITO: layout de items reorganizado y limpio ── */
 #cartOverlay .cart-item{
@@ -4811,6 +4815,7 @@ body.cart-open #pwaInstallBtn{display:none!important;}
   else tryPatchDeletes();
 
   /* 8b. Ocultar botón instalar cuando carrito está abierto */
+  /* + Corregir body.overflow en Android para no bloquear scroll interno del carrito */
   function patchCart(){
     const origOpen=window.openCart;
     const origClose=window.closeCart;
@@ -4818,12 +4823,24 @@ body.cart-open #pwaInstallBtn{display:none!important;}
       window.openCart=function(){
         origOpen.apply(this,arguments);
         document.body.classList.add('cart-open');
+        /* En Android el body.overflow:hidden rompe el scroll del panel interno.
+           Lo revertimos sólo en touch devices y dejamos que el overlay fixed lo contenga */
+        if('ontouchstart' in window){
+          document.body.style.overflow='';
+          document.body.style.position='fixed';
+          document.body.style.width='100%';
+        }
       };
     }
     if(typeof origClose==='function'){
       window.closeCart=function(){
         origClose.apply(this,arguments);
         document.body.classList.remove('cart-open');
+        /* Restaurar posición body */
+        if('ontouchstart' in window){
+          document.body.style.position='';
+          document.body.style.width='';
+        }
       };
     }
   }
