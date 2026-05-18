@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-18T00:48:10.499Z",
+  "exportedAt": "2026-05-18T00:50:52.399Z",
   "data": {
     "mt_products": [
       {
@@ -3038,11 +3038,16 @@
       "securityQuestion": "¿Nombre de tu primera mascota?",
       "securityAnswer": "shutter",
       "categories": [
+        "Electricidad",
         "Electrónica",
         "Ropa",
-        "Dulces",
+        "Calzado",
+        "Electrodomesticos",
         "Hogar",
-        "Accesorios"
+        "Accesorios",
+        "Móviles",
+        "Plomeria",
+        "Otros"
       ],
       "licenseKey": "MEGA-2026-TRIAL",
       "licenseExpiry": "2026-06-30",
