@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-18T00:52:42.241Z",
+  "exportedAt": "2026-05-18T00:53:25.600Z",
   "data": {
     "mt_products": [
       {
@@ -29,12 +29,12 @@
       },
       {
         "id": "prod_1778884315020_j6a1wp",
-        "name": "adaptador hdmi",
+        "name": "Adaptador hdmi a vga",
         "price": 2000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 1,
+        "stock": 5,
         "minStock": 5,
         "description": "",
         "images": [
@@ -58,7 +58,7 @@
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 1,
+        "stock": 10,
         "minStock": 5,
         "description": "",
         "images": [
