@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "exportedAt": "2026-05-18T00:46:27.404Z",
+  "exportedAt": "2026-05-18T00:48:10.499Z",
   "data": {
     "mt_products": [
       {
         "id": "prod_1778884309275_ln6zgj",
-        "name": "adaptador",
+        "name": "Adaptador hdmi a vga",
         "price": 2000,
         "currency": "CUP",
         "category": "Electrónica",
         "condition": "nuevo",
-        "stock": 1,
+        "stock": 5,
         "minStock": 5,
         "description": "",
         "images": [
